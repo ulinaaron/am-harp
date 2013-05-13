@@ -1,34 +1,26 @@
 {
+  "hello-world": {
+    "type": "post",
+    "date": {
+      "day": "13",
+      "month": "may",
+      "year": "2013"
+    }
+  },
   "cusp-of-broader-adoption-of-js": {
     "type": "quote",
     "date": {
-      "day": "15",
-      "month": "dec",
-      "year": "2011"
+      "day": "12",
+      "month": "may",
+      "year": "2013"
     }
   },
-  "connecting-existing-git-repository": {
+  "first-post": {
     "type": "post",
     "date": {
-      "day": "15",
-      "month": "dec",
-      "year": "2011"
-    }
-  },
-  "dynamic-file-paths-using-require-js": {
-    "type": "post",
-    "date": {
-      "day": "15",
-      "month": "dec",
-      "year": "2011"
-    }
-  },
-  "if-you-dont-go-after-what-you-want": {
-    "type": "quote",
-    "date": {
-      "day": "15",
-      "month": "dec",
-      "year": "2011"
+      "day": "10",
+      "month": "may",
+      "year": "2013"
     }
   }
 }

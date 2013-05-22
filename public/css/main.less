@@ -1,6 +1,16 @@
 @import "_bootstrap";
 @import "responsive";
 
+html {
+  overflow-y: scroll;
+}
+body {
+  line-height: 1.8em;
+}
+p {
+  margin: 0 0 1em;
+}
+
 h1, h2, h3 {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
   font-weight: 100;
@@ -126,15 +136,13 @@ a {
   box-sizing: border-box;
 }
 
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-  .box-shadow(none);
-  background: #FAFAFA;
-}
-
 .nav-home {
-  position: relative;
-  top: -2px;
+  display: block;
+  border: #f4f4f4 solid 1px;
+  border-left: none;
+  border-right: none;
+  padding: 10px 0;
+  margin: -10px 0 20px;
 }
 
 @media (max-width: 480px) {

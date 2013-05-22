@@ -1,4 +1,12 @@
 {
+  "markdown-post": {
+    "type": "post",
+    "date": {
+      "day": "03",
+      "month": "jun",
+      "year": "2013"
+    }
+  },
   "hello-world": {
     "type": "post",
     "date": {

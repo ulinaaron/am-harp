@@ -1,34 +1,4 @@
 {
-  "markdown-post": {
-    "type": "post",
-    "date": {
-      "day": "03",
-      "month": "jun",
-      "year": "2013"
-    }
-  },
-  "hello-world": {
-    "type": "post",
-    "date": {
-      "day": "13",
-      "month": "may",
-      "year": "2013"
-    }
-  },
-  "cusp-of-broader-adoption-of-js": {
-    "type": "quote",
-    "date": {
-      "day": "12",
-      "month": "may",
-      "year": "2013"
-    }
-  },
-  "first-post": {
-    "type": "post",
-    "date": {
-      "day": "10",
-      "month": "may",
-      "year": "2013"
-    }
-  }
+  "hello-world": {},
+  "hello-markdown": {}
 }

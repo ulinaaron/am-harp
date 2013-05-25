@@ -1,4 +1,2 @@
 each post, slug in globals.public.posts.data
-  - post.slug = slug;
-  - post.layout = "_post.jade";
   != partial("/posts/" + slug, post)

@@ -11,24 +11,9 @@ html(lang="en")
       .container-fluid
         .row-fluid
           .span8.main
-            if current.path[0] === "posts"
-              div(class="post post-#{ type }")
-                .post-meta
-                  .post-type
-                    i(class="icon-#{ type } icon-2x")
-                  .post-date
-                    span.month #{ date.month }
-                    span.day #{ date.day }
-                    span.year #{ date.year }
-                .post-content
-                  != yield
-              a.nav-home(href="/") &larr; Article List
-            else
               != yield
           .offset1.span3.aside
             p: a(href="/"): img.aside-profile-img.aside-img(src="http://placekitten.com/g/200/200")
             p: strong Web Engineer &amp; Designer
             p: small I live in Vancouver, Canada, where I build websites for startups and small businesses.
-    script(src="#{ globals.public.data.jquery }")
-    script(src="#{ globals.public.data.bootstrap.js }")
     script(src="/js/app.js")

@@ -1,4 +1,4 @@
-@import '_bootstrap/bootstrap.less';
+@import '_bootstrap';
 
 /* Variables */
 
@@ -10,8 +10,11 @@
   margin-right: auto;
 }
 
-
-
+/* Layout */
+.main-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 /* HTML Elements */
 .gist {
@@ -51,7 +54,6 @@ a {
   border-bottom: darken(#f4f4f4, 0%) solid 1px;
 }
 .post-date {
-  // background: darken(#f4f4f4, 8%);
   padding: 5px 0;
   color: darken(#f4f4f4, 8%);
   .month,
@@ -124,7 +126,7 @@ a {
 
 footer{
   .copyright{
-    font-size: 12px;
+    font-size: @font-size-small;
   }
 }
 

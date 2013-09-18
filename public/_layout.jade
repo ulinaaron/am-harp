@@ -11,17 +11,24 @@ html(lang="en")
       .container.main-content
         .row
           .col-sm-8.main
-              != yield
+            != yield
           .col-sm-offset-1.col-sm-3.aside
             p: a(href="/"): img.aside-profile-img.aside-img(src="http://placekitten.com/g/200/200")
             p: strong Web Engineer &amp; Designer
             p I live in Vancouver, Canada, where I build websites for startups and small 
             p Twitter: 
               a(href="http://twitter.com/#{ twitter }") #{ twitter }
-            p: a(href="/rss.xml", title="#{ title } RSS feed"): img.rss-feed(src="/assets/images/feed-icon.png")
     hr
 
     footer
       .container
-        p.copyright &copy; 2013 #{ title }
+        .row
+          .col-sm-6
+            p: small &copy; 2013 #{ title }
+          .col-sm-6
+            p.pull-right
+              small: a(href="/rss.xml", title="#{ title } RSS feed")
+                img.rss-feed(src="/assets/images/feed-icon.png")
+                |  RSS feed
+
     script(src="/assets/js/app.js")

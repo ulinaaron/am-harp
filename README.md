@@ -1,12 +1,12 @@
 # Harp's Blog Boilerplate
 
-_This is a boilerplate to use with the [Harp Platform](http://harp.io/) and [Harp APF](https://github.com/sintaxi/harp) (an open source Asset Pipeline Framework powered by NodeJS)_
+_This is a boilerplate to use with the [Harp Platform](http://harp.io/) and/or the [Harp Server](http://harpjs.com/) (a static web server with built-in pre-processing powered by NodeJS)_
 
 ## Index
 
 - [How to use it?](#how-to-use-it)
-    - [On the Harp Platform](#on-the-harp-platform)
     - [On your own computer](#on-your-own-computer)
+    - [On the Harp Platform](#on-the-harp-platform)
 - [Controlling your content](#controlling-your-content)
 - [Adding new posts](#adding-new-posts)
 - [Adding new pages](#adding-new-pages)
@@ -38,7 +38,7 @@ Go to [http://localhost:9966](http://localhost:9966/) from your browser to see y
 
 1. Login to the [Harp Platform](http://harp.io/)
 2. Create a new application
-3. Choose "Blog Boilerplate" as your starting point
+3. Choose __Blog Boilerplate__ as your starting point
 4. Start your application
 5. Open and edit the files in your Dropbox
 

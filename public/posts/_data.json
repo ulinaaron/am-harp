@@ -1,10 +1,8 @@
 {
   "hello-world": {
-    "title": "Hello World Post",
-    "description": "Short version of the Hello World Post"
+    "title": "Hello World Post"
   },
   "hello-markdown": {
-    "title": "Markdown Post",
-    "description": "Short version of the Markdown Post"
+    "title": "Markdown Post"
   }
 }

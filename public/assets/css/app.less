@@ -12,7 +12,7 @@
 
 /* Layout */
 .main-content {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -29,9 +29,27 @@ a {
   }
 }
 
+.main {
+  > h2 {
+    margin-top: 50px;
+    border-top: solid 1px #f4f4f4;
+    padding-top: 40px;
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+}
+
 /* Post */
 .post {
   margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: #f4f4f4 solid 1px;
+  &:last-child {
+    border-bottom: none;
+  }
   h2, h1 {
     margin-top: 0;
   }
@@ -40,67 +58,6 @@ a {
   }
   width: 100%;
   .clearfix();
-}
-.post-meta {
-  margin-top: 0.5em;
-  float: left;
-  color: darken(#f4f4f4, 15%);
-  text-align: center;
-}
-.post-type {
-  color: darken(#f4f4f4, 8%);
-  padding: 10px 0 15px;
-  margin-bottom: .5em;
-  border-bottom: darken(#f4f4f4, 0%) solid 1px;
-}
-.post-date {
-  padding: 5px 0;
-  color: darken(#f4f4f4, 8%);
-  .month,
-  .day,
-  .year {
-    display: block;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
-  .month {
-    font-size: 18px;
-  }
-  .day {
-    font-size: 30px;
-  }
-}
-.post-content {
-}
-
-.post {
-  &.post-quote {
-    h1, h2 {
-      font-style: italic;
-    }
-    .post-content {
-      p {
-        font-style: italic;
-      }
-    }
-  }
-  &.post-image {
-    h1, h2 {
-      img {
-        border: #f4f4f4 solid 5px;
-      }
-    }
-    .post-content {
-
-    }
-  }
-  &.post-tweet {
-    .post-content {
-      h2 {
-        font-style: italic;
-      }
-    }
-  }
 }
 
 /* Sidebar/Aside */
@@ -122,12 +79,8 @@ a {
   margin: -10px 0 20px;
 }
 
-/* Footer */
-
-footer{
-  .copyright{
-    font-size: @font-size-small;
-  }
+body > footer {
+  margin-bottom: 50px;
 }
 
 

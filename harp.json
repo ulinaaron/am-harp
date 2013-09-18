@@ -2,8 +2,7 @@
   "domains": [""],
   "globals": {
     "title": "My Harp Blog",
-    "name": "Harp.io",
-    "twitter": "@harpplatform",
+    "twitter": "@HarpPlatform",
     "site_url": "http://example.com"
   }
 }

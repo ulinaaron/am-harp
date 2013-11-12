@@ -1,7 +1,7 @@
 if disqus.enabled && current.path[0] == "posts"
   hr
   #disqus_thread
-  script
+  script.
     var disqus_shortname = '#{ disqus.shortname }';
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

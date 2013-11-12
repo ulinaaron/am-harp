@@ -2,10 +2,10 @@
   "domains": [""],
   "globals": {
     "site_title": "My Harp Blog",
-    "twitter": "@HarpPlatform",
+    "twitter": "HarpPlatform",
     "site_url": "http://example.com",
     "disqus": {
-      "show": false,
+      "enabled": false,
       "shortname": ""
     }
   }

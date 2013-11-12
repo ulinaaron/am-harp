@@ -1,4 +1,4 @@
-# Harp's Blog Boilerplate
+# Harp’s Blog Boilerplate
 
 _This is a boilerplate to use with the [Harp Platform](http://harp.io/) and/or the [Harp Server](http://harpjs.com/) (a static web server with built-in pre-processing powered by NodeJS)_
 
@@ -107,28 +107,59 @@ _public/about.html:_
 
 ````
 <h1>About me</h1>
-<p>I love the fotoshapz and taking pictures of foods</p>
+<p>I love fotoshapz and taking pictures of foods</p>
 ````
 
 __3__. Your can now access your page in your browser. I.e.: `http://localhost:9966/about`
 
 ## Migrating from a WordPress blog
 
-If you're planning to move your WordPress site to Harp, I'd recommend cloning it using wget or curl:
+If you’re planning to move your WordPress site to Harp, I’d recommend cloning it using wget or curl:
 
-This one-line terminal command will create a static replica of __yourwebsite.com__ in your computer, it'll fix all the links to work locally and download all the necessary assets (images, javascript, css and other files):
+This one-line terminal command will create a static replica of __yourwebsite.com__ in your computer, it’ll fix all the links to work locally and download all the necessary assets (images, javascript, css and other files):
 
 ```
 $ wget --recursive --no-clobber --page-requisites --html-extension --convert-links yourwebsite.com
 ```
 
+## Enabling/Disabling Comments
+
+This blog boilerplate makes it really easy to enable your visitors to leave comments on your blog posts.
+
+Open the `/harp.json` file and look for the disqus section. It should look something like this:
+
+```
+...
+"disqus": {
+  "enabled": false,
+  "shortname": ""
+}
+...
+```
+
+In the disqus configuration there are two configurable keys:
+
+`enabled`: can be `true` or `false`. Make it true to display comments and false to disable them. Make sure the value is not wrapped in quotes like this `"false"`, otherwise it will still show the comments.
+
+`shortname`: this is your shortname assigned by Disqus. [Signup for Disqus](https://disqus.com/admin/signup/) and get your own shortname, then enter it as a string (with wrapping double quotes) as the shortname value.
+
+This is what it looks like when it’s enabled:
+
+```
+...
+"disqus": {
+  "enabled": true,
+  "shortname": "jorgepedret"
+}
+...
+```
+
 ## TODO
-- Integrate [discuss](http://disqus.com/) for comments
 - Create sitemap.xml for improving SEO
 
 ## Support
 
-Please [create an issue](https://github.com/harp-boilerplates/hb-blog/issues) on github's bug tracker. Feedback and bug reports are greatly appreciated.
+Please [create an issue](https://github.com/harp-boilerplates/hb-blog/issues) on github’s bug tracker. Feedback and bug reports are greatly appreciated.
 
 ## License
 

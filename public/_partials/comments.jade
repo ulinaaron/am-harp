@@ -1,10 +1,5 @@
-div(class="post post-#{ current.path[0] }")
-  .post-meta
-    h2 #{ title }
-  .post-content
-    != yield
-
-if disqus.show && current.path[0] == "posts"
+if disqus.enabled && current.path[0] == "posts"
+  hr
   #disqus_thread
   script
     var disqus_shortname = '#{ disqus.shortname }';

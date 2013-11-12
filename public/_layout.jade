@@ -1,9 +1,9 @@
 !!!
 html(lang="en")
   head
-    meta(charset='utf-8')
+    meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{ iste_title }
+    title #{ site_title }
     link(rel="stylesheet", href="/assets/css/app.css")
     link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="/rss.xml")
   body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
@@ -11,28 +11,9 @@ html(lang="en")
       .container.main-content
         .row
           .col-sm-8.main
-            if current.path[0] === "posts"
-              != partial("_post-wrapper", { yield: yield })
-            else
-              != yield
+            != yield
+            != partial("_partials/comments")
           .col-sm-offset-1.col-sm-3.aside
-            p: a(href="/"): img.aside-profile-img.aside-img(src="http://placekitten.com/g/200/200")
-            p: strong Web Engineer &amp; Designer
-            p I live in Vancouver, Canada, where I build websites for startups and small 
-            p Twitter: 
-              a(href="http://twitter.com/#{ twitter }") #{ twitter }
+            != partial("_partials/aside")
     hr
-
-    footer
-      .container
-        .row
-          .col-sm-6
-            p: small &copy; 2013 #{ site_title }
-          .col-sm-6
-            p.pull-right
-              small: a(href="/rss.xml", title="#{ site_title } RSS feed")
-                img.rss-feed(src="/assets/images/feed-icon.png")
-                |  RSS feed
-   
-    script(src="/assets/js/bootstrap.min.js")
-    script(src="/assets/js/app.js")
+    != partial("_partials/footer")

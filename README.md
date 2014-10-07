@@ -154,7 +154,7 @@ This is what it looks like when it’s enabled:
 ...
 ```
 
-## Enabling/Disabling Comments
+## Enabling/Disabling Sitemap.xml
 
 Open the `/harp.json` file and look for the sitemap section:
 
@@ -167,7 +167,7 @@ Open the `/harp.json` file and look for the sitemap section:
 ...
 ```
 
-Change "changefreq" to fit your blog needs. The final file will be live in /sitemap.xml
+Change "changefreq" to fit your blog needs. The result will be live in /sitemap.xml
 
 ## Support
 

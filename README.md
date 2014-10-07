@@ -154,8 +154,20 @@ This is what it looks like when it’s enabled:
 ...
 ```
 
-## TODO
-- Create sitemap.xml for improving SEO
+## Enabling/Disabling Comments
+
+Open the `/harp.json` file and look for the sitemap section:
+
+```
+...
+"sitemap": {
+  "enabled": true,
+  "changefreq": "daily"
+}
+...
+```
+
+Change "changefreq" to fit your blog needs. The final file will be live in /sitemap.xml
 
 ## Support
 

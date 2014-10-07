@@ -7,6 +7,10 @@
     "disqus": {
       "enabled": false,
       "shortname": ""
+    },
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily"
     }
   }
 }

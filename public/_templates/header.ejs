@@ -1,0 +1,19 @@
+<header id="header" class="header">
+	<div class="container">
+		<div id="header-title" class="header-title header-group">
+			<h1 class="site-title align-center">
+				<a href="<%- site_url %>" id="logo"><%= site_title %></a>
+			</h1>
+		</div>
+		<div id="header-menu" class="header-menu header-group">
+			<a id="main-nav-toggle" class="nav-icon"></a>
+			<ul class="navigation-list">
+				<% for (var i in menu) { %>
+				<li>
+					<a class="main-nav-link" href="<%- menu[i] %>"><%= i %></a>
+				</li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+</header>

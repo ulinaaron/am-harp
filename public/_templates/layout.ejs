@@ -1,0 +1,16 @@
+<%- partial('_templates/head') %>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <%- partial('__templates/header') %>
+      <div class="outer">
+        <section id="main">
+           <%- yield %>
+        </section>
+      </div>
+      <%- partial('_templates/footer') %>
+    </div>
+    <%- partial('_templates/foot') %>
+  </div>
+</body>
+</html>

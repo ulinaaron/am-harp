@@ -1,0 +1,12 @@
+<%- partial('_templates/head') %>
+<body>
+  <%- partial('_templates/header') %>
+  <div id="container" class="container">
+    <section id="main" class="main">
+       <%- yield %>
+    </section>
+  </div>
+  <%- partial('_templates/footer') %>
+  <%- partial('_templates/foot') %>
+</body>
+</html>

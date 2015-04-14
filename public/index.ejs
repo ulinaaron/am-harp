@@ -1,0 +1,56 @@
+<%- partial('_templates/head') %>
+<body>
+	<%- partial('_templates/header') %>
+
+	<div class="introduction">
+		<div class="container">
+			<h5 class="introduction-subtitle align-center">Hi there, I am</h5>
+			<h4 class="introduction-title align-center">Aaron Mazade!</h4>
+			<div class="introduction-title-border align-center"></div>
+			<p class="lead narrow align-center">
+				I'm a man of many titles and even more so of talents. You can call me a Front-End Developer, a web designer, a user experience aficionado, or just a stand up guy. I hail from Muskegon, MI, where I concoct my eccentric plans of wold domination.
+			</p>
+			<p class="lead narrow align-center">
+				Outside of my creative endeavors I enjoy disc golfing and bowling with friends.
+			</p>
+		</div>
+	</div> <!-- /.introduction -->
+
+	<div class="talents">
+		<div class="group skills">
+			<div class="narrow">
+				<h3 class="group-title">Technical Abilities</h3>
+
+				<ul class="skill-list">
+					<li>CSS / Sass / Stylus</li>
+					<li>Front-End Task Processing (Gulp)</li>
+					<li>Responsive Web Design (RWD)</li>
+					<li>Wordpress</li>
+					<li>Static Site Generation</li>
+					<li>Wireframes &amp; Mockups</li>
+				</ul>
+			</div>
+		</div>
+		<div class="group accolades">
+			<div class="narrow">
+				<h3 class="group-title">Accomplishments</h3> 
+
+				<ul class="accolade-list">
+					<li>2015 Silver Addy with Revel</li>
+					<li>Talk on using Gulp as a static site generator GRWebDev Meetup</li>
+					<li>November 2013 Awwwards Nominee (LongerDays)</li>
+					<li>2X GiveCamp GR Volunteer</li>
+				</ul>   
+			</div>
+		</div>
+	</div> <!-- /.talents -->
+
+	<div class="work">
+		<h3 class="group-title align-center">Work that I have done</h3>
+		<%- partial('_templates/loop-portfolio', {type: 'grid'}) %>
+	</div>
+
+	<%- partial('_templates/footer') %>
+	<%- partial('_templates/foot') %>
+</body>
+</html>

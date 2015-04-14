@@ -1,9 +1,11 @@
 {
   "domains": [""],
   "globals": {
-    "site_title": "My Harp Blog",
-    "twitter": "HarpPlatform",
-    "site_url": "http://example.com",
+    "site_title": "Aaron Mazade",
+    "copyright": "Aaron Mazade 2011-2015",
+    "twitter": "ulinaaron",
+    "site_url": "http://aaronmazade.com",
+    "google_analytics": "",
     "disqus": {
       "enabled": false,
       "shortname": ""
@@ -11,6 +13,11 @@
     "sitemap": {
       "enabled": true,
       "changefreq": "daily"
+    },
+    "menu": {
+      "About": "/about",
+      "Blog": "/blog",
+      "Contact": "/contact"
     }
   }
 }

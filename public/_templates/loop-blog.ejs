@@ -1,0 +1,14 @@
+<% function excerpt(content) {
+  if(content.indexOf("<!-- more -->") == -1) return content;
+  else return content.split("<!-- more -->")[0]; 
+} %>
+
+<% for(var slug in public.posts._data){ %>
+	<div class="article-block">
+		<h2 class="entry-title"><a href="/posts/<%= slug %>"><%= public.posts._data[slug].title %></a></h2>
+		<div class="entry-meta">
+    		Published on <%= public.posts._data.date %>
+    	</div>
+		<%- excerpt(partial("../posts/" + slug)) %>
+	</div>
+<% }; %>

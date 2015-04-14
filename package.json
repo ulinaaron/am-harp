@@ -1,0 +1,14 @@
+{
+  "name": "AaronMazade.com",
+  "version": "0.0.1",
+  "description": "The dependencies needed to run Harp for AaronMazade.com",
+  "private": true,
+  "main": "gulpfile.js",
+  "author": "Aaorn Mazade",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "harp": "^0.13.0",
+    "browser-sync": "^1.3.5"
+  }
+}

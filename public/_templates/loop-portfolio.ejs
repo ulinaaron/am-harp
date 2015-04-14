@@ -1,0 +1,15 @@
+<% if (type == "grid") { %>
+	<div class="work-group">
+		<% for(var slug in public.work._data){ %>
+			<div class="work-item">
+				<a href="/work/<%= slug %>"><%= public.work._data[slug].title %></a>
+			</div>
+		<% }; %>
+	</div>
+<% } else { %>
+
+	<% for(var slug in public.work._data){ %>
+		<h2><a href="/work/<%= slug %>"><%= public.work._data[slug].title %></a></h2>
+	<% }; %>
+
+<% } %>

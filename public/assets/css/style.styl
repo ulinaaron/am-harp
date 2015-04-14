@@ -1,0 +1,381 @@
+@import "_vendor/nib"
+@import "_vendor/jeet"
+@import "_vendor/axis"
+@import "_functions"
+@import "_variables"
+
+normalize-css()
+
+/**
+ * Global
+ */
+ 
+ html
+ 	font-size 100%
+ 	
+*
+	box-sizing(border-box)
+ 	
+.narrow
+	center(650px)
+	padding 0 20px
+	
+	@media device-medium
+		padding 0
+ 	
+/**
+ * Typography
+ */
+ 
+body
+	fs 1rem
+	font-family font-secondary
+	color color-dark
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family font-primary
+	color color-dark
+
+h1
+	h1()
+
+h2
+	h2()
+	
+h3
+	h3()
+	
+h4 
+	h4()
+
+h5
+	h5()
+	
+h6
+	h6()
+	
+.group-title
+	font-weight 300
+	
+p
+	paragraph 1rem
+
+.lead
+	font-weight 300
+	
+a
+	link()
+	
+blockquote
+	blockquote(color-light)
+	
+/**
+ * Grid
+ */
+ 
+.container
+	center(1100px)
+	cf()
+
+.header-title
+	col(1)
+	
+	@media device-medium
+		col(2/5)
+
+.header-menu
+	col(1)
+	
+	@media device-medium
+		col(3/5)
+		
+.talents,
+.footer
+	
+	.narrow
+		
+		@media device-medium
+			center(300px)
+			
+		@media device-large
+			center(400px)
+
+/**
+ * Buttons
+ */
+ 
+button,
+.button
+	button color-darker 20 white
+	text-transform uppercase
+	font-weight 300
+		
+/**
+ * Structure
+ */
+ 
+.group
+	col(1)
+	padding 40px 0
+	
+	@media device-medium
+		col(1/2, gutter: 0)
+		padding 80px 0
+		
+/**
+ * Contact Form
+ */
+
+.contact-form
+	cf()
+	
+	input[type="email"],
+	input[type="text"],
+	textarea
+		background-color color-medium
+		border 0
+		padding 10px
+		set-placeholder-style(color, color-lightest)
+
+	textarea
+		field(100%)
+		resize none
+		
+	input,
+	textarea,
+	button
+		stack()
+		margin-bottom 20px
+		
+	button
+		width 100%
+		
+		@media device-medium
+			width 50%
+		
+/**
+ * Header
+ */
+
+.header
+	padding 20px 20px 40px
+	
+	@media device-medium
+		padding 20px 0
+	
+.site-title
+	fs 2rem
+	margin 0 0 20px
+	padding 0
+	font-weight 300
+	
+	a
+		color color-medium
+		
+	@media device-medium
+		margin 0
+		
+.site-title.align-center
+	
+	@media device-medium
+		text-align left
+		
+/**
+ * Header Navigation
+ */
+ 
+.header-menu
+	position relative
+ 	
+	a
+ 		color color-darker
+ 
+.navigation-list
+	align()
+	inline-list()
+	
+	@media device-medium
+		align(vertical)
+		right 0
+
+	
+/**
+ * Home
+ */
+ 
+.introduction
+	background-color color-darker
+	color color-light
+	padding 40px 0
+	
+	@media device-medium
+		padding 80px 0
+
+.introduction-title
+	fs: 3rem
+	font-weight 500
+	color color-lightest
+	margin 0
+
+
+.introduction-subtitle
+	fs 3rem
+	font-weight 300
+	color color-lightest
+	margin 0
+	
+.introduction-title-border
+	border-bottom 2px dashed color-medium
+	center(100px)
+	margin-bottom 40px
+	
+.talents
+	color color-lighter
+	cf()
+	
+	.group-title
+		color color-lighter
+		
+.accolades
+	background-color color-dark
+
+.skills
+	background-color color-medium
+	
+	.narrow
+		
+		@media device-medium
+			text-align right
+			
+.skill-list
+	direction ltr
+	
+	@media device-medium
+		direction rtl
+	
+.skill-list,
+.accolade-list
+	ul disc
+	margin 0
+	padding 0 20px
+	
+	@media device-medium
+		padding 0
+	
+.work
+	padding 40px 0
+	
+	@media device-medium
+	
+		padding 80px 0
+		
+/**
+ * Footer
+ */
+
+.footer
+	background-color color-primary
+	color: color-lightest
+	fs 1rem
+	
+	.contact
+		background-color color-dark
+		
+	.social
+		background-color color-medium
+		
+.copyright
+	font-weight 300
+	margin-top 60px
+	
+.social,
+.contact
+	.group-title
+		color color-lightest
+		
+	a
+		color color-light
+	
+.social-list
+	reset-list()
+	
+/**
+ * Main
+ */
+ 
+.main
+	padding 0 20px
+	
+	@media device-medium
+		padding 20px 0 60px
+	
+/**
+ * Articles
+ */
+ 
+.article-block
+	border-bottom 4px solid color-primary
+	background-color color-lightest
+	padding 20px
+	margin-bottom 20px
+	
+	.entry-title
+		margin 0
+	
+	.entry-title a
+		color color-secondary
+		font-weight 500
+		
+		&:hover
+			border-bottom 0
+
+/**
+ * Article
+ */
+ 
+.article-container
+	center(800px)
+	
+.article-entry
+
+	.entry-title
+		color color-darker
+		font-weight 500
+		margin-bottom 0
+ 
+.article-entry p
+	fs: 1.2rem
+	font-weight 300
+	
+/**
+ * Work Group
+ */
+ 
+.work-group
+	cf()
+
+.work-item
+	col(.5, cycle: 2, uncycle: 2)
+		
+	@media device-medium
+		col(.25, cycle: 4 , uncycle: 2, gutter: 4)
+		
+	a
+		area()
+		display block
+		width 100%
+		
+		&:hover
+			border-bottom 0
+			text-decoration none
+			
+@css {
+	.align-center {
+		text-align: center;
+	}
+}

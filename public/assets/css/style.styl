@@ -69,7 +69,10 @@ p
 	font-weight 300
 	
 a
-	link()
+	link color-primary none
+	
+	&:hover
+		border 0
 	
 blockquote
 	blockquote(color-light)
@@ -122,7 +125,9 @@ blockquote
  
 button,
 .button
-	button color-darker 20 white
+	button color-darker 20 color-light
+	background-color transparent
+	border 4px solid color-light
 	font-family font-primary
 	font-weight 300
 	border-radius 0
@@ -132,9 +137,23 @@ button,
 	box-shadow none
 	
 	&:hover
-		background-color color-darkest
-		border 0
+		background-color color-light
+		color color-darker
 		text-decoration none
+		
+.read-more
+	button color-darker 12 color-medium
+	background-color transparent
+	border-radius 0
+	border 2px solid color-medium
+	
+	&:hover
+		border 2px solid color-medium
+		background-color color-medium
+		color color-light
+	
+	@media device-medium
+		float right
 		
 /**
  * Structure
@@ -160,10 +179,13 @@ button,
 	textarea
 		background-color color-medium
 		border 0
+		border-radius 0
 		padding 10px
 		set-placeholder-style(color, color-lightest)
-		set-placeholder-style('text-align', right)
 		transition background-color .5s ease-in-quart
+		
+		@media device-medium
+			set-placeholder-style('text-align', right)
 		
 		&:focus
 			outline none
@@ -193,19 +215,19 @@ button,
  */
 
 .header
-	padding 20px 20px 40px
+	padding 20px
 	
 	@media device-medium
 		padding 20px 0
 	
 .site-title
 	fs 2rem
-	margin 0 0 20px
+	margin 0
 	padding 0
 	font-weight 300
 	
 	a
-		color color-medium
+		color color-darkest
 		
 	@media device-medium
 		margin 0
@@ -222,26 +244,47 @@ button,
 .header-menu
 	position relative
  	
-	a
- 		color color-darker
- 
 .navigation-list
-	align()
 	inline-list()
+	font-family font-primary
 	
 	@media device-medium
 		align(vertical)
 		right 0
+		left auto
+		
+	a
+ 		color color-darker
+ 		font-weight 100
+ 		
+ 	.active a
+ 		border-bottom 1px solid color-darker
 
+/**
+ * Display for menus
+ */
+ 
+#navigation
+	display none
+	
+	@media device-medium
+		display block
+		
+.slicknav_menu
+	display block
+	
+	@media device-medium
+		display none
 	
 /**
  * Home
  */
  
 .introduction
-	background-color color-darker
+	background-color color-darkest
 	color color-light
 	padding 40px 0
+	position relative
 	
 	@media device-medium
 		padding 80px 0
@@ -270,12 +313,22 @@ button,
 	
 	.group-title
 		color color-lighter
+		inline-block()
+		padding 5px 20px
 		
 .accolades
 	background-color color-dark
+	
+	.group-title
+		border-left 4px solid color-medium
+		background-color color-darker
 
 .skills
-	background-color color-medium
+	background-color color-darker
+	
+	.group-title
+		border-right 4px solid color-medium
+		background-color color-dark
 	
 	.narrow
 		
@@ -306,10 +359,12 @@ button,
 	
 	.contact
 		background-color color-dark
-		text-align right
+		
+		@media device-medium
+			text-align right
 		
 	.social
-		background-color color-medium
+		background-color color-darker
 		
 .copyright
 	font-weight 300
@@ -339,10 +394,11 @@ button,
  */
  
 .article-block
-	border-bottom 4px solid color-primary
+	border-bottom 4px solid color-medium
 	background-color color-lightest
 	padding 20px
 	margin-bottom 20px
+	cf()
 	
 	.entry-title
 		margin 0
@@ -351,9 +407,6 @@ button,
 		color color-dark
 		font-weight 900
 		
-		&:hover
-			border-bottom 0
-
 /**
  * Article
  */
@@ -389,13 +442,12 @@ button,
 		area()
 		display block
 		width 100%
-		
-		&:hover
-			border-bottom 0
-			text-decoration none
 			
 @css {
 	.align-center {
 		text-align: center;
 	}
 }
+
+@import "_vendor/slicknav"
+@import "_vendor/animate"

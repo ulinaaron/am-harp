@@ -2,14 +2,13 @@
 	<div class="container">
 		<div id="header-title" class="header-title header-group">
 			<h1 class="site-title align-center">
-				<a href="<%- site_url %>" id="logo"><%= site_title %></a>
+				<a href="<%= env_root %>/" id="logo"><%= site_title %></a>
 			</h1>
 		</div>
 		<div id="header-menu" class="header-menu header-group">
-			<a id="main-nav-toggle" class="nav-icon"></a>
-			<ul class="navigation-list">
+			<ul id="navigation" class="navigation-list">
 				<% for (var i in menu) { %>
-				<li>
+				<li <%- current.source == menu[i] ? 'class="active"' : '' %>>
 					<a class="main-nav-link" href="<%= env_root %><%= menu[i] %>"><%= i %></a>
 				</li>
 				<% } %>

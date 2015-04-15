@@ -16,9 +16,10 @@
       "changefreq": "daily"
     },
     "menu": {
-      "About": "/about",
+      "Home": "/",
+      "About": "/index#introduction",
       "Blog": "/blog",
-      "Contact": "/contact"
+      "Contact": "/index#footer"
     }
   }
 }

@@ -10,5 +10,6 @@
     		Published on <%= public.posts._data.date %>
     	</div>
 		<%- excerpt(partial("../posts/" + slug)) %>
+		<a class="button read-more" href="/posts/<%= slug %>">Read More</a>
 	</div>
 <% }; %>

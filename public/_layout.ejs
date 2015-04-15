@@ -1,12 +1,18 @@
-<%- partial('_templates/head') %>
+<% if (environment == "development") { 
+  var env_set = ""
+} else {
+  var env_set = root
+} %>
+
+<%- partial('_templates/head', {env_root: env_set}) %>
 <body>
-  <%- partial('_templates/header') %>
+  <%- partial('_templates/header', {env_root: env_set}) %>
   <div id="container" class="container">
     <section id="main" class="main">
        <%- yield %>
     </section>
   </div>
-  <%- partial('_templates/footer') %>
-  <%- partial('_templates/foot') %>
+  <%- partial('_templates/footer', {env_root: env_set}) %>
+  <%- partial('_templates/foot', {env_root: env_set}) %>
 </body>
 </html>

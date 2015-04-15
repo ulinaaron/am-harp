@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var harp        = require('harp');
+var deploy     = require('gulp-gh-pages');
 
 /**
  * Serve the Harp Site from the src directory
@@ -31,6 +32,11 @@ gulp.task('serve', function () {
       reload();
     });
   });
+});
+
+gulp.task('deploy', function() {
+  gulp.src('www/**/*')
+  .pipe(deploy());
 });
 
 /**

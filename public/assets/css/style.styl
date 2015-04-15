@@ -74,6 +74,17 @@ a
 blockquote
 	blockquote(color-light)
 	
+	
+.skill-list,
+.accolade-list,
+.social-list
+	ul circle
+	margin 0
+	padding 0 20px
+	
+	@media device-medium
+		padding 0
+	
 /**
  * Grid
  */
@@ -112,8 +123,18 @@ blockquote
 button,
 .button
 	button color-darker 20 white
-	text-transform uppercase
+	font-family font-primary
 	font-weight 300
+	border-radius 0
+	position relative
+	transition all .5s ease-in-quart
+	outline none
+	box-shadow none
+	
+	&:hover
+		background-color color-darkest
+		border 0
+		text-decoration none
 		
 /**
  * Structure
@@ -141,9 +162,16 @@ button,
 		border 0
 		padding 10px
 		set-placeholder-style(color, color-lightest)
+		set-placeholder-style('text-align', right)
+		transition background-color .5s ease-in-quart
+		
+		&:focus
+			outline none
+			background-color color-darker
 
 	textarea
 		field(100%)
+		height: 200px
 		resize none
 		
 	input,
@@ -154,6 +182,8 @@ button,
 		
 	button
 		width 100%
+		float right
+		text-align right
 		
 		@media device-medium
 			width 50%
@@ -258,15 +288,6 @@ button,
 	@media device-medium
 		direction rtl
 	
-.skill-list,
-.accolade-list
-	ul disc
-	margin 0
-	padding 0 20px
-	
-	@media device-medium
-		padding 0
-	
 .work
 	padding 40px 0
 	
@@ -285,6 +306,7 @@ button,
 	
 	.contact
 		background-color color-dark
+		text-align right
 		
 	.social
 		background-color color-medium
@@ -300,10 +322,8 @@ button,
 		
 	a
 		color color-light
-	
-.social-list
-	reset-list()
-	
+
+
 /**
  * Main
  */
@@ -328,8 +348,8 @@ button,
 		margin 0
 	
 	.entry-title a
-		color color-secondary
-		font-weight 500
+		color color-dark
+		font-weight 900
 		
 		&:hover
 			border-bottom 0
@@ -344,8 +364,8 @@ button,
 .article-entry
 
 	.entry-title
-		color color-darker
-		font-weight 500
+		color color-dark
+		font-weight 900
 		margin-bottom 0
  
 .article-entry p

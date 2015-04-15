@@ -10,6 +10,9 @@
 		"title": "Styleguide",
 		"description": "A guide for the site styles"
 	},
+	"404": {
+		"title": "404"
+	},
 	"rss": {
 		"layout": false
 	},

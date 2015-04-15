@@ -10,7 +10,7 @@
 			<ul class="navigation-list">
 				<% for (var i in menu) { %>
 				<li>
-					<a class="main-nav-link" href="<%- menu[i] %>"><%= i %></a>
+					<a class="main-nav-link" href="<%= env_root %><%= menu[i] %>"><%= i %></a>
 				</li>
 				<% } %>
 			</ul>

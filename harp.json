@@ -5,6 +5,7 @@
     "copyright": "Aaron Mazade 2011-2015",
     "twitter": "ulinaaron",
     "site_url": "http://aaronmazade.com",
+    "root": "/am-harp",
     "google_analytics": "",
     "disqus": {
       "enabled": false,

@@ -66,6 +66,7 @@ p
 	paragraph 1rem
 
 .lead
+	fs 1.1rem
 	font-weight 300
 	
 a
@@ -290,7 +291,7 @@ button,
 		padding 80px 0
 
 .introduction-title
-	fs: 3rem
+	fs 3rem
 	font-weight 500
 	color color-lightest
 	margin 0
@@ -336,10 +337,33 @@ button,
 			text-align right
 			
 .skill-list
+	list-style-type none
 	direction ltr
 	
+	.skill-row
+		position relative
+		cf()
+		
+.skill-title
+	fs .9rem
+	font-family font-secondary
+	color color-lightest
+	font-weight 300
+	text-transform none
+	margin 0 0 10px
+	position relative
+
+	
 	@media device-medium
-		direction rtl
+		text-align right
+		column(3/5)
+		margin-bottom 0
+
+.skill-list .progress
+	position relative
+	
+	@media device-medium
+		column(2/5)
 	
 .work
 	padding 40px 0
@@ -347,6 +371,15 @@ button,
 	@media device-medium
 	
 		padding 80px 0
+		
+	.group-title
+		background-color color-primary
+		color color-lightest
+		padding 5px 20px
+		inline-block()
+		margin 0 auto
+		border-left 5px solid color-medium
+		border-right 5px solid color-medium
 		
 /**
  * Footer
@@ -369,6 +402,11 @@ button,
 .copyright
 	font-weight 300
 	margin-top 60px
+	color color-medium
+	
+.colophon
+	fs .8rem
+	color color-medium
 	
 .social,
 .contact
@@ -432,16 +470,34 @@ button,
 .work-group
 	cf()
 
+.work-item-title
+	color color-dark
+	padding 20px
+	width 100%
+	margin 0
+	font-weight 300
+	fs 1.4rem
+@css {
+	.work-item-title {
+		text-align: center;
+	}
+}
+
 .work-item
-	col(.5, cycle: 2, uncycle: 2)
+	position relative
+	col(.5, cycle: 2, uncycle: 2, gutter: 0)
 		
 	@media device-medium
-		col(.25, cycle: 4 , uncycle: 2, gutter: 4)
+		col(.25, cycle: 4 , uncycle: 2, gutter: 0)
 		
 	a
-		area()
 		display block
 		width 100%
+		height inherit
+		padding-bottom: 100%
+		background-size cover
+		background-position 50%
+		
 			
 @css {
 	.align-center {
@@ -450,4 +506,4 @@ button,
 }
 
 @import "_vendor/slicknav"
-@import "_vendor/animate"
+@import "_modules/progress-bars"

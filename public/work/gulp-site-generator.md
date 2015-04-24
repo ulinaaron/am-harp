@@ -1,0 +1,3 @@
+This is a personal project that spawned out of necessity. I had been working on small open source projects that required landing pages and documentation. I had wanted to embed the website within the project repository in case others desired to manipulate or study the process. 
+
+Thus I created a wrapper around the Gulp Task Runner for compiling HTML, Sass, Javascript, and other front-end dependencies.

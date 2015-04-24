@@ -1,0 +1,10 @@
+  <div id="container" class="article-container">
+    <section id="main" class="article-entry main">
+    	<h1 class="entry-title"><%= title %></h1>
+    	<%- yield %>
+
+    	<% if (public._data.url) { %>
+			<a href="<%= url %>" class="button">Go to project</a>
+    	<% } %>
+    </section>
+  </div>

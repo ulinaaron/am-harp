@@ -2,7 +2,11 @@
 	<div class="work-group">
 		<% for(var slug in public.work._data){ %>
 			<div class="work-item">
-				<a href="/work/<%= slug %>"><%= public.work._data[slug].title %></a>
+				<h5 class="work-item-title">
+					<%= public.work._data[slug].title %>
+				</h5>
+				<a href="/work/<%= slug %>" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].title %>.png');">
+				</a>
 			</div>
 		<% }; %>
 	</div>

@@ -31,6 +31,11 @@ body
 	fs 1rem
 	font-family font-secondary
 	color color-dark
+	background-color color-lightest
+	
+	.about &
+		background-color color-warning
+		color color-light
 
 h1,
 h2,
@@ -40,6 +45,9 @@ h5,
 h6
 	font-family font-primary
 	color color-dark
+	
+	.about &
+		color color-light
 
 h1
 	h1()
@@ -66,7 +74,7 @@ p
 	paragraph 1rem
 
 .lead
-	fs 1.1rem
+	fs 1.2rem
 	font-weight 300
 	
 a
@@ -77,6 +85,10 @@ a
 	
 blockquote
 	blockquote(color-light)
+	
+.align-image-center
+	margin 0 auto
+	display block
 	
 	
 .skill-list,
@@ -143,14 +155,15 @@ button,
 		text-decoration none
 		
 .read-more
-	button color-darker 12 color-medium
+	button color-darker 12 color-dark
 	background-color transparent
 	border-radius 0
-	border 2px solid color-medium
+	border 2px solid color-dark
+	font-weight 300
 	
 	&:hover
-		border 2px solid color-medium
-		background-color color-medium
+		border 2px solid color-dark
+		background-color color-dark
 		color color-light
 	
 	@media device-medium
@@ -168,6 +181,15 @@ button,
 		col(1/2, gutter: 0)
 		padding 80px 0
 		
+.skills,
+.accolades
+	
+	&.group
+		padding 60px 0 40px
+		
+		@media device-medium
+			padding 120px 0 100px
+		
 /**
  * Contact Form
  */
@@ -178,7 +200,7 @@ button,
 	input[type="email"],
 	input[type="text"],
 	textarea
-		background-color color-medium
+		background-color color-darker
 		border 0
 		border-radius 0
 		padding 10px
@@ -190,7 +212,7 @@ button,
 		
 		&:focus
 			outline none
-			background-color color-darker
+			background-color color-dark
 
 	textarea
 		field(100%)
@@ -217,18 +239,37 @@ button,
 
 .header
 	padding 20px
+	background-color color-info
+	
+	.index &
+		background-color color-darkest
+		
+	.about &
+		background-color color-darkest
 	
 	@media device-medium
 		padding 20px 0
 	
 .site-title
+	position relative
 	fs 2rem
 	margin 0
 	padding 0
 	font-weight 300
 	
 	a
-		color color-darkest
+		color color-lightest
+		
+		.index &,
+		.about &
+			color color-info
+		
+		&:hover
+			color color-darkest
+			
+			.index &,
+			.about &
+				color color-lightest
 		
 	@media device-medium
 		margin 0
@@ -246,7 +287,7 @@ button,
 	position relative
  	
 .navigation-list
-	inline-list()
+	inline-list(5px)
 	font-family font-primary
 	
 	@media device-medium
@@ -255,11 +296,32 @@ button,
 		left auto
 		
 	a
- 		color color-darker
+ 		color color-lightest
  		font-weight 100
+ 		padding 5px 12px
+ 		border 2px solid transparent
+ 		transition all .5s ease-in-quart
+ 		
+ 		.index &,
+ 		.about &
+ 			color color-info
+ 		
+ 		&:hover
+ 			color color-darkest
+ 			border-color color-darkest
+ 			
+ 			.index &,
+ 			.about &
+ 				color color-lightest
+ 				border-color color-lightest
  		
  	.active a
- 		border-bottom 1px solid color-darker
+ 		border-color color-darkest
+ 		color color-darkest
+ 		
+ 		&:hover
+ 			background-color color-darkest
+ 			color color-light
 
 /**
  * Display for menus
@@ -281,14 +343,30 @@ button,
  * Home
  */
  
+ .avatar
+ 	position relative
+ 	background-image url('../images/avatar_round.png')
+ 	background-repeat no-repeat
+ 	width 100px
+ 	height 100px
+ 	bottom -50px
+ 	display none
+ 	margin 0 auto
+ 	
+ 	@media device-medium
+ 		display block
+ 	
+ 
 .introduction
 	background-color color-darkest
-	color color-light
-	padding 40px 0
+	color color-medium
 	position relative
 	
-	@media device-medium
-		padding 80px 0
+	.container
+		padding 40px 0
+	
+		@media device-medium
+			padding 80px 0 40px
 
 .introduction-title
 	fs 3rem
@@ -318,18 +396,16 @@ button,
 		padding 5px 20px
 		
 .accolades
-	background-color color-dark
+	background-color lighten(color-darker, 3)
 	
 	.group-title
-		border-left 4px solid color-medium
-		background-color color-darker
+		background-color color-darkest
 
 .skills
-	background-color color-darker
+	background-color darken(color-darker, 3)
 	
 	.group-title
-		border-right 4px solid color-medium
-		background-color color-dark
+		background-color color-darkest
 	
 	.narrow
 		
@@ -373,13 +449,11 @@ button,
 		padding 80px 0
 		
 	.group-title
-		background-color color-primary
+		background-color color-dark
 		color color-lightest
 		padding 5px 20px
 		inline-block()
 		margin 0 auto
-		border-left 5px solid color-medium
-		border-right 5px solid color-medium
 		
 /**
  * Footer
@@ -391,22 +465,22 @@ button,
 	fs 1rem
 	
 	.contact
-		background-color color-dark
+		background-color darken(color-darkest, 2)
 		
 		@media device-medium
 			text-align right
 		
 	.social
-		background-color color-darker
+		background-color lighten(color-darkest, 2)
 		
 .copyright
 	font-weight 300
 	margin-top 60px
-	color color-medium
+	color color-light
 	
 .colophon
 	fs .8rem
-	color color-medium
+	color darken(color-light, 25)
 	
 .social,
 .contact
@@ -414,7 +488,10 @@ button,
 		color color-lightest
 		
 	a
-		color color-light
+		color color-lighter
+		
+		&:hover
+			color color-success
 
 
 /**
@@ -433,7 +510,7 @@ button,
  
 .article-block
 	border-bottom 4px solid color-medium
-	background-color color-lightest
+	background-color color-lighter
 	padding 20px
 	margin-bottom 20px
 	cf()
@@ -495,6 +572,7 @@ button,
 		width 100%
 		height inherit
 		padding-bottom: 100%
+		background-color #FFF
 		background-size cover
 		background-position 50%
 		

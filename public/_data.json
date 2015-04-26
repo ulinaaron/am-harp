@@ -6,6 +6,9 @@
 	"blog": {
 		"title": "Blog"
 	},
+	"about": {
+		"title": "About"
+	},
 	"styleguide": {
 		"title": "Styleguide",
 		"description": "A guide for the site styles"

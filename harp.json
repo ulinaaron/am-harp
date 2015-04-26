@@ -17,8 +17,8 @@
     },
     "menu": {
       "Home": "/",
-      "About": "/index#introduction",
-      "Blog": "/blog",
+      "About": "/about",
+      "Blog": "blog",
       "Contact": "/index#footer"
     }
   }

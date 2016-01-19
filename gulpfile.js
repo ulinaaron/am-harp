@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var harp        = require('harp');
-var deploy     = require('gulp-gh-pages');
+var deploy      = require('gulp-gh-pages');
 
 /**
  * Serve the Harp Site from the src directory
@@ -20,7 +20,7 @@ gulp.task('serve', function () {
       }
     });
     /**
-     * Watch for scss changes, tell BrowserSync to refresh main.css
+     * Watch for stylus changes, tell BrowserSync to refresh main.css
      */
     gulp.watch("**/*.styl", function () {
       reload("public/assets/css/style.css", {stream: true});

@@ -2,7 +2,7 @@
   "domains": [""],
   "globals": {
     "site_title": "Aaron Mazade",
-    "copyright": "Aaron Mazade 2011-2015",
+    "copyright": "Aaron Mazade 2011-2016",
     "twitter": "ulinaaron",
     "site_url": "http://aaronmazade.com",
     "root": "/am-harp",
@@ -16,10 +16,9 @@
       "changefreq": "daily"
     },
     "menu": {
-      "Home": "/",
+      "Work": "/work",
       "About": "/about",
-      "Blog": "blog",
-      "Contact": "/index#footer"
+      "Contact": "/contact"
     }
   }
 }

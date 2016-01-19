@@ -6,6 +6,10 @@
 	"blog": {
 		"title": "Blog"
 	},
+    "contact": {
+        "title": "Contact",
+        "layout": false
+    },
 	"about": {
 		"title": "About"
 	},

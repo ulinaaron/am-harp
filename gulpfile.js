@@ -35,7 +35,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('deploy', function() {
-  gulp.src('www/**/*')
+  gulp.src('./www/**/*')
   .pipe(deploy());
 });
 

@@ -241,9 +241,8 @@ button,
 	padding 20px
 	background-color color-info
 	
-	.index &
-		background-color color-darkest
-		
+	.index &,
+    .contact &,
 	.about &
 		background-color color-darkest
 	
@@ -261,14 +260,16 @@ button,
 		color color-lightest
 		
 		.index &,
-		.about &
+		.about &,
+        .contact &
 			color color-info
 		
 		&:hover
 			color color-darkest
 			
 			.index &,
-			.about &
+			.about &,
+            .contact &
 				color color-lightest
 		
 	@media device-medium
@@ -303,7 +304,8 @@ button,
  		transition all .5s ease-in-quart
  		
  		.index &,
- 		.about &
+        .about &,
+        .contact &
  			color color-info
  		
  		&:hover
@@ -311,7 +313,8 @@ button,
  			border-color color-darkest
  			
  			.index &,
- 			.about &
+			.about &,
+            .contact &
  				color color-lightest
  				border-color color-lightest
  		
@@ -479,8 +482,11 @@ button,
 	color color-light
 	
 .colophon
-	fs .8rem
+	fs 0.8rem
 	color darken(color-light, 25)
+
+.colophon
+    margin-top 40px
 	
 .social,
 .contact

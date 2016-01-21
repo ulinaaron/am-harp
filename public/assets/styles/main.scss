@@ -26,6 +26,10 @@
 	@media #{$device-medium} {
 		padding: 0;
     }
+    
+    &.extra {
+        @include j-center(400px);
+    }
 }
  	
 /**
@@ -33,10 +37,14 @@
  */
  
 body {
-	font-size: rem(16);
+	font-size: rem(18);
 	font-family: $font-secondary;
-    background-color: $color-light;
+    background-color: $color-lightest;
     color: $color-dark;
+    
+    @media #{$device-medium} {
+		padding: 10px;
+    }
 }
 
 h1,
@@ -111,6 +119,13 @@ blockquote {
 	margin: 0;
 	padding: 0 20px;
     color: $color-light;
+    
+    &.plain {
+       @include ul('none'); 
+       padding: 0;
+       margin: 0;
+    }
+ 
 	
 	@media #{$device-medium} {
 		padding: 0;
@@ -213,6 +228,10 @@ button,
 		@include j-column(1/2, $gutter: 0);
 		padding: 80px 0;
     }
+    
+   &.full-span {
+       @include j-column(1);
+   }
 }
 		
 .skills,
@@ -238,6 +257,7 @@ button,
 	input[type="text"],
 	textarea {
 		background-color: $color-darker;
+        color: $color-light;
 		border: 0;
 		border-radius: 0;
 		padding: 10px;
@@ -246,6 +266,10 @@ button,
 		
 		@media #{$device-medium} {
 			@include set-placeholder-style('text-align', right);
+            
+            .contact & {
+                @include set-placeholder-style('text-align', left);
+            }
         }
 		
 		&:focus {
@@ -566,6 +590,22 @@ button,
 		margin: 0 auto;
     }
 }
+
+/**
+ * Sections
+ */
+ 
+.contact-section {
+    background-color: lighten($color-darkest, 2);
+    
+    @media #{$device-medium} {
+        text-align: right;
+    }
+}
+
+.social-section {
+    background-color: $color-darkest;
+}
 		
 /**
  * Footer
@@ -575,18 +615,6 @@ button,
 	background-color: $color-primary;
 	color: $color-lightest;
     font-size: rem(16);
-	
-	.contact-section {
-		background-color: lighten($color-darkest, 2);
-		
-		@media #{$device-medium} {
-			text-align: right;
-        }
-    }
-
-	.social-section {
-		background-color: $color-darkest;
-    }
 }
 
 .copyright {
@@ -602,7 +630,12 @@ button,
     
     @media #{$device-medium} {
 	   margin-left: -20px;
+       
+       .contact & {
+           margin-left: 0;
+       }
     }
+    
 }
 	
 .social-section,
@@ -630,6 +663,18 @@ button,
 	@media #{$device-medium} {
 		padding: 20px 0 60px;
     }
+}
+
+/**
+ * Pages
+ */
+
+.page-title {
+    font-weight: 400;
+}
+
+.about-feature {
+    margin-bottom: 40px;
 }
 	
 /**

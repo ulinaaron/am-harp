@@ -31,12 +31,6 @@
     display: block; 
     width: 1.125em; 
     height: 0.125em; 
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
     
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
@@ -99,7 +93,7 @@
 */
 
 .slicknav_menu {
-    font-size: rem(12);
+    font-size: rem(16);
     font-family: font-primary;
     box-sizing: border-box;
     position: relative;
@@ -123,7 +117,7 @@
 
 /* Button Text */
 .slicknav_menu  .slicknav_menutxt {
-    color: $color-lighter;
+    color: $color-light;
     font-weight:  bold;
 }
 
@@ -179,7 +173,7 @@
 }
 
 .slicknav_nav a:hover {
-    color: $color-secondary;
+    color: $color-info;
     border: 0;
 }
 

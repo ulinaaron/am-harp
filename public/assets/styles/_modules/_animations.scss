@@ -4,10 +4,10 @@
 	}
 	40% {
 		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 10px 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 	}
 	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 10px 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 		-webkit-transform: scale(1.2);
 		opacity: 0;
 	}
@@ -18,10 +18,10 @@
 	}
 	40% {
 		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 0 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 	}
 	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 0 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 		-moz-transform: scale(1.2);
 		opacity: 0;
 	}
@@ -32,11 +32,52 @@
 	}
 	40% {
 		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 0 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 	}
 	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 4px 4px rgba($color-darker, .8), 0 0 0 2px rgba(255,255,255,0.5);
+		box-shadow: 0 0 0 10px rgba($color-light,0.1), 0 0 5px 5px rgba($color-darker, .5), 0 0 0 10px rgba($color-light,0.5);
 		transform: scale(1.2);
 		opacity: 0;
 	}
+}
+
+@-webkit-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-moz-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-ms-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@-o-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+@keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
 }

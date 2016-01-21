@@ -35,13 +35,8 @@
 body {
 	font-size: rem(16);
 	font-family: $font-secondary;
-	color: $color-dark;
-	background-color: $color-lightest;
-	
-	.about & {
-		background-color: $color-darkest;
-		color: $color-light;
-    }
+    background-color: $color-light;
+    color: $color-dark;
 }
 
 h1,
@@ -52,10 +47,6 @@ h5,
 h6 {
 	font-family: $font-primary;
 	color: $color-dark;
-	
-	.about & {
-		color: $color-light;
-    }
 }
 
 h1 {
@@ -119,6 +110,7 @@ blockquote {
 	@include ul('circle');
 	margin: 0;
 	padding: 0 20px;
+    color: $color-light;
 	
 	@media #{$device-medium} {
 		padding: 0;
@@ -230,7 +222,7 @@ button,
 		padding: 60px 0 40px;
 		
 		@media #{$device-medium} {
-			padding: 120px 0 100px;
+			padding: 80px 0 80px;
         }
     }
 }
@@ -293,6 +285,16 @@ button,
 .header {
 	padding: 20px;
 	background-color: $color-light;
+    
+    .index & {
+        display: none;
+    }
+    
+    @media #{$device-medium} {
+		.index & {
+            display: block;
+        }
+    }
 	
 	.index &,
     .contact &,
@@ -312,7 +314,7 @@ button,
 	padding: 0;
 	font-weight: 300;
     
-	
+
 	a {
         padding: 5px 12px;
         border: 2px solid transparent;
@@ -347,7 +349,7 @@ button,
 }
  	
 .navigation-list {
-	@include inline-list(5px);
+	@include inline-list(10px);
 	font-family: $font-primary;
 	
 	@media #{$device-medium} {
@@ -365,13 +367,13 @@ button,
         -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
         -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
         transition: transform ease-out 0.1s, background 0.2s;
+        transition: background 1s ease-out;
         
         &:after {
             pointer-events: none;
             position: absolute;
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             content: '';
             -webkit-box-sizing: content-box; 
             -moz-box-sizing: content-box; 
@@ -381,26 +383,26 @@ button,
             left: 0;
             padding: 0;
             z-index: -1;
-            box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+            box-shadow: 0 0 10px 10px rgba(255,255,255,0.2);
             opacity: 0;
-            -webkit-transform: scale(0.9);
-            -moz-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-            transform: scale(0.9);
+            -webkit-transform: scale(0.70);
+            -moz-transform: scale(0.70);
+            -ms-transform: scale(0.70);
+            transform: scale(0.70);
         }
 
  		&:hover {
-            color: $color-dark;
-            background: rgba(255,255,255,0.05);
-            -webkit-transform: scale(0.93);
-            -moz-transform: scale(0.93);
-            -ms-transform: scale(0.93);
-            transform: scale(0.93);
+            color: $color-light;
+            background: $color-dark;
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            transform: scale(1.5);
             
             &:after {
-            -webkit-animation: sonarEffect 1.3s ease-out 75ms;
-            -moz-animation: sonarEffect 1.3s ease-out 75ms;
-            animation: sonarEffect 1.3s ease-out 75ms;
+            -webkit-animation: sonarEffect 1s ease-out 75ms;
+            -moz-animation: sonarEffect 1s ease-out 75ms;
+            animation: sonarEffect 1s ease-out 75ms;
             }
         }
     }
@@ -444,12 +446,16 @@ button,
 	background-color: $color-light;
 	color: $color-dark;
 	position: relative;
+    
+   .lead {
+        margin: 0 auto;
+    }
 	
 	.container {
 		padding: 40px 0;
 	
 		@media #{$device-medium} {
-			padding: 80px 0 40px;
+			padding: 80px 0 80px;
         }
     }
 }
@@ -469,9 +475,10 @@ button,
 }
 	
 .introduction-title-border {
+    padding-bottom: 20px;
 	border-bottom: 2px dashed $color-medium;
-	@include j-center(100px);
-	margin-bottom: 40px;
+	@include j-center(260px);
+	margin-bottom: 20px;
 }
 	
 .talents {
@@ -489,6 +496,7 @@ button,
 	background-color: darken($color-darker, 1);
 	
 	.group-title {
+        margin-top: 0;
 		background-color: $color-darkest;
     }
 }
@@ -497,6 +505,7 @@ button,
 	background-color: lighten($color-darker, 1);
 	
 	.group-title {
+        margin-top: 0;
 		background-color: $color-darkest;
     }
     
@@ -521,7 +530,7 @@ button,
 .skill-title {
     font-size: rem(14);
 	font-family: $font-secondary;
-	color: $color-lightest;
+	color: $color-light;
 	font-weight: 300;
 	text-transform: none;
 	margin: 0 0 10px;
@@ -567,7 +576,7 @@ button,
 	color: $color-lightest;
     font-size: rem(16);
 	
-	.contact {
+	.contact-section {
 		background-color: lighten($color-darkest, 2);
 		
 		@media #{$device-medium} {
@@ -575,7 +584,7 @@ button,
         }
     }
 
-	.social {
+	.social-section {
 		background-color: $color-darkest;
     }
 }
@@ -593,8 +602,8 @@ button,
     margin-left: -20px;
 }
 	
-.social,
-.contact {
+.social-section,
+.contact-section {
 	.group-title {
 		color: $color-light;
     }

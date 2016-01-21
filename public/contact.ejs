@@ -7,8 +7,13 @@
 <%- partial('_templates/head', {env_root: env_set}) %>
 <body>
 	<%- partial('_templates/header', {env_root: env_set}) %>
-
-	<%- partial('_templates/contact-form', {env_root: env_set}) %>
+    
+    <div class="main">
+        <div class="narrow">
+        <h1 class="align-center">Contact Me</h1>
+            <%- partial('_templates/contact-form', {env_root: env_set}) %>
+        </div>
+    </div>
 
 	<%- partial('_templates/foot', {env_root: env_set}) %>
 </body>

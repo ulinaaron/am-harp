@@ -43,7 +43,7 @@ body {
     color: $color-dark;
     
     @media #{$device-medium} {
-		padding: 20px;
+		padding: 30px;
     }
 }
 
@@ -118,7 +118,7 @@ blockquote {
 	@include ul('circle');
 	margin: 0;
 	padding: 0 20px;
-    color: $color-light;
+    color: $color-medium;
     
     &.plain {
        @include ul('none'); 
@@ -327,7 +327,11 @@ button,
     }
 	
 	@media #{$device-medium} {
-		padding: 20px 0;
+		padding: 30px 0;
+    }
+    
+    @media #{$device-small} {
+		padding: 30px;
     }
 }
 	
@@ -506,7 +510,7 @@ button,
 }
 	
 .talents {
-	color: $color-lighter;
+	color: $color-medium;
 	@include clearfix;
 	
 	.group-title {
@@ -554,7 +558,7 @@ button,
 .skill-title {
     font-size: rem(14);
 	font-family: $font-secondary;
-	color: $color-light;
+	color: $color-medium;
 	font-weight: 300;
 	text-transform: none;
 	margin: 0 0 10px;

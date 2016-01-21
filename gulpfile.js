@@ -1,6 +1,8 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var merge       = require('merge-stream');
+var rename      = require('gulp-rename');
 var harp        = require('harp');
 var deploy      = require('gulp-gh-pages');
 
@@ -22,8 +24,8 @@ gulp.task('serve', function () {
     /**
      * Watch for stylus changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch("**/*.styl", function () {
-      reload("public/assets/css/style.css", {stream: true});
+    gulp.watch("**/*.scss", function () {
+      reload("public/assets/styles/main.css", {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page
@@ -32,6 +34,21 @@ gulp.task('serve', function () {
       reload();
     });
   });
+});
+
+/**
+ * Task: NPM Components
+ * ================
+ * This is a manual process for components that should be included.
+ * This function is not included in the default Gulp process.
+ * Run 'gulp npm-packages' to use.
+ */
+
+gulp.task('npm-packages', function () {
+    // Normalize
+    gulp.src('./node_modules/normalize.css/normalize.css')
+    .pipe(rename('_normalize.scss'))
+    .pipe(gulp.dest('./assets/styles/_vendor/')); // Copies to src/scss
 });
 
 gulp.task('deploy', function() {

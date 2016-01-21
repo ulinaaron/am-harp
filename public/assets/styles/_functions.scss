@@ -1,0 +1,39 @@
+/* Sets an input tag's placeholder styles; called within the INPUT itself */
+@mixin set-placeholder-style($prop, $value) {
+    &::-webkit-input-placeholder {
+        #{$prop}: $value;
+    }
+    &::-moz-input-placeholder {
+        #{$prop}: $value;
+    }
+}
+
+// Inline List
+@mixin inline-list($spacing: 20px) {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    
+    li {
+        float: left;
+        margin-right: $spacing;
+        list-style-type: none;;
+    }
+    
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+// Unordered List
+@mixin ul($style: 'disc') {
+  margin: 5px 15px;
+  margin: 0.32rem 0.94rem;
+  padding-left: 1rem;
+  
+  li {
+      list-style-type: unquote($style);
+      padding: 2px 0;
+      padding: 0.125rem;
+  }
+}

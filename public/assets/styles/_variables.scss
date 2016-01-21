@@ -1,0 +1,33 @@
+// Theme Colors
+// -------------------------
+$color-primary:	  #6699cc;
+$color-secondary: #cc99cc;
+$color-tertiary:  #d27b53;
+$color-quaternary:#747369;
+
+$color-success:	#99cc99;
+$color-warning:	#ffcc66;
+$color-alert:	#f99157;
+$color-danger:  #f2777a;
+$color-info:	#66cccc;
+
+$color-light:	#D3D0C9;
+$color-lighter:	#E8E6DB;
+$color-lightest:#f2f0ec;
+$color-medium:	#a09f93;
+$color-dark:	#515151;
+$color-darker:	#393939;
+$color-darkest:	#2d2d2d;
+
+// DEVICES
+// -------------------------
+$device-micro:	"only screen and (min-width: 240px)"; 	// 240px
+$device-tiny:	"only screen and (min-width: 320px)"; 	// 320px
+$device-small:	"only screen and (min-width: 480px)"; 	// 480px
+$device-medium:	"only screen and (min-width: 768px)"; 	// 768px
+$device-large:	"only screen and (min-width: 1024px)";	// 1024px
+$device-xl:	    "only screen and (min-width: 1280px)";	// 1280px
+
+
+$font-primary : 'Oswald', sans-serif;
+$font-secondary : 'Quattrocento', serif;

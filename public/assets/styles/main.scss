@@ -207,7 +207,7 @@ button,
  
 .group {
 	@include j-column(1);
-	padding: 40px 0;
+	padding: 40px 20px;
 	
 	@media #{$device-medium} {
 		@include j-column(1/2, $gutter: 0);
@@ -219,7 +219,7 @@ button,
 .accolades {
 	
 	&.group {
-		padding: 60px 0 40px;
+		padding: 60px 20px 40px;
 		
 		@media #{$device-medium} {
 			padding: 80px 0 80px;
@@ -599,7 +599,10 @@ button,
     font-size: rem(14);
 	color: $color-dark;
     margin-top: 40px;
-    margin-left: -20px;
+    
+    @media #{$device-medium} {
+	   margin-left: -20px;
+    }
 }
 	
 .social-section,

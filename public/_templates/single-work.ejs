@@ -1,10 +1,12 @@
-  <div id="container" class="article-container">
-    <section id="main" class="article-entry main">
+<section id="main" class="article-entry main">
+    <div  class="article-container">
     	<h1 class="entry-title"><%= title %></h1>
     	<%- yield %>
-
-    	<% if (public._data.url) { %>
-			<a href="<%= url %>" class="button">Go to project</a>
-    	<% } %>
-    </section>
-  </div>
+        
+        <ul class="tag-list">
+            <% for(var tag in tags){ %>
+                <li><%= tags[tag] %></li>
+            <% } %>
+        </ul>
+    </div>
+</section>

@@ -5,6 +5,7 @@
 
 @import "_vendor/normalize";
 @import "_modules/animations";
+@import "_modules/patterns";
 
 
 /**
@@ -39,8 +40,10 @@
 body {
 	font-size: rem(18);
 	font-family: $font-secondary;
-    background-color: $color-lightest;
+    background-color: $color-darkest;
     color: $color-dark;
+    @extend %pattern-2;
+    background-size: 30px 30px;
     
     @media #{$device-medium} {
 		padding: 30px;
@@ -198,11 +201,11 @@ button,
 }
 		
 .read-more {
-    color: $color-dark;
+    color: $color-medium;
     padding: 0 12px;
-	background-color: $color-darker;
+	background-color: transparent;
 	border-radius: 0;
-	border: 2px solid $color-dark;
+	border: 2px solid $color-medium;
 	font-weight: 300;
 	
 	&:hover {
@@ -307,6 +310,7 @@ button,
  */
 
 .header {
+    position: relative;
 	padding: 20px;
 	background-color: $color-light;
     
@@ -664,6 +668,7 @@ button,
  
 .main {
 	padding: 0 20px;
+    background-color: $color-light;
 	
 	@media #{$device-medium} {
 		padding: 20px 0 60px;
@@ -676,6 +681,7 @@ button,
 
 .page-title {
     font-weight: 400;
+    text-align: center;
 }
 
 .about-feature {
@@ -687,8 +693,8 @@ button,
  */
  
 .article-block {
-	border-bottom: 4px solid $color-medium;
-	background-color: $color-lighter;
+	border-bottom: 2px solid $color-medium;
+	background-color: $color-lightest;
 	padding: 20px;
 	margin-bottom: 20px;
 	@include clearfix;
@@ -699,7 +705,7 @@ button,
 	
 	.entry-title a {
 		color: $color-dark;
-		font-weight: 900;
+		font-weight: 400;
     }
 }
 		
@@ -715,13 +721,18 @@ button,
 
 	.entry-title {
 		color: $color-dark;
-		font-weight: 900;
+		font-weight: 400;
 		margin-bottom: 0;
+    }
+    
+    .meta {
+        font-size: rem(13);
+        color: $color-medium;
     }
 }
  
 .article-entry p {
-	font-size: rem(12);
+	font-size: rem(18);
 	font-weight: 300;
 }
 	
@@ -741,25 +752,75 @@ button,
 	font-weight: 300;
 	font-size: rem(14);
 	text-align: center;
+    
+    .work-item.sections & {
+        text-align: left;
+        font-size: rem(32);
+        padding: 0;
+    }
 }
 
 .work-item {
 	position: relative;
-	//@include j-column(.5, $cycle: 2, $uncycle: 2, $gutter: 0);
+    
+    &.grid {
+        @include j-column(.5, $cycle: 2, $gutter: 0);
 		
-	@media #{$device-medium} {
-		//@include j-column(.25, $cycle: 4, $uncycle: 2, $gutter: 0);
+        @media #{$device-medium} {
+            @include j-column(.25, $cycle: 4, $gutter: 0);
+        }
+        
+        a {
+            display: block;
+            width: 100%;
+            height: inherit;
+            padding-bottom: 100%;
+            background-color: #FFF;
+            background-size: cover;
+            background-position: 50%;
+            text-align: center;
+        }
     }
     
-	a {
-		display: block;
-		width: 100%;
-		height: inherit;
-		padding-bottom: 100%;
-		background-color: #FFF;
-		background-size: cover;
-		background-position: 50%;
-		text-align: center;
+    &.sections {
+        position: relative;
+        display: block;
+        width: 100%;
+        background-color: $color-success;
+        
+        .work-item-cover {
+            @include j-column(3/8, $gutter: 0);
+        }
+        .work-item-description {
+            @include j-column(5/8, $gutter: 0);
+        }
+    }
+    
+}
+
+.tag-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+    li {
+        float: left;
+        background-color: $color-dark;
+        color: $color-light;
+        padding: 6px 12px;
+        font-family: $font-primary;
+        font-weight: 100;
+        font-size: rem(14);
+        margin-right: 5px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        .work-item & {
+            font-size: rem(12);
+            padding: 4px 10px;
+        }
     }
 }
 

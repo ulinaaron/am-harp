@@ -7,11 +7,10 @@
 <%- partial('_templates/head', {env_root: env_set}) %>
 <body>
   <%- partial('_templates/header', {env_root: env_set}) %>
-  <div id="container" class="container">
     <section id="main" class="main">
-       <%- yield %>
+        <h1 class="page-title"><%= page_title %></h1>
+        <%- yield %>
     </section>
-  </div>
   <%- partial('_templates/footer', {env_root: env_set}) %>
   <%- partial('_templates/foot', {env_root: env_set}) %>
 </body>

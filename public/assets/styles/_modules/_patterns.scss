@@ -1,0 +1,119 @@
+%pattern-1 {
+  // Make sure to include the background-size property with the element that is extending this.
+  // This will scale the diagonals.
+  // background-size: 35px 35px;
+  background-image: -moz-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%, 
+        rgba(255,255,255,0.15) 25%, 
+        rgba(255,255,255,0) 25%, 
+        rgba(255,255,255,0) 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        rgba(255,255,255,0) 75%, 
+        rgba(255,255,255,0) 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%,rgba(255,255,255,0.2)), 
+        color-stop(25%,rgba(255,255,255,0.2)), 
+        color-stop(25%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0.2)), 
+        color-stop(75%,rgba(255,255,255,0.2)),
+        color-stop(75%,rgba(255,255,255,0)),
+        color-stop(100%,rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(-45deg, 
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.3) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.3) 50%,
+        rgba(255,255,255,0.3) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -o-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -ms-linear-gradient(-45deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(135deg, 
+        rgba(255,255,255,0.15) 0%,
+        rgba(255,255,255,0.15) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+}
+
+%pattern-2 {
+  // Make sure to include the background-size property with the element that is extending this.
+  // This will scale the diagonals.
+  // background-size: 35px 35px;
+  background-image: -moz-linear-gradient(-45deg, 
+        rgba(255,255,255,0.05) 0%, 
+        rgba(255,255,255,0.05) 25%, 
+        rgba(255,255,255,0) 25%, 
+        rgba(255,255,255,0) 50%, 
+        rgba(255,255,255,0.05) 50%, 
+        rgba(255,255,255,0.05) 75%, 
+        rgba(255,255,255,0) 75%, 
+        rgba(255,255,255,0) 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, 
+        color-stop(0%,rgba(255,255,255,0.1)), 
+        color-stop(25%,rgba(255,255,255,0.1)), 
+        color-stop(25%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0)), 
+        color-stop(50%,rgba(255,255,255,0.1)), 
+        color-stop(75%,rgba(255,255,255,0.1)),
+        color-stop(75%,rgba(255,255,255,0)),
+        color-stop(100%,rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(-45deg, 
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.1) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(255,255,255,0.1) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -o-linear-gradient(-45deg, 
+        rgba(255,255,255,0.05) 0%,
+        rgba(255,255,255,0.05) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.05) 50%,
+        rgba(255,255,255,0.05) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: -ms-linear-gradient(-45deg, 
+        rgba(255,255,255,0.05) 0%,
+        rgba(255,255,255,0.05) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.05) 50%,
+        rgba(255,255,255,0.05) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(135deg, 
+        rgba(255,255,255,0.05) 0%,
+        rgba(255,255,255,0.05) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,0.05) 50%,
+        rgba(255,255,255,0.05) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+}

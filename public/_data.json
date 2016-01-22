@@ -8,10 +8,16 @@
 	},
     "contact": {
         "title": "Contact",
+        "page_title": "Contact Me",
         "layout": false
     },
 	"about": {
-		"title": "About"
+		"title": "About",
+        "page_title": "About Me"
+	},
+    "my-work": {
+		"title": "My Work",
+        "page_title": "My Work"
 	},
 	"styleguide": {
 		"title": "Styleguide",

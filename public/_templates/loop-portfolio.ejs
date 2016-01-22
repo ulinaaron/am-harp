@@ -1,16 +1,39 @@
-<% if (type == "grid") { %>
-	<div class="work-group">
-		<% for(var slug in public.work._data){ %>
-			<div class="work-item">
-				<h5 class="work-item-title">
-					<%= public.work._data[slug].title %>
-				</h5>
-				<a href="/work/<%= slug %>" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].title %>.png');">
-				</a>
-			</div>
-		<% }; %>
-	</div>
-<% } else { %>
+<div class="work-group">
+    <% if (type == "grid") { %>
+            <% for(var slug in public.work._data){ %>
+                <div class="work-item grid">
+                    <h5 class="work-item-title">
+                        <%= public.work._data[slug].title %>
+                    </h5>
+                    <a href="/work/<%= slug %>" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].title %>.png');">
+                    </a>
+                </div>
+            <% }; %>
+    <% } else if (type == "sections") { %>
+            <% for(var slug in public.work._data){ %>
+                <div class="work-item sections">
+                    <div class="work-item-cover">
+                        <a href="/work/<%= slug %>">
+                            <img src="/assets/images/work/thumbnails/<%= public.work._data[slug].title %>.png" class="work-item-cover">
+                        </a>
+                    </div>
+                    <div class="work-item-description">
+                        <a href="/work/<%= slug %>">
+                            <h5 class="work-item-title">
+                                <%= public.work._data[slug].title %>
+                            </h5>
+                        </a>
+                        <%= public.work._data[slug].description %>
+                         <ul class="tag-list">
+                            <% for(var tag in public.work._data[slug].tags){ %>
+                                <li><%= public.work._data[slug].tags[tag] %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            <% }; %>
+    <% } else { %>
+</div>
 
 	<% for(var slug in public.work._data){ %>
 		<h2><a href="/work/<%= slug %>"><%= public.work._data[slug].title %></a></h2>

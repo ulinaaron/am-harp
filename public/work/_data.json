@@ -1,7 +1,14 @@
 {
   "longerdays": {
     "title": "LongerDays",
-    "url": "http://longerdays.com"
+    "url": "http://longerdays.com",
+    "description": "At LongerDays, I worked on the redesign, redevelopment, and branding for the company's website.",
+    "tags": [
+    	"Sass",
+        "UX/UI Design",
+        "Front-End Development",
+        "Branding"
+    ]
   },
   "minnow": {
     "title": "Minnow CSS"

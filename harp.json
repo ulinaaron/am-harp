@@ -16,8 +16,8 @@
       "changefreq": "daily"
     },
     "menu": {
-      "Work": "/work",
       "About": "/about",
+      "Work": "/my-work",
       "Contact": "/contact"
     }
   }

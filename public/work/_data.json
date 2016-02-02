@@ -1,26 +1,34 @@
 {
   "longerdays": {
     "title": "LongerDays",
+    "cover": "longerdays",
     "url": "http://longerdays.com",
-    "description": "At LongerDays, I worked on the redesign, redevelopment, and branding for the company's website.",
+    "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
     "tags": [
     	"Sass",
         "UX/UI Design",
         "Front-End Development",
+        "Wordpress",
         "Branding"
     ]
   },
   "minnow": {
-    "title": "Minnow CSS"
-  },
-  "gulp-site-generator": {
-    "title": "Gulp Site Generator",
+    "title": "Minnow CSS",
+    "cover": "minnowcss",
+    "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
     "tags": [
-    	""
-    ],
-    "url": "https://github.com/ulinaaron/gulp-site"
+    	"Sass",
+        "Front-End Development"
+    ]
   },
-  "nerdcorenow": {
-    "title": "Nerdcore Now"
+  "momsbloom": {
+    "title": "Mom's Bloom",
+    "cover": "momsbloom",
+    "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
+    "tags": [
+    	"Sass",
+        "Front-End Development",
+        "Wordpress"
+    ]
   }
 }

@@ -12,23 +12,32 @@
     <% } else if (type == "sections") { %>
             <% for(var slug in public.work._data){ %>
                 <div class="work-item sections">
-                    <div class="work-item-cover">
-                        <a href="/work/<%= slug %>">
-                            <img src="/assets/images/work/thumbnails/<%= public.work._data[slug].title %>.png" class="work-item-cover">
-                        </a>
-                    </div>
-                    <div class="work-item-description">
-                        <a href="/work/<%= slug %>">
-                            <h5 class="work-item-title">
-                                <%= public.work._data[slug].title %>
-                            </h5>
-                        </a>
-                        <%= public.work._data[slug].description %>
-                         <ul class="tag-list">
-                            <% for(var tag in public.work._data[slug].tags){ %>
-                                <li><%= public.work._data[slug].tags[tag] %></li>
-                            <% } %>
-                        </ul>
+                    <div class="container">
+                        <div class="work-item-cover">
+                            <a href="/work/<%= slug %>">
+                                <div class="browser-bar">
+                                    <div class="browser-dot-1"></div>
+                                    <div class="browser-dot-2"></div>
+                                    <div class="browser-dot-3"></div>
+                                </div>
+                                <div class="cover-source" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].cover %>.png');"></div>
+                            </a>
+                        </div>
+                        <div class="work-item-description">
+                            <a href="/work/<%= slug %>">
+                                <h5 class="work-item-title">
+                                    <%= public.work._data[slug].title %>
+                                </h5>
+                            </a>
+                             <ul class="tag-list clearfix">
+                                <% for(var tag in public.work._data[slug].tags){ %>
+                                    <li><%= public.work._data[slug].tags[tag] %></li>
+                                <% } %>
+                            </ul>
+                            <p>
+                            <%= public.work._data[slug].description %>
+                            </p>
+                        </div>
                     </div>
                 </div>
             <% }; %>

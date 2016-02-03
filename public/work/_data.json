@@ -1,9 +1,11 @@
 {
   "longerdays": {
     "title": "LongerDays",
+    "page_title": "LongerDays",
     "cover": "longerdays",
     "url": "http://longerdays.com",
     "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
+    "year": 2013,
     "tags": [
     	"Sass",
         "UX/UI Design",
@@ -14,17 +16,37 @@
   },
   "minnow": {
     "title": "Minnow CSS",
+    "page_title": "Minnow CSS",
     "cover": "minnowcss",
-    "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
+    "url": "http://ulinaaron.github.io/minnow-css/",
+    "description": "A passion project of mine for building front-end web interfaces with a lightweight set of tools. Minnow is a Sass / CSS framework I created that does not contain any extra bloat.",
+    "year": 2015,
     "tags": [
     	"Sass",
         "Front-End Development"
     ]
   },
+  "parentville": {
+    "title": "Parentville",
+    "page_title": "Parentville",
+    "cover": "parentville",
+    "url": "http://parentville.org/",
+    "description": "At Revel Marketing I was fortunate enough to develop a playful project that used parallax design. I was responsible for the assembly of the interface and interactions.",
+    "year": 2014,
+    "tags": [
+    	"Sass",
+        "Front-End Development",
+        "jQuery",
+        "Wordpress"
+    ]
+  },
   "momsbloom": {
     "title": "Mom's Bloom",
+    "page_title": "Mom's Bloom",
     "cover": "momsbloom",
-    "description": "At LongerDays, I worked on the design, development, and branding for the company's web presence.",
+    "url": "https://momsbloom.org/",
+    "description": "Through GiveCamp GR I had the opportunity to be a part of the team creating a new web presence for the non-profit, Mom's Bloom.",
+    "year": 2014,
     "tags": [
     	"Sass",
         "Front-End Development",

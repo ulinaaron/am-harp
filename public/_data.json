@@ -1,10 +1,12 @@
 {
 	"index": {
 		"title": "Home",
+        "page_title": "Home",
 		"layout": false
 	},
 	"blog": {
-		"title": "Blog"
+		"title": "Blog",
+        "page_title": "Blog"
 	},
     "contact": {
         "title": "Contact",
@@ -17,19 +19,23 @@
 	},
     "my-work": {
 		"title": "My Work",
-        "page_title": "My Work"
+        "page_title": "Work"
 	},
 	"styleguide": {
 		"title": "Styleguide",
+        "page_title": "Styleguide",
 		"description": "A guide for the site styles"
 	},
 	"404": {
-		"title": "404"
+		"title": "404",
+        "page_title": "404"
 	},
 	"rss": {
+        "title": "RSS",
 		"layout": false
 	},
 	"sitemap": {
+        "title": "Sitemap",
 		"layout": false
 	}
 }

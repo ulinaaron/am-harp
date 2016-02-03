@@ -23,12 +23,6 @@
           
           
             
-            <li><a href="/blog">/blog</a></li>
-          
-        
-          
-          
-            
             <li><a href="/contact">/contact</a></li>
           
         
@@ -36,6 +30,12 @@
           
             
             <li><a href="/">/</a></li>
+          
+        
+          
+          
+            
+            <li><a href="/my-work">/my-work</a></li>
           
         
           
@@ -139,42 +139,6 @@
           
           
         
-      
-    
-  
-
-      
-    
-  
-
-      
-    
-  
-
-      
-    
-  
-    
-    
-      
-        
-  
-    
-    
-      
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
           
           
         
@@ -188,21 +152,6 @@
     
   
 
-      
-    
-  
-    
-    
-      
-        
-  
-    
-    
-      
-        
-          
-          
-        
       
     
   
@@ -225,20 +174,26 @@
         
           
           
-            
-            <li><a href="/posts/hello-markdown">/posts/hello-markdown</a></li>
+        
+          
           
         
           
           
-            
-            <li><a href="/posts/hello-world">/posts/hello-world</a></li>
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
           
         
       
-    
-  
-    
     
   
 
@@ -256,30 +211,22 @@
         
           
           
-            
-            <li><a href="/work/gulp-site-generator">/work/gulp-site-generator</a></li>
-          
-        
-          
-          
-            
-            <li><a href="/work/longerdays">/work/longerdays</a></li>
-          
-        
-          
-          
-            
-            <li><a href="/work/minnow">/work/minnow</a></li>
-          
-        
-          
-          
-            
-            <li><a href="/work/nerdcorenow">/work/nerdcorenow</a></li>
-          
         
       
     
+  
+
+      
+    
+  
+
+      
+    
+  
+    
+    
+      
+        
   
     
     

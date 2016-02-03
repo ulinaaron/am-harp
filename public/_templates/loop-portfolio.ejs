@@ -13,8 +13,8 @@
             <% for(var slug in public.work._data){ %>
                 <div class="work-item sections">
                     <div class="container">
-                        <div class="work-item-cover">
-                            <a href="/work/<%= slug %>">
+                        <div class="work-item-cover wow fadeInUp">
+                            <a href="<%- public.work._data[slug].url %>" target="_blank">
                                 <div class="browser-bar">
                                     <div class="browser-dot-1"></div>
                                     <div class="browser-dot-2"></div>
@@ -24,11 +24,11 @@
                             </a>
                         </div>
                         <div class="work-item-description">
-                            <a href="/work/<%= slug %>">
-                                <h5 class="work-item-title">
+                            <h5 class="work-item-title">
+                                <a href="<%- public.work._data[slug].url %>" target="_blank">
                                     <%= public.work._data[slug].title %>
-                                </h5>
-                            </a>
+                                </a>
+                            </h5>
                              <ul class="tag-list clearfix">
                                 <% for(var tag in public.work._data[slug].tags){ %>
                                     <li><%= public.work._data[slug].tags[tag] %></li>
@@ -36,6 +36,9 @@
                             </ul>
                             <p>
                             <%= public.work._data[slug].description %>
+                            </p>
+                            <p class="meta-year">
+                                <%- public.work._data[slug].year %>
                             </p>
                         </div>
                     </div>

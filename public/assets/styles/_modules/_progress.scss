@@ -44,6 +44,31 @@
   background-color: $color-info;
   transition: width .6s ease;
   text-align: center;
+  
+  &.progress-css {
+      background-color: $color-alert;
+  }
+  &.progress-wordpress {
+      background-color: $color-info;
+  }
+  &.progress-rwd {
+      background-color: $color-alert;
+  }
+  &.progress-ssg {
+      background-color: $color-info;
+  }
+  &.progress-tasks {
+      background-color: $color-danger;
+  }
+  &.progress-wireframing {
+      background-color: $color-medium;
+  }
+  &.progress-php {
+      background-color: $color-secondary;
+  }
+  &.progress-js {
+      background-color: $color-success;
+  }
 }
 
 // Striped bars

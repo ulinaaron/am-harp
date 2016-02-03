@@ -26,6 +26,10 @@
         "page_title": "Styleguide",
 		"description": "A guide for the site styles"
 	},
+    "resume": {
+		"title": "Résumé",
+        "page_title": "Résumé"
+	},
 	"404": {
 		"title": "404",
         "page_title": "404"

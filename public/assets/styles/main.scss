@@ -117,6 +117,16 @@ blockquote {
 	//blockquote($color-light);
 }
 
+/**
+ * Plain List
+ */
+
+.plain-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .align-image-center {
 	margin: 0 auto;
 	display: block;
@@ -148,7 +158,11 @@ blockquote {
  
 .container {
 	@include j-center(1100px);
-	@include clearfix;
+	@extend .clearfix;
+}
+
+%span-column {
+    @include j-column(1, $gutter: 0);
 }
 
 .header-title {
@@ -196,13 +210,14 @@ button,
 	font-weight: 300;
 	border-radius: 0;
 	position: relative;
-	transition: all .5s ease-in;
+	transition: background-color .5s ease-in;
 	outline: none;
 	box-shadow: none;
 	
 	&:hover {
 		background-color: $color-medium;
-		color: $color-darker;
+        border-color: $color-medium;
+		color: $color-light;
 		text-decoration: none;
     }
 }
@@ -261,7 +276,7 @@ button,
  */
 
 .contact-form {
-	@include clearfix;
+	@extend .clearfix;
 	
 	input[type="email"],
 	input[type="text"],
@@ -522,7 +537,7 @@ button,
 	
 .talents {
 	color: $color-medium;
-	@include clearfix;
+	@extend .clearfix;
 	
 	.group-title {
 		color: $color-lighter;
@@ -562,7 +577,7 @@ button,
 	
 	.skill-row {
 		position: relative;
-		@include clearfix;
+		@extend .clearfix;
     }
 }
 		
@@ -706,6 +721,142 @@ button,
 .about-feature {
     margin-bottom: 40px;
 }
+
+
+/**
+ * Resume
+ */
+ 
+.resume-container {
+    padding: 20px;
+    background-color: $color-lightest;
+    border: 6px solid $color-dark;
+    @extend .clearfix;
+    
+    a {
+        color: $color-dark;
+    }
+    
+    .sub-title {
+        text-align: left;
+    }
+    
+    /** 
+     * Structure
+     */
+     
+     .title-section {
+         @extend %span-column;
+         @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-span(.82);
+        }
+     }
+    
+    .contact-info {
+        @extend %span-column;
+        @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-span(.18);
+        }
+    }
+    
+    .work-experience {
+        @extend %span-column;
+        @extend .clearfix;
+        
+        @media #{$device-medium} {
+            @include j-column(.7);
+        }
+    }
+    
+    .side-section {
+        @extend %span-column;
+        @extend .clearfix;
+        
+        @media #{$device-medium} {
+            @include j-column(.3);
+        }
+    }
+    
+    /**
+     * Styles
+     */
+     
+     .contact-info {
+         padding-top: 20px;
+         
+         @media #{$device-medium} {
+            .list {
+                padding: 0;
+                padding-left: 20px;
+            }
+        }
+     }
+     
+     p,
+     ul {
+         font-size: rem(16);
+     }
+    
+    .title {
+        margin: 0;
+        font-size: rem(24);
+        border-bottom: 4px solid $color-medium;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .title-section {
+        
+        @media #{$device-medium} {
+            border-right: 4px solid $color-medium;
+        }
+    }
+    
+    .role-title {
+        margin: 0;
+        font-weight: 100;
+    }
+
+    .job-item {
+        .job-title {
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .role-title {
+            font-weight: 400;
+            margin: 0;
+        }
+        
+        .length {
+            margin: 0;
+            font-weight: 100;
+        }
+    }
+    
+    .side-section {
+        .list {
+            list-style-type: square;
+        }
+    }
+}
+
+.resume-button {
+    border-color: $color-dark;
+    color: $color-dark;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: inline-block;
+    
+    &:hover {
+        border: 2px solid $color-medium;
+    }
+}
+
 	
 /**
  * Articles
@@ -716,7 +867,7 @@ button,
 	background-color: $color-lightest;
 	padding: 20px;
 	margin-bottom: 20px;
-	@include clearfix;
+	@extend .clearfix;
 	
 	.entry-title {
 		margin: 0;
@@ -760,7 +911,7 @@ button,
  */
  
 .work-group {
-	@include clearfix;
+	@extend .clearfix;
 }
 
 .work-item-title {
@@ -831,7 +982,7 @@ button,
         }
         
         .work-item-cover {
-            @include j-column(1, $gutter: 0);
+            @extend %span-column;
             
             @media #{$device-medium} {
                 @include j-column(.6, $gutter: 0);
@@ -841,7 +992,7 @@ button,
         }
         .work-item-description {
             position: relative;
-            @include j-column(1, $gutter: 0);
+            @extend %span-column;
             
             @media #{$device-medium} {
                 @include j-column(.4, $gutter: 0);
@@ -977,7 +1128,7 @@ button,
     margin: 0;
     padding: 0;
     list-style-type: none;
-    @include clearfix;
+    @extend .clearfix;
     
     li {
         float: left;
@@ -1002,6 +1153,14 @@ button,
 
 .align-center {
     text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
 }
 
 @import "_vendor/slicknav";

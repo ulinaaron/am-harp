@@ -19,7 +19,7 @@
     "page_title": "Minnow CSS",
     "cover": "minnowcss",
     "url": "http://ulinaaron.github.io/minnow-css/",
-    "description": "A passion project of mine for building front-end web interfaces with a lightweight set of tools. Minnow is a Sass / CSS framework I created that does not contain any extra bloat.",
+    "description": "A passion project of mine for building front-end web interfaces with a lightweight set of tools. Minnow is a Sass / CSS framework I created that does not contain unnecessary extra bloat.",
     "year": 2015,
     "tags": [
     	"Sass",

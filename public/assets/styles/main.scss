@@ -363,7 +363,7 @@ button,
 	
 .site-title {
 	position: relative;
-	font-size: rem(30);
+	font-size: rem(32);
 	margin: 0;
 	padding: 0;
 	font-weight: 300;
@@ -371,13 +371,12 @@ button,
 
 	a {
         padding: 5px 12px;
-        border: 2px solid transparent;
         transition: border 1.0s ease-in;
- 		transition: background-color 1.5s ease-in;
  		transition: color .5s ease-in;
         color: $color-medium;
-		
-		&:hover {
+        line-height: 1;
+        
+        &:hover {
             color: $color-dark;
         }
     }
@@ -706,7 +705,11 @@ button,
  */
  
  .page-header {
-     padding-bottom: 60px;
+     padding: 0 20px 60px;
+     
+     @media #{$device-medium} {
+		padding: 0 0 60px;
+    }
      
      p:first-of-type {
         margin: 0;
@@ -739,18 +742,32 @@ button,
     
     .sub-title {
         text-align: left;
+        
+        &.summary-title {
+            margin-bottom: 5px;
+            
+            & + p:first-of-type {
+                margin-top: 0;
+            }
+        }
     }
     
     /** 
      * Structure
      */
      
+     .resume-header {
+         @extend clearfix;
+         margin-bottom: 20px;
+         overflow: hidden;
+     }
+     
      .title-section {
          @extend %span-column;
          @extend .clearfix;
 		
         @media #{$device-medium} {
-            @include j-span(.82);
+            @include j-column(.8);
         }
      }
     
@@ -759,25 +776,25 @@ button,
         @extend .clearfix;
 		
         @media #{$device-medium} {
-            @include j-span(.18);
+            @include j-column(.20);
         }
     }
     
-    .work-experience {
+    .main-column {
         @extend %span-column;
         @extend .clearfix;
         
         @media #{$device-medium} {
-            @include j-column(.7);
+            @include j-column(.7, $gutter: 6);
         }
     }
     
-    .side-section {
+    .side-column {
         @extend %span-column;
         @extend .clearfix;
         
         @media #{$device-medium} {
-            @include j-column(.3);
+            @include j-column(.27);
         }
     }
     
@@ -789,9 +806,12 @@ button,
          padding-top: 20px;
          
          @media #{$device-medium} {
+             padding-top: 0;
+             
             .list {
+                text-align: left;
                 padding: 0;
-                padding-left: 20px;
+                line-height: 1.7;
             }
         }
      }
@@ -799,6 +819,11 @@ button,
      p,
      ul {
          font-size: rem(16);
+         
+         &:last-of-type {
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
      }
     
     .title {
@@ -822,6 +847,9 @@ button,
     }
 
     .job-item {
+        position: relative;
+        margin-bottom: 40px;
+        
         .job-title {
             font-weight: 700;
             margin: 0;
@@ -830,19 +858,56 @@ button,
         .role-title {
             font-weight: 400;
             margin: 0;
+            font-size: rem(16);
         }
         
         .length {
             margin: 0;
             font-weight: 100;
+            font-size: rem(14);
+        }
+        
+        .location {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            font-weight: 100;
+            font-size: rem(14);
+        }
+        
+        .explainations {
+            padding-left: 20px;
+            line-height: 1.5;
         }
     }
     
-    .side-section {
+    .side-column {
+        .section-title {
+            margin: 30px 0 5px;
+        }
+        
         .list {
+            margin-top: 0;
             list-style-type: square;
+            padding-left: 20px;
+            line-height: 1.5;
         }
     }
+} //.resume-container
+
+.resume-standalone {
+    
+    body {
+        background: #FFF;
+    }
+    
+    .resume-container {
+        width: 980px;
+        margin: 0 auto;
+        background: #FFF;
+    }
+    
 }
 
 .resume-button {

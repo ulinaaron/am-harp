@@ -1,0 +1,11 @@
+<% if (environment == "development") { 
+	var env_set = ""
+} else {
+	var env_set = root
+} %>
+
+<%- partial('_templates/head', {env_root: env_set}) %>
+<body>
+    <%- partial('_templates/resume') %>
+</body>
+</html>

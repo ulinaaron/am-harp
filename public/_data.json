@@ -30,6 +30,11 @@
 		"title": "Résumé",
         "page_title": "Résumé"
 	},
+    "resume-standalone": {
+		"title": "Résumé",
+        "page_title": "Résumé",
+        "layout": false
+	},
 	"404": {
 		"title": "404",
         "page_title": "404"

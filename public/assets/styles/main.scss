@@ -938,6 +938,10 @@ button,
             line-height: 1.5;
         }
     }
+    
+    .standalone {
+        display: none;
+    }
 } //.resume-container
 
 .resume-standalone {
@@ -961,6 +965,10 @@ button,
 .resume-standalone,
 .references-standalone {
     
+    .standalone {
+        display: block;
+    }
+    
     body {
         background: #FFF;
     }
@@ -971,6 +979,47 @@ button,
         margin: 0 auto;
         background: #FFF;
     }
+    
+    .title {
+        font-size: rem(20);
+    }
+    
+    .sub-title {
+        font-size: rem(18);
+    }
+    
+    .role-title {
+        font-size: rem(14);
+    }
+    
+    .side-column .section-title {
+        margin: 15px 0 5px
+    }
+    
+    p,
+     ul,
+     q {
+         font-size: rem(13);
+     }
+     
+     .job-item {
+         margin-bottom: 10px;
+         
+         .job-title {
+             font-size: rem(16);
+         }
+         .role-title {
+            font-size: rem(12);
+        }
+        
+        .length {
+            font-size: rem(12);
+        }
+        
+        .location {
+            font-size: rem(12);
+        }
+     }
 }
 
 .reference-container,

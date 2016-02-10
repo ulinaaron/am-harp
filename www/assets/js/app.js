@@ -1,11 +1,13 @@
+/**
+ * Assemble the libraries!
+ */
+
 (function() {
 	$(function() {
 	    $('.group, .header-group').matchHeight();
 	});
-})(jQuery);
-
-$(function(){
-	$('#navigation').slicknav({
+    
+    $('#navigation').slicknav({
 		label: ""
 	});
-});
+})(jQuery);

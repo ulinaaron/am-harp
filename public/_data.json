@@ -30,6 +30,11 @@
 		"title": "Résumé",
         "page_title": "Résumé"
 	},
+    "references-standalone": {
+		"title": "References",
+        "page_title": "References",
+        "layout": false
+	},
     "resume-standalone": {
 		"title": "Résumé",
         "page_title": "Résumé",

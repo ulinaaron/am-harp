@@ -730,7 +730,9 @@ button,
  * Resume
  */
  
-.resume-container {
+.resume-container,
+.reference-container,
+.resume-footer {
     padding: 20px;
     background-color: $color-lightest;
     border: 6px solid $color-dark;
@@ -749,6 +751,10 @@ button,
             & + p:first-of-type {
                 margin-top: 0;
             }
+        }
+        
+        &.reference-title {
+            margin-top: 0;
         }
     }
     
@@ -817,7 +823,8 @@ button,
      }
      
      p,
-     ul {
+     ul,
+     q {
          font-size: rem(16);
          
          &:last-of-type {
@@ -841,7 +848,7 @@ button,
         }
     }
     
-    .role-title {
+    .role-title, {
         margin: 0;
         font-weight: 100;
     }
@@ -880,6 +887,43 @@ button,
             padding-left: 20px;
             line-height: 1.5;
         }
+    } //.job-item
+    
+    .reference-item {
+        margin-bottom: 40px;
+        
+        .reference-name {
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .role-title {
+            font-weight: 400;
+            margin: 0;
+            font-size: rem(16);
+        }
+        
+       blockquote {
+           position: relative;
+           quotes: "\201C""\201D";
+           
+           &:before,
+           &:after {
+               position: absolute;
+               color: $color-medium;
+               font-size: rem(80);
+               
+           }
+
+           &:before {
+               content: open-quote;
+               font-size: rem(80);
+               top: 0;
+               left: -40px;
+               line-height: 1;
+               
+           }
+       } // blockquote
     }
     
     .side-column {
@@ -896,25 +940,40 @@ button,
     }
 } //.resume-container
 
-.resume-standalone {
+.resume-standalone,
+.references-standalone {
     
     body {
         background: #FFF;
     }
     
-    .resume-container {
+    .resume-container,
+    .reference-container {
         width: 980px;
         margin: 0 auto;
         background: #FFF;
     }
+}
+
+.reference-container,
+.resume-footer {
+    margin-top: 40px !important;
+}
+
+.resume-footer {
+    text-align: center;
     
+    p {
+        margin-top: 0;
+        font-size: rem(30);
+    }
 }
 
 .resume-button {
     border-color: $color-dark;
     color: $color-dark;
     margin: 0 auto;
-    margin-top: 60px;
+    margin: 20px auto 0;
     display: inline-block;
     
     &:hover {

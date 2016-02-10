@@ -971,6 +971,7 @@ button,
     
     body {
         background: #FFF;
+        padding-top: 0;
     }
     
     .resume-container,
@@ -984,7 +985,8 @@ button,
         margin-bottom: 10px;
     }
     
-    .title {
+    .title,
+    .reference-title.sub-title {
         font-size: rem(20);
     }
     
@@ -1007,15 +1009,19 @@ button,
          font-size: rem(13);
      }
      
-     .job-item {
+     .job-item,
+     .reference-item {
          margin-bottom: 10px;
          
-         .job-title {
+         .job-title,
+         .reference-name {
              font-size: rem(16);
          }
+         
          .role-title {
             font-size: rem(12);
         }
+        
         
         .length {
             font-size: rem(12);

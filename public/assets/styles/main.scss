@@ -768,7 +768,7 @@ button,
          overflow: hidden;
      }
      
-     .title-section {
+    .title-section {
          @extend %span-column;
          @extend .clearfix;
 		
@@ -940,6 +940,24 @@ button,
     }
 } //.resume-container
 
+.resume-standalone {
+    .title-section {
+        @include j-column(.8);
+    }
+    
+    .contact-info {
+        @include j-column(.20);
+    }
+    
+    .main-column {
+        @include j-column(.7, $gutter: 6);
+    }
+    
+    .side-column {
+        @include j-column(.27);
+    }
+}
+
 .resume-standalone,
 .references-standalone {
     
@@ -949,7 +967,7 @@ button,
     
     .resume-container,
     .reference-container {
-        width: 980px;
+        width: 100%;
         margin: 0 auto;
         background: #FFF;
     }

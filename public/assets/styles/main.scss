@@ -19,20 +19,14 @@
 * {
 	box-sizing: border-box;
 }
- 	
-.narrow {
-    padding: 0 20px;
-	@include j-center(650px);
-	
-	@media #{$device-medium} {
-		padding: 0;
-    }
-    
-    &.extra {
-        @include j-center(400px);
-    }
-}
 
+::selection {
+  background: $color-success; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $color-success; /* Gecko Browsers */
+}
+ 	
 .clearfix {
     @include clearfix;
 }
@@ -236,6 +230,19 @@ blockquote {
 	@extend .clearfix;
 }
 
+.narrow {
+    padding: 0 20px;
+	@include j-center(650px);
+	
+	@media #{$device-medium} {
+		padding: 0;
+    }
+    
+    &.extra {
+        @include j-center(400px);
+    }
+}
+
 %span-column {
     @include j-column(1, $gutter: 0);
 }
@@ -273,13 +280,15 @@ blockquote {
 
 // Used for showing vertical rhythm alignment.
 .grid-guide {
-    padding: ms(3);
+    border: 2px solid $color-medium;
+    background-color: $color-lightest;
+    padding: 0 ms(3);
     background-image: linear-gradient(to bottom, rgba($color-primary, .3) 1px, transparent 1px);
     background-position: left -1px;
     background-repeat: repeat;
     background-size: ms(3) ms(3);
+    box-sizing: content-box;
 }
-
 
 /**
  * Buttons
@@ -588,10 +597,6 @@ button,
 	background-color: $color-light;
 	color: $color-dark;
 	position: relative;
-    
-   .lead {
-        margin: 0 auto;
-    }
 	
 	.container {
 		padding: ms(4);
@@ -603,27 +608,21 @@ button,
 }
 
 .introduction-title {
-	font-size: ms(4);
-    line-height: ms(5);
+	font-size: ms(5);
+    line-height: ms(6);
 	font-weight: 500;
 	color: $color-darker;
-	margin: ms(2) 0 0;
+	margin: ms(2) auto ms(0);
 }
 
 .introduction-subtitle {
 	font-size: ms(3);
+    line-height: ms(4);
 	font-weight: 300;
 	color: $color-dark;
 	margin: 0;
 }
-	
-.introduction-title-border {
-    padding-bottom: ms(1);
-    margin-bottom: ms(3);
-	border-bottom: 2px dashed $color-medium;
-	@include j-center(260px);
-}
-	
+
 .talents {
 	color: $color-medium;
 	@extend .clearfix;
@@ -802,12 +801,6 @@ button,
  
 .page-title {
     text-align: center;
-    margin: 0;
-    
-    &:after {
-        content: "";
-        @extend .introduction-title-border;
-    }
 }
 
 .about-feature {

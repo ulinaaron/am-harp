@@ -282,7 +282,7 @@ blockquote {
 .grid-guide {
     border: 2px solid $color-medium;
     background-color: $color-lightest;
-    padding: 0 ms(3);
+    padding: 0 ms(3) ms(3);
     background-image: linear-gradient(to bottom, rgba($color-primary, .3) 1px, transparent 1px);
     background-position: left -1px;
     background-repeat: repeat;
@@ -290,6 +290,18 @@ blockquote {
     box-sizing: content-box;
 }
 
+/**
+ * Cool FX
+ */
+
+.glow {
+    transition: all .5s ease-in-out;
+}
+.glow:hover {
+    &.danger {
+        color: $color-danger;
+    }
+}
 /**
  * Buttons
  */

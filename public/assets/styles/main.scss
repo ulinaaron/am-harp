@@ -147,6 +147,7 @@ a {
 	padding: 0 ms(1);
     color: $color-medium;
     margin-bottom: ms(4);
+    list-style-position: inside;
     
     &.plain {
        @include ul('none'); 
@@ -544,6 +545,7 @@ button,
 .talents {
 	color: $color-medium;
 	@extend .clearfix;
+    font-size: ms(0);
 	
 	.group-title {
         font-size: ms(2);
@@ -614,16 +616,16 @@ button,
 }
 	
 .work {
-	padding: 40px 0;
+	padding: ms(4) 0;
 	
 	@media #{$device-medium} {
-		padding: 80px 0;
+		padding: ms(7) 0;
     }
 		
 	.group-title {
 		background-color: $color-dark;
 		color: $color-lightest;
-		padding: 5px 20px;
+		padding: ms(-4) ms(1);
 		display: inline-block;
 		margin: 0 auto;
     }
@@ -652,28 +654,13 @@ button,
 .footer {
 	background-color: $color-primary;
 	color: $color-lightest;
-    font-size: rem(16);
     overflow: hidden;
-}
-
-.copyright {
-	font-weight: 300;
-	margin-top: 60px;
-	color: $color-light;
+    font-size: ms(0);
 }
 	
 .colophon {
 	color: $color-dark;
     margin-top: ms(3);
-    
-    @media #{$device-medium} {
-	   margin-left: - ms(2);
-       
-       .contact & {
-           margin-left: 0;
-       }
-    }
-    
 }
 	
 .social-section,

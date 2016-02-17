@@ -962,6 +962,7 @@ button,
         
         .role-title {
             font-weight: 400;
+            font-style: normal;
             margin: 0;
             font-size: ms(0);
             line-height: ms(2);
@@ -1087,31 +1088,44 @@ button,
     }
     
     .resume-header {
-        margin-bottom: ms(-6);
+        margin-bottom: 0;
     }
+    
+    .contact-info {       
+         @media #{$device-medium} {
+            .list {
+                line-height: ms2(4);
+            }
+        }
+     }
     
     .title,
     .reference-title.sub-title {
-        font-size: ms(1);
+        font-size: ms2(5);
+        line-height: ms2(6);
     }
     
     .sub-title {
-        font-size: ms(1);
+        font-size: ms2(4);
+        line-height: ms2(5);
     }
     
     .role-title {
         font-size: ms(0);
+        line-height: ms2(1);
     }
     
     .side-column .section-title {
         margin: ms(-1) 0 ms(-4);
-        font-size: rem(14);
+        font-size: ms2(2);
+        line-height: ms2(3);
     }
     
     p,
      ul,
      q {
-         font-size: rem(13);
+         font-size: ms2(0);
+         line-height: ms2(4);
      }
      
      .job-item,
@@ -1120,11 +1134,11 @@ button,
          
          .job-title,
          .reference-name {
-             font-size: rem(16);
+             font-size: ms2(2);
          }
          
          .role-title {
-            font-size: rem(12);
+            font-size: ms2(0);
         }
         
         

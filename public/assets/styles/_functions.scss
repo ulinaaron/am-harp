@@ -43,3 +43,8 @@
 @function ms($size) {
     @return modular-scale($size);
 }
+
+// Use a smaller scale
+@function ms2($size) {
+    @return modular-scale($size, rem(14) rem(18), $major-third);
+}

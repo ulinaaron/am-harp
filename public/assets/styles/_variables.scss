@@ -31,3 +31,6 @@ $device-xl:	    "only screen and (min-width: 1280px)";	// 1280px
 
 $font-primary : 'Oswald', sans-serif;
 $font-secondary : 'Quattrocento', serif;
+
+$modular-scale-ratio: $golden;
+$modular-scale-base: rem(16) rem(18);

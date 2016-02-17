@@ -42,7 +42,7 @@ body {
     background-color: $color-darkest;
     color: $color-dark;
     @extend %pattern-2;
-    background-size: 30px 30px;
+    background-size: ms(4) ms(4);
     letter-spacing: rem(.4);
     
     @media #{$device-medium} {

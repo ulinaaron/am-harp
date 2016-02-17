@@ -31,7 +31,7 @@
 .progress {
   overflow: hidden;
   height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: ms(-2);
   background-color: $color-darkest;
 }
 
@@ -79,7 +79,7 @@
 .progress-striped .progress-bar,
 .progress-bar-striped {
   @extend %pattern-1;
-  background-size: 20px 20px;
+  background-size: ms(1) ms(1);
 }
 
 // Call animation for the active one

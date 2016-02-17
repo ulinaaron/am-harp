@@ -1050,6 +1050,10 @@ button,
     }
 } //.resume-container
 
+.resume-container {
+    margin-top: ms(3);
+}
+
 .resume-standalone {
     .title-section {
         @include j-column(.78);

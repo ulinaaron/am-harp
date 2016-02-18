@@ -48,7 +48,7 @@ gulp.task('npm-packages', function () {
     // Normalize
     gulp.src('./node_modules/normalize.css/normalize.css')
     .pipe(rename('_normalize.scss'))
-    .pipe(gulp.dest('./assets/styles/_vendor/')); // Copies to src/scss
+    .pipe(gulp.dest('public/assets/styles/_vendor/')); // Copies to src/scss
 });
 
 gulp.task('deploy', function() {

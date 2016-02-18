@@ -11,38 +11,78 @@
             <% }; %>
     <% } else if (type == "sections") { %>
             <% for(var slug in public.work._data){ %>
-                <div class="work-item sections">
-                    <div class="container">
-                        <div class="work-item-cover wow fadeInUp">
-                            <a href="<%- public.work._data[slug].url %>" target="_blank">
-                                <div class="browser-bar">
-                                    <div class="browser-dot-1"></div>
-                                    <div class="browser-dot-2"></div>
-                                    <div class="browser-dot-3"></div>
-                                </div>
-                                <div class="cover-source" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].cover %>.png');"></div>
-                            </a>
-                        </div>
-                        <div class="work-item-description">
-                            <h3 class="work-item-title">
-                                <a href="<%- public.work._data[slug].url %>" target="_blank">
-                                    <%= public.work._data[slug].title %>
+                <% if (public.work._data[slug].case_study == true) { %>
+                    <div class="work-item work-item-case-study sections">
+                        <div class="container">
+                            <div class="work-item-cover wow fadeInUp">
+                                <a href="/work/<%= slug %>" target="_blank">
+                                    <div class="browser-bar">
+                                        <div class="browser-dot-1"></div>
+                                        <div class="browser-dot-2"></div>
+                                        <div class="browser-dot-3"></div>
+                                    </div>
+                                    <div class="cover-source" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].cover %>.png');"></div>
                                 </a>
-                            </h3>
-                             <ul class="tag-list clearfix">
-                                <% for(var tag in public.work._data[slug].tags){ %>
-                                    <li><%= public.work._data[slug].tags[tag] %></li>
-                                <% } %>
-                            </ul>
-                            <p>
-                            <%= public.work._data[slug].description %>
-                            </p>
-                            <p class="meta-year">
-                                <%- public.work._data[slug].year %>
-                            </p>
+                            </div>
+                            <div class="work-item-description">
+                                <h3 class="work-item-title">
+                                    <a href="/work/<%= slug %>" target="_blank">
+                                        <%= public.work._data[slug].title %>
+                                    </a>
+                                </h3>
+                                <ul class="tag-list clearfix">
+                                    <% for(var tag in public.work._data[slug].tags){ %>
+                                        <li><%= public.work._data[slug].tags[tag] %></li>
+                                    <% } %>
+                                </ul>
+                                <p>
+                                <%= public.work._data[slug].description %>
+                                </p>
+                                <p class="meta-year">
+                                    <%- public.work._data[slug].year %>
+                                </p>
+                                <a href="/work/<%= slug %>" class="button">
+                                    Read the <%= public.work._data[slug].title %> case study
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- .work-item-case-study -->
+                <% } else { %>
+                    <div class="work-item sections">
+                        <div class="container">
+                            <div class="work-item-cover wow fadeInUp">
+                                <a href="<%- public.work._data[slug].url %>" target="_blank">
+                                    <div class="browser-bar">
+                                        <div class="browser-dot-1"></div>
+                                        <div class="browser-dot-2"></div>
+                                        <div class="browser-dot-3"></div>
+                                    </div>
+                                    <div class="cover-source" style="background-image: url('/assets/images/work/thumbnails/<%= public.work._data[slug].cover %>.png');"></div>
+                                </a>
+                            </div>
+                            <div class="work-item-description">
+                                <h3 class="work-item-title">
+                                    <a href="<%- public.work._data[slug].url %>" target="_blank">
+                                        <%= public.work._data[slug].title %>
+                                    </a>
+                                </h3>
+                                <ul class="tag-list clearfix">
+                                    <% for(var tag in public.work._data[slug].tags){ %>
+                                        <li><%= public.work._data[slug].tags[tag] %></li>
+                                    <% } %>
+                                </ul>
+                                <p>
+                                <%= public.work._data[slug].description %>
+                                </p>
+                                <p class="meta-year">
+                                    <%- public.work._data[slug].year %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .work-item -->
+                <% } %>
             <% }; %>
     <% } else { %>
 </div>

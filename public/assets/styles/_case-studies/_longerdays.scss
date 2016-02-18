@@ -1,0 +1,21 @@
+// Variables
+$color-longerdays: #409ece;
+
+.longerdays {
+    .header {
+        background-color: $color-longerdays;
+    }
+    
+    .site-title a {
+        color: $color-lightest;
+    }
+    
+    .navigation-list a {
+        color: $color-lightest;
+    }
+    
+    .page-title {
+        color: $color-lightest;
+        margin: ms(6) 0;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div id="header-title" class="header-title header-group">
+        <h1 class="site-title align-center">
+            <a href="<%= env_root %>/" id="logo">
+                Aaron Mazade
+            </a>
+        </h1>
+    </div>
+    <div id="header-menu" class="header-menu header-group">
+        <ul id="navigation" class="navigation-list">
+            <% for (var i in menu) { %>
+            <li <%- current.source == menu[i] ? 'class="active"' : '' %>>
+                <a class="main-nav-link" href="<%= env_root %><%= menu[i] %>"><%= i %></a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

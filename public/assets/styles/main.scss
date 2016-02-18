@@ -4,6 +4,7 @@
 @import "variables";
 
 @import "_vendor/normalize";
+@import "animate";
 @import "_modules/animations";
 @import "_modules/patterns";
 @import "_modules/devicons";
@@ -150,8 +151,8 @@ sub {
 }
 
 .lead {
-	font-size: ms(1);
-	font-weight: 300;
+	font-size: modular-scale(1, rem(12) rem(18));
+	font-weight: 600;
 }
 
 /**
@@ -641,6 +642,7 @@ button,
 	font-size: ms(3);
     line-height: ms(4);
 	font-weight: 300;
+    font-style: normal;
 	color: $color-dark;
 	margin: 0;
 }
@@ -803,6 +805,10 @@ button,
 	@media #{$device-xl} {
 		padding: ms(1) 0 ms(6);
     }
+}
+
+.main-case-study {
+    padding: ms(3) 0;
 }
 
 /**
@@ -1403,6 +1409,19 @@ button,
         margin-bottom: 0;
     }
     
+    .button {
+        color: $color-dark;
+        border-color: $color-dark;
+        padding: ms(0) ms(6);
+        width: 100%;
+        text-align: center;
+        
+        &:hover {
+            border-color: $color-lighter;
+            background-color: $color-lighter;
+        }
+    }
+    
     &.grid {
         @include j-column(.5, $cycle: 2, $gutter: 0);
 		
@@ -1593,14 +1612,17 @@ button,
     margin: 0;
     padding: 0;
     list-style-type: none;
-    @extend .clearfix;
+    text-align: center;
+    
+    .work-item & {
+        text-align: left;
+    }
     
     li {
-        float: left;
+        display: inline-block;
         background-color: $color-dark;
         color: $color-light;
         padding: ms(-4) ms(-1);
-        margin-right: ms(-4);
         font-family: $font-primary;
         font-weight: 100;
         
@@ -1634,3 +1656,9 @@ button,
 
 @import "_vendor/slicknav";
 @import "_modules/progress";
+
+/**
+ * Art Directed Partials
+ */
+
+@import "_case-studies/longerdays";

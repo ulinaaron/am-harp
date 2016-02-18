@@ -4,7 +4,7 @@
 
 (function() {
 	$(function() {
-	    $('.group, .header-group').matchHeight();
+	    $('.group, .set-item .inner, .header-group').matchHeight();
 	});
     
     $('#navigation').slicknav({

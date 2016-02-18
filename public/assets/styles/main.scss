@@ -6,6 +6,7 @@
 @import "_vendor/normalize";
 @import "_modules/animations";
 @import "_modules/patterns";
+@import "_modules/devicons";
 
 
 /**
@@ -116,8 +117,9 @@ ul ul, ol ol, ul ol, ol ul {
 }
 
 hr {
-  border: 1px solid;
-  margin: -1px 0;
+  border: 3px solid;
+  height: 0;
+  margin: ms(1) auto ms(0);
 }
 
 code {
@@ -219,6 +221,14 @@ blockquote {
 	@media #{$device-medium} {
 		padding: 0;
     }
+}
+
+/**
+ * Images
+ */
+ 
+figure img {
+    width: 100%;
 }
 	
 /**
@@ -624,7 +634,7 @@ button,
     line-height: ms(6);
 	font-weight: 500;
 	color: $color-darker;
-	margin: ms(2) auto ms(0);
+	margin: ms(0) auto ms(0);
 }
 
 .introduction-subtitle {
@@ -800,6 +810,7 @@ button,
  */
  
  .page-header {
+     margin-top: ms(1);
      padding: 0 ms(1) ms(6);
      
      @media #{$device-medium} {
@@ -815,10 +826,113 @@ button,
     text-align: center;
 }
 
-.about-feature {
-    margin-bottom: ms(4);
+.about-headshot {
+    position: relative;
+    width: ms(11);
+    margin: 0 ms(2) ms(2) 0;
+    float: left;
 }
 
+/**
+ * Sets
+ */
+ 
+ .set-item {
+    border: 4px solid $color-dark;
+    margin-bottom: 0;
+    color: $color-light;
+    @extend %pattern-1;
+    background-size: ms(4) ms(4);
+    
+    &:hover {
+        animation: progress 2s linear infinite;
+    }
+    
+    
+    .inner {
+        background-color: $color-darker;
+        margin: ms(0);
+        padding: ms(2);
+    }
+    
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    @media #{$device-medium} {
+        margin-bottom: 0;
+    }
+    
+    &.primary {
+        background-color: darken($color-primary, 0);
+    }
+    
+    &.secondary {
+        background-color: darken($color-secondary, 0);
+    }
+     
+    &.danger {
+        background-color: darken($color-danger, 0);
+    }
+    
+    &.info {
+        background-color: darken($color-info, 0);
+    }
+    
+    &.success {
+        background-color: darken($color-success, 0);
+    }
+    
+    .set-title {
+        font-size: ms(1);
+        line-height: ms(2);
+        text-align: center;
+        color: $color-light;
+    }
+    
+    .set-icon {
+        display: inline-block;
+        font-size: ms(6);
+        background-color: $color-light;
+        color: $color-darker;
+        border-radius: 100%;
+        padding: ms(0);
+        margin-top: ms(0);
+    }
+ }
+
+.set-of-three {
+    .set-item {
+        @extend %span-column;
+        @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-column(.33333, $cycle: 0, $gutter: 1.8);
+        }
+    }
+}
+
+/**
+ * Callout
+ */
+
+.callout {
+    background-color: $color-dark;
+    padding: ms(4) 0;
+    color: $color-light;
+    font-size: ms(2);
+}
+
+.callout-button {
+    color: $color-light;
+    box-shadow: inset 0 -6px 0 rgba($color-light,0.2);
+    transition: all .5s ease-in-out;
+    
+    &:hover {
+        color: $color-dark;
+        box-shadow: inset 0 -6px 0 rgba($color-dark,0.2)
+    }
+}
 
 /**
  * Resume

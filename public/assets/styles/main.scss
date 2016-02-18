@@ -829,8 +829,12 @@ button,
 .about-headshot {
     position: relative;
     width: ms(11);
-    margin: 0 ms(2) ms(2) 0;
-    float: left;
+    margin: ms(2) auto 0;
+    
+    @media #{$device-medium} {
+        float: left;
+        margin: 0 ms(2) ms(2) 0;
+    }
 }
 
 /**

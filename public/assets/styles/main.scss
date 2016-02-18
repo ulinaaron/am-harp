@@ -839,7 +839,7 @@ button,
  
  .set-item {
     border: 4px solid $color-dark;
-    margin-bottom: 0;
+    margin-bottom: ms(2);
     color: $color-light;
     @extend %pattern-1;
     background-size: ms(4) ms(4);

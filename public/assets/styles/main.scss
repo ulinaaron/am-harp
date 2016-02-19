@@ -228,8 +228,26 @@ blockquote {
  * Images
  */
  
+figure.full-width {
+    margin: 0;
+}
+ 
 figure img {
     width: 100%;
+}
+
+figcaption {
+    font-size: ms(0);
+    font-style: italic;
+    text-align: center;
+}
+
+.matte {
+    margin: ms(2) 0 0;
+    
+    img {
+        display: block;
+    }
 }
 	
 /**
@@ -848,28 +866,38 @@ button,
  */
  
  .set-item {
-    border: 4px solid $color-dark;
-    margin-bottom: ms(2);
-    color: $color-light;
-    @extend %pattern-1;
-    background-size: ms(4) ms(4);
+     
+    &.fancy {
+        border: 4px solid $color-dark;
+        margin-bottom: ms(2);
+        color: $color-light;
+        @extend %pattern-1;
+        background-size: ms(4) ms(4);
     
-    &:hover {
-        animation: progress 2s linear infinite;
+        &:hover {
+            animation: progress 2s linear infinite;
+        }
+    
+    
+        .inner {
+            background-color: $color-darker;
+            margin: ms(0);
+            padding: ms(2);
+        }
+        
+        @media #{$device-medium} {
+            margin-bottom: 0;
+        }
     }
     
-    
-    .inner {
-        background-color: $color-darker;
-        margin: ms(0);
-        padding: ms(2);
+    &.swatch {
+        border: 2px solid $color-dark;
+        width: 100%;
+        height: ms(6);
+        margin-bottom: ms(1);
     }
     
     p:last-of-type {
-        margin-bottom: 0;
-    }
-    
-    @media #{$device-medium} {
         margin-bottom: 0;
     }
     
@@ -918,6 +946,17 @@ button,
 		
         @media #{$device-medium} {
             @include j-column(.33333, $cycle: 0, $gutter: 1);
+        }
+    }
+}
+
+.set-of-six {
+    .set-item {
+        @extend %span-column;
+        @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-column(1/6, $cycle: 0, $gutter: 1);
         }
     }
 }
@@ -1625,6 +1664,7 @@ button,
         padding: ms(-4) ms(-1);
         font-family: $font-primary;
         font-weight: 100;
+        font-size: ms(0);
         
         &:last-child {
             margin-right: 0;

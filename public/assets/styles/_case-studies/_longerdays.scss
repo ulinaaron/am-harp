@@ -4,10 +4,17 @@ $color-longerdays: #409ece;
 .longerdays {
     .header {
         background-color: $color-longerdays;
+        background-image: url('../images/case-studies/longerdays/bg_pattern.png');
+        background-position: center center;
+        background-attachment: fixed;
     }
     
     .site-title a {
         color: $color-lightest;
+        
+        &:hover {
+            color: $color-dark;
+        }
     }
     
     .navigation-list a {

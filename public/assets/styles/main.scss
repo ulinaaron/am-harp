@@ -105,11 +105,15 @@ h6 {
 p, 
 ul, 
 ol, 
-pre, 
 table, 
 blockquote {
 	margin-top: ms(0);
     margin-bottom: ms(2);
+}
+
+pre {
+    line-height: 0;
+    overflow: hidden;
 }
 
 ul ul, ol ol, ul ol, ol ul {
@@ -238,8 +242,10 @@ figure img {
 
 figcaption {
     font-size: ms(0);
+    line-height: ms(1);
     font-style: italic;
     text-align: center;
+    margin-top: ms(0);
 }
 
 .matte {
@@ -247,6 +253,23 @@ figcaption {
     
     img {
         display: block;
+    }
+}
+
+/**
+ * Segments
+ */
+
+.segment {
+    background-color: $color-darkest;
+    border: 6px solid $color-medium;
+    padding: ms(0);
+    margin: ms(2) 0 0;
+    color: $color-light;
+    
+    > p,
+    > pre {
+        margin-top: 0;
     }
 }
 	
@@ -274,6 +297,10 @@ figcaption {
 
 %span-column {
     @include j-column(1, $gutter: 0);
+}
+
+%half-span-column {
+    @include j-column(.5, $cycle: 2, $gutter: 6);
 }
 
 .header-title {
@@ -826,7 +853,11 @@ button,
 }
 
 .main-case-study {
-    padding: ms(3) 0;
+    padding: ms(3) ms(1);
+    
+    @media #{$device-medium} {
+        padding: ms(3) 0;
+    }
 }
 
 /**
@@ -892,9 +923,11 @@ button,
     
     &.swatch {
         border: 2px solid $color-dark;
-        width: 100%;
-        height: ms(6);
-        margin-bottom: ms(1);
+        height: ms(4);
+        
+        @media #{$device-medium} {
+             height: ms(6);
+        }
     }
     
     p:last-of-type {
@@ -938,11 +971,24 @@ button,
         margin-top: ms(0);
     }
  }
-
-.set-of-three {
+ 
+.set-of-two {
+    @extend .clearfix;
+    
     .set-item {
         @extend %span-column;
-        @extend .clearfix;
+
+        @media #{$device-medium} {
+            @include j-column(.5, $cycle: 0, $gutter: 2);
+        }
+    }
+}
+
+.set-of-three {
+    @extend .clearfix;
+    
+    .set-item {
+        @extend %span-column;
 		
         @media #{$device-medium} {
             @include j-column(.33333, $cycle: 0, $gutter: 1);
@@ -951,12 +997,14 @@ button,
 }
 
 .set-of-six {
+    @extend .clearfix;
+    margin-bottom: ms(1);
+            
     .set-item {
-        @extend %span-column;
-        @extend .clearfix;
+        @extend %half-span-column;
 		
         @media #{$device-medium} {
-            @include j-column(1/6, $cycle: 0, $gutter: 1);
+            @include j-column(1/6, $cycle: 6, $gutter: 1);
         }
     }
 }

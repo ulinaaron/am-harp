@@ -9,6 +9,8 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/styles/main.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow-night-eighties.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 </head>
 <body>
   <header id="header" class="header">
@@ -245,9 +247,9 @@
 
 			<div id="footer-info" class="colophon inner">
 				<p>
-					Designed and developed by Aaron Mazade. Built with Harp, Gulp, EJS, Sass, Bourbon, Jeet, WOW.js, and a whole lot of <span class="glow danger">&#9825;</span>.
+					Designed and developed by Aaron Mazade. Built with Harp, Gulp, EJS, Sass, Bourbon, Jeet, WOW.js, and a whole lot of <span class="glow danger">&#9825;</span>. <a href="https://github.com/ulinaaron/am-harp">View source on Github</a>.
 				</p>
-                <p>View the <a href="/styleguide">Style Guide.</a></p>
+                <p><a href="/styleguide">View the Style Guide.</a></p>
 			</div>
 		</div>
 	</div>
@@ -266,7 +268,15 @@
 <script type="text/javascript" src="/assets/js/app.js"></script>
 
 <script>
+ /**
+ * Initiate WOW.js
+ */
  new WOW().init();
+ 
+ /**
+  * Initiate Syntaxt Highlighting
+  */
+ hljs.initHighlightingOnLoad();
 </script>
 </body>
 </html>

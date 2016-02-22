@@ -2,12 +2,31 @@
  * Figures & Images
  */
  
-figure.full-width {
-    margin: 0;
-}
- 
-figure img {
-    width: 100%;
+figure {
+
+    &.full-width {
+        margin: ms(3) 0;
+    }
+
+    &.expanded {
+        margin: ms(3) 0;
+        
+        @media #{$device-medium} {
+            margin: ms(5) (- ms(6));
+        }
+    }
+    
+    &.matte {
+        margin: ms(2) 0 0;
+    
+        img {
+            display: block;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
 }
 
 figcaption {
@@ -16,12 +35,5 @@ figcaption {
     font-style: italic;
     text-align: center;
     margin-top: ms(0);
-}
-
-.matte {
-    margin: ms(2) 0 0;
-    
-    img {
-        display: block;
-    }
+    color: lighten($color-darker, 25%);
 }

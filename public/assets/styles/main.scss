@@ -1,661 +1,34 @@
-@import "_vendor/jeet/jeet";
-@import "_vendor/bourbon/bourbon";
-@import "functions";
-@import "variables";
+// Non-output functions and libraries
+@import "_vendor/jeet/jeet"; // Grid Library
+@import "_vendor/bourbon/bourbon"; // Bourbon Library
+@import "functions"; // Mixins & Functions
+@import "variables"; // Project Variables
 
-@import "_vendor/normalize";
-@import "animate";
-@import "_modules/animations";
-@import "_modules/patterns";
-@import "_modules/devicons";
+// Begin CSS Output and cascade order
+@import "_vendor/normalize"; // Top of the stylsheet
+@import "partials/base"; // General styles and global element resets
+@import "partials/utilities"; // Utility classes such as alignments and clearfixes
+@import "partials/typography"; // Typography
+@import "partials/figures"; // Figure and image types
+@import "partials/structure"; // Layout and grid
+@import "partials/sets"; // Stylistic grid structures
+@import "partials/segments"; // Panel styles
+@import "partials/buttons"; // Buttons
+@import "partials/progress"; // Progress Bars
+@import "partials/forms"; // Forms
+@import "partials/header"; // Header
+@import "partials/footer"; // Footer
+@import "partials/resume"; // Resume and References
+@import "partials/browser"; // Browser window used for the Works page
+@import "partials/animations"; // Custom Animations
+@import "partials/patterns"; // CSS Patterns
+@import "partials/devicons"; // Devicons Font Icon
+@import "_vendor/slicknav"; // Used for mobile navigation
+@import "animate"; // Animate.css Library
 
+// Art Directed Partials
 
-/**
- * Global
- */
- 
- html {
- 	font-size: 100%;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-::selection {
-  background: $color-success; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: $color-success; /* Gecko Browsers */
-}
- 	
-.clearfix {
-    @include clearfix;
-}
- 	
-/**
- * Typography
- */
- 
-body {
-	font-size: ms(1);
-    line-height: ms(3);
-	font-family: $font-secondary;
-    background-color: $color-darkest;
-    color: $color-dark;
-    @extend %pattern-2;
-    background-size: ms(4) ms(4);
-    letter-spacing: rem(.4);
-    
-    @media #{$device-medium} {
-		padding: rem(30);
-    }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $font-primary;
-	color: $color-darker;
-}
-
-h1 {
-    font-size: ms(5);
-    line-height: ms(6);
-    margin: ms(2) 0 0;
-}
-
-h2 {
-    font-size: ms(4);
-    line-height: ms(5);
-    margin: ms(1) 0;
-}
-
-h3 {
-    font-size: ms(3);
-    line-height: ms(4);
-    margin: ms(2) 0 0;
-}
-
-h4 {
-    font-size: ms(2);
-    line-height: ms(3);
-    margin: ms(2) 0 0;
-    font-weight: 500;
-}
-
-h5 {
-    font-size: ms(1);
-    line-height: ms(2);
-    margin: ms(1) 0 0;
-    font-weight: 400;
-    font-style: italic;
-}
-
-h6 {
-    font-size: ms(1);
-    line-height: ms(2);
-    margin: ms(1) 0 0;
-    font-weight: 100;
-}
-
-p, 
-ul, 
-ol, 
-table, 
-blockquote {
-	margin-top: ms(0);
-    margin-bottom: ms(2);
-}
-
-pre {
-    line-height: 0;
-    overflow: hidden;
-}
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-hr {
-  border: 3px solid;
-  height: 0;
-  margin: ms(1) auto ms(2);
-}
-
-code {
-    font-size: ms(0);
-    background-color: $color-lighter;
-    border-radius: 4px;
-    padding: ms(-10);
-}
-
-b, strong, em, small, code {
-  line-height: 1;
-}
-
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-.group-title {
-	font-weight: 300;
-    margin: 0 0 ms(1);
-}
-
-.lead {
-	font-size: modular-scale(1, rem(12) rem(18));
-	font-weight: 600;
-}
-
-/**
- * Links
- */
-
-// Set a baseline for all link types	
-a {
-	color: $color-dark;
-    text-decoration: none;
-	
-	&:hover {
-		border: 0;
-    }
-}
-
-// Lets give content links some special attention   
-p, 
-ul, 
-ol, 
-pre, 
-table, 
-blockquote {
-    > a {
-
-    box-shadow: inset 0 -6px 0 rgba($color-darker,0.2);
-    transition: all .5s ease-in-out;
-    
-        &:hover {
-            color: $color-danger;
-            box-shadow: inset 0 -6px 0 rgba($color-danger,0.2)
-        }
-    } // a
-}
-
-/**
- * Plain List
- */
-
-.plain-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.align-image-center {
-	margin: 0 auto;
-	display: block;
-}	
-	
-.skill-list,
-.accolade-list,
-.social-list {
-	@include ul('circle');
-	margin: 0;
-	padding: 0 ms(1);
-    color: $color-medium;
-    margin-bottom: ms(4);
-    list-style-position: inside;
-    
-    &.plain {
-       @include ul('none'); 
-       padding: 0;
-    }
- 
-	
-	@media #{$device-medium} {
-		padding: 0;
-    }
-}
-
-/**
- * Images
- */
- 
-figure.full-width {
-    margin: 0;
-}
- 
-figure img {
-    width: 100%;
-}
-
-figcaption {
-    font-size: ms(0);
-    line-height: ms(1);
-    font-style: italic;
-    text-align: center;
-    margin-top: ms(0);
-}
-
-.matte {
-    margin: ms(2) 0 0;
-    
-    img {
-        display: block;
-    }
-}
-
-/**
- * Segments
- */
-
-.segment {
-    background-color: $color-darkest;
-    border: 6px solid $color-medium;
-    padding: ms(0);
-    margin: ms(2) 0 0;
-    color: $color-light;
-    
-    > p,
-    > pre {
-        margin-top: 0;
-    }
-}
-	
-/**
- * Grid
- */
- 
-.container {
-	@include j-center(1100px);
-	@extend .clearfix;
-}
-
-.narrow {
-    padding: 0 20px;
-	@include j-center(650px);
-	
-	@media #{$device-medium} {
-		padding: 0;
-    }
-    
-    &.extra {
-        @include j-center(400px);
-    }
-}
-
-%span-column {
-    @include j-column(1, $gutter: 0);
-}
-
-%half-span-column {
-    @include j-column(.5, $cycle: 2, $gutter: 6);
-}
-
-.header-title {
-	@include j-column(1);
-	
-	@media #{$device-medium} {
-		@include j-column(2/5);
-    }
-}
-
-.header-menu {
-	@include j-column(1);
-	
-	@media #{$device-medium} {
-		@include j-column(3/5);
-    }
-}
-		
-.talents,
-.footer {
-	
-	.narrow {
-		
-		@media #{$device-medium} {
-			@include j-center(300px);
-        }
-			
-		@media #{$device-large} {
-			@include j-center(400px);
-        }
-    }
-}
-
-// Used for showing vertical rhythm alignment.
-.grid-guide {
-    border: 2px solid $color-medium;
-    background-color: $color-lightest;
-    padding: 0 ms(3) ms(3);
-    background-image: linear-gradient(to bottom, rgba($color-primary, .3) 1px, transparent 1px);
-    background-position: left -1px;
-    background-repeat: repeat;
-    background-size: ms(3) ms(3);
-    box-sizing: content-box;
-}
-
-/**
- * Cool FX
- */
-
-.glow {
-    transition: all .5s ease-in-out;
-}
-.glow:hover {
-    &.danger {
-        color: $color-danger;
-    }
-}
-/**
- * Buttons
- */
- 
-button,
-.button {
-    display: inline-block;
-    color: $color-medium;
-    padding: ms(-2) ms(1);
-    margin: ms(1) 0;
-    font-size: ms(0);
-    line-height: ms(1);
-    font-family: $font-primary;
-	font-weight: 300;
-	background-color: transparent;
-	border: 2px solid $color-medium;
-	border-radius: 0;
-	position: relative;
-	transition: background-color .5s ease-in;
-	outline: none;
-	box-shadow: none;
-	
-	&:hover {
-		background-color: $color-medium;
-        border: 2px solid $color-medium;
-		color: $color-light;
-		text-decoration: none;
-    }
-}
-		
-.read-more {
-    color: $color-medium;
-    padding: 0 12px;
-	background-color: transparent;
-	border-radius: 0;
-	border: 2px solid $color-medium;
-	font-weight: 300;
-	
-	&:hover {
-		border: 2px solid $color-dark;
-		background-color: $color-dark;
-		color: $color-light;
-    }
-	
-	@media #{$device-medium} {
-		float: right;
-    }
-}
-		
-/**
- * Structure
- */
- 
-.group {
-	@include j-column(1);
-	padding: 40px 20px;
-	padding: ms(4) ms(2);
-	
-	@media #{$device-medium} {
-		@include j-column(1/2, $gutter: 0);
-		padding: 80px 0;
-    }
-    
-   &.full-span {
-       @include j-column(1);
-   }
-}
-		
-.skills,
-.accolades {
-	
-	&.group {
-		padding: 60px 20px 40px;
-		
-		@media #{$device-medium} {
-			padding: 80px 0 80px;
-        }
-    }
-}
-		
-/**
- * Contact Form
- */
-
-.contact-form {
-	@extend .clearfix;
-	
-	input[type="email"],
-	input[type="text"],
-	textarea {
-		background-color: $color-darker;
-        color: $color-light;
-		border: 0;
-		border-radius: 0;
-		padding: ms(-1);
-		@include set-placeholder-style(color, $color-medium);
-		transition: background-color .5s ease-in-quart;
-		
-		@media #{$device-medium} {
-			@include set-placeholder-style('text-align', right);
-            
-            .contact & {
-                @include set-placeholder-style('text-align', left);
-            }
-        }
-		
-		&:focus {
-			outline: none;
-			background-color: $color-darkest;
-        }
-    }
-
-	textarea {
-		height: 200px;
-		resize: none;
-    }
-		
-	input,
-	textarea,
-	button {
-		@include j-stack();
-		margin-bottom: ms(1);
-    }
-		
-	button {
-		width: 100%;
-		float: right;
-		text-align: right;
-		
-		@media #{$device-medium} {
-			width: 50%;
-        }
-    }
-}
-		
-/**
- * Header
- */
-
-.header {
-    position: relative;
-	padding: ms(1);
-	background-color: $color-light;
-    
-    .index & {
-        display: none;
-    }
-    
-    @media #{$device-medium} {
-		.index & {
-            display: block;
-        }
-    }
-	
-	.index &,
-    .contact &,
-	.about & {
-		background-color: $color-light;
-    }
-	
-	@media #{$device-medium} {
-		padding: ms(3) 0;
-    }
-    
-    @media #{$device-small} {
-		padding: ms(3);
-    }
-}
-	
-.site-title {
-	position: relative;
-	font-size: ms(3);
-	margin: 0;
-	padding: 0;
-	font-weight: 300;
-    
-
-	a {
-        padding: ms(-3) ms(-1);
-        transition: border 1.0s ease-in;
- 		transition: color .5s ease-in;
-        color: $color-medium;
-        line-height: 1;
-        
-        &:hover {
-            color: $color-dark;
-        }
-    }
-		
-	@media #{$device-medium} {
-		margin: 0;
-    }
-}
-		
-.site-title.align-center {
-	
-	@media #{$device-medium} {
-		text-align: left;
-    }
-}
-		
-/**
- * Header Navigation
- */
- 
-.header-menu {
-	position: relative;
-}
- 	
-.navigation-list {
-	@include inline-list(10px);
-	font-family: $font-primary;
-	
-	@media #{$device-medium} {
-		@include j-align(vertical);
-		right: 0;
-		left: auto;
-    }
-		
-	a {
-        position: relative;
- 		font-weight: 100;
- 		padding: ms(-3) ms(-1);
-        color: $color-medium;
-        background: transparent;
-        -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
-        -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
-        transition: transform ease-out 0.1s, background 0.2s;
-        transition: background 1s ease-out;
-        
-        &:after {
-            pointer-events: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            content: '';
-            -webkit-box-sizing: content-box; 
-            -moz-box-sizing: content-box; 
-            box-sizing: content-box;
-            
-            top: 0;
-            left: 0;
-            padding: 0;
-            z-index: -1;
-            box-shadow: 0 0 10px 10px rgba(255,255,255,0.2);
-            opacity: 0;
-            -webkit-transform: scale(0.70);
-            -moz-transform: scale(0.70);
-            -ms-transform: scale(0.70);
-            transform: scale(0.70);
-        }
-
- 		&:hover {
-            color: $color-light;
-            background: $color-dark;
-            -webkit-transform: scale(1.5);
-            -moz-transform: scale(1.5);
-            -ms-transform: scale(1.5);
-            transform: scale(1.5);
-            
-            &:after {
-            -webkit-animation: sonarEffect 1s ease-out 75ms;
-            -moz-animation: sonarEffect 1s ease-out 75ms;
-            animation: sonarEffect 1s ease-out 75ms;
-            }
-        }
-    }
- 		
- 	.active a {
- 		border-color: $color-darkest;
- 		color: $color-darkest;
- 		
- 		&:hover {
- 			background-color: $color-darkest;
- 			color: $color-light;
-         }
-     }
-}
-
-/**
- * Display for menus
- */
- 
-#navigation {
-	display: none;
-	
-	@media #{$device-medium} {
-		display: block;
-    }
-}
-		
-.slicknav_menu {
-	display: block;
-	
-	@media #{$device-medium} {
-		display: none;
-    }
-}
+@import "partials/case-studies/longerdays";
 	
 /**
  * Home
@@ -704,7 +77,7 @@ button,
 		padding: ms(-5) ms(1);
         margin: 0 0 ms(1);
     }
-}
+} //.talents
 		
 .accolades {
 	background-color: darken($color-darker, 1);
@@ -729,7 +102,7 @@ button,
 			text-align: right;
         }
     }
-}
+} //.skills
 			
 .skill-list {
 	list-style-type: none;
@@ -739,7 +112,7 @@ button,
 		position: relative;
 		@extend .clearfix;
     }
-}
+} //.skill-list
 		
 .skill-title {
     font-size: ms(0);
@@ -755,7 +128,7 @@ button,
         margin-bottom: 0;
 		@include j-column(3/5);
     }
-}
+} //.skill-title
 
 .skill-list .progress {
 	position: relative;
@@ -779,7 +152,7 @@ button,
 		display: inline-block;
 		margin: 0 auto;
     }
-}
+} //.work
 
 /**
  * Sections
@@ -797,39 +170,6 @@ button,
     background-color: $color-darkest;
 }
 		
-/**
- * Footer
- */
-
-.footer {
-	background-color: $color-primary;
-	color: $color-lightest;
-    overflow: hidden;
-    font-size: ms(0);
-}
-	
-.colophon {
-	color: $color-dark;
-    margin-top: ms(3);
-}
-	
-.social-section,
-.contact-section {
-	.group-title {
-		color: $color-light;
-    }
-		
-	a {
-		color: $color-medium;
-        transition: all .5s ease-in-out;
-		
-		&:hover {
-			color: $color-success;
-            box-shadow: inset 0 -6px 0 rgba($color-success,0.2)
-        }
-    }
-}
-
 /**
  * Main
  */
@@ -850,7 +190,7 @@ button,
 	@media #{$device-xl} {
 		padding: ms(1) 0 ms(6);
     }
-}
+} //.main
 
 .main-case-study {
     padding: ms(3) ms(1);
@@ -858,7 +198,7 @@ button,
     @media #{$device-medium} {
         padding: ms(3) 0;
     }
-}
+} //,main-case-study
 
 /**
  * Pages
@@ -875,7 +215,7 @@ button,
      p:first-of-type {
         margin: 0;
      }
- }
+ } //.page-header
  
 .page-title {
     text-align: center;
@@ -890,525 +230,8 @@ button,
         float: left;
         margin: 0 ms(2) ms(2) 0;
     }
-}
+} //.about-headshot
 
-/**
- * Sets
- */
- 
- .set-item {
-     
-    &.fancy {
-        border: 4px solid $color-dark;
-        margin-bottom: ms(2);
-        color: $color-light;
-        @extend %pattern-1;
-        background-size: ms(4) ms(4);
-    
-        &:hover {
-            animation: progress 2s linear infinite;
-        }
-    
-    
-        .inner {
-            background-color: $color-darker;
-            margin: ms(0);
-            padding: ms(2);
-        }
-        
-        @media #{$device-medium} {
-            margin-bottom: 0;
-        }
-    }
-    
-    &.swatch {
-        border: 2px solid $color-dark;
-        height: ms(4);
-        
-        @media #{$device-medium} {
-             height: ms(6);
-        }
-    }
-    
-    p:last-of-type {
-        margin-bottom: 0;
-    }
-    
-    &.primary {
-        background-color: darken($color-primary, 0);
-    }
-    
-    &.secondary {
-        background-color: darken($color-secondary, 0);
-    }
-     
-    &.danger {
-        background-color: darken($color-danger, 0);
-    }
-    
-    &.info {
-        background-color: darken($color-info, 0);
-    }
-    
-    &.success {
-        background-color: darken($color-success, 0);
-    }
-    
-    .set-title {
-        font-size: ms(1);
-        line-height: ms(2);
-        text-align: center;
-        color: $color-light;
-    }
-    
-    .set-icon {
-        display: inline-block;
-        font-size: ms(6);
-        background-color: $color-light;
-        color: $color-darker;
-        border-radius: 100%;
-        padding: ms(0);
-        margin-top: ms(0);
-    }
- }
- 
-.set-of-two {
-    @extend .clearfix;
-    
-    .set-item {
-        @extend %span-column;
-
-        @media #{$device-medium} {
-            @include j-column(.5, $cycle: 0, $gutter: 2);
-        }
-    }
-}
-
-.set-of-three {
-    @extend .clearfix;
-    
-    .set-item {
-        @extend %span-column;
-		
-        @media #{$device-medium} {
-            @include j-column(.33333, $cycle: 0, $gutter: 1);
-        }
-    }
-}
-
-.set-of-six {
-    @extend .clearfix;
-    margin-bottom: ms(1);
-            
-    .set-item {
-        @extend %half-span-column;
-		
-        @media #{$device-medium} {
-            @include j-column(1/6, $cycle: 6, $gutter: 1);
-        }
-    }
-}
-
-/**
- * Callout
- */
-
-.callout {
-    background-color: $color-dark;
-    padding: ms(4) 0;
-    color: $color-light;
-    font-size: ms(2);
-}
-
-.callout-button {
-    color: $color-light;
-    box-shadow: inset 0 -6px 0 rgba($color-light,0.2);
-    transition: all .5s ease-in-out;
-    
-    &:hover {
-        color: $color-dark;
-        box-shadow: inset 0 -6px 0 rgba($color-dark,0.2)
-    }
-}
-
-/**
- * Resume
- */
- 
-.resume-container,
-.reference-container,
-.resume-footer {
-    padding: ms(1);
-    background-color: $color-lightest;
-    border: 6px solid $color-dark;
-    @extend .clearfix;
-    
-    a {
-        color: $color-dark;
-    }
-    
-    .sub-title {
-        text-align: left;
-        
-        &.work-title {
-            margin-bottom: ms(1);
-        }
-        
-        &.summary-title {
-            margin-bottom: ms(-2);
-            
-            & + p:first-of-type {
-                margin-top: 0;
-            }
-        }
-        
-        &.reference-title {
-            margin: 0 0 ms(2);
-        }
-    }
-    
-    /** 
-     * Structure
-     */
-     
-     .resume-header {
-         @extend clearfix;
-         margin-bottom: ms(1);
-         overflow: hidden;
-     }
-     
-    .title-section {
-         @extend %span-column;
-         @extend .clearfix;
-		
-        @media #{$device-medium} {
-            @include j-column(.8);
-        }
-     }
-    
-    .contact-info {
-        @extend %span-column;
-        @extend .clearfix;
-		
-        @media #{$device-medium} {
-            @include j-column(.20);
-        }
-    }
-    
-    .main-column {
-        @extend %span-column;
-        @extend .clearfix;
-        
-        @media #{$device-medium} {
-            @include j-column(.7, $gutter: 6);
-        }
-    }
-    
-    .side-column {
-        @extend %span-column;
-        @extend .clearfix;
-        
-        @media #{$device-medium} {
-            @include j-column(.27);
-        }
-    }
-    
-    /**
-     * Styles
-     */
-     
-     .contact-info {
-         padding-top: ms(1);
-         
-         @media #{$device-medium} {
-             padding-top: 0;
-             
-            .list {
-                text-align: left;
-                padding: 0;
-                line-height: ms(3);
-            }
-        }
-     }
-     
-     p,
-     ul,
-     q {
-         font-size: ms(0);
-         
-         &:last-of-type {
-             margin-bottom: 0;
-             padding-bottom: 0;
-         }
-     }
-    
-    .title {
-        margin: 0;
-        font-size: ms(2);
-        border-bottom: 4px solid $color-medium;
-        padding-bottom: ms(-5);
-        margin-bottom: ms(-1);
-    }
-    
-    .title-section {
-        
-        @media #{$device-medium} {
-            border-right: 4px solid $color-medium;
-        }
-    }
-    
-    .role-title, {
-        margin: 0;
-        font-weight: 100;
-    }
-
-    .job-item {
-        position: relative;
-        margin-bottom: ms(4);
-        
-        .job-title {
-            font-weight: 700;
-            line-height: ms(3);
-        }
-        
-        .role-title {
-            font-weight: 400;
-            font-style: normal;
-            margin: 0;
-            font-size: ms(0);
-            line-height: ms(2);
-        }
-        
-        .length {
-            margin: 0;
-            font-weight: 100;
-            font-size: modular-scale(0, rem(14));
-            line-height: ms(0);
-        }
-        
-        .location {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0;
-            font-weight: 100;
-            font-size: modular-scale(0, rem(14));
-        }
-        
-        .explainations {
-            padding-left: ms(1);
-            margin-top: ms(-3);
-        }
-        
-        p:first-of-type {
-            margin-top: ms(-2);
-        }
-    } //.job-item
-    
-    .reference-item {
-        margin-bottom: ms(4);
-        
-        .reference-name {
-            font-weight: 700;
-            margin: 0;
-        }
-        
-        .role-title {
-            font-weight: 400;
-            margin: 0;
-            font-size: ms(0);
-        }
-        
-       blockquote {
-           position: relative;
-           quotes: "\201C""\201D";
-           margin-top: ms(-2);
-           
-           &:before,
-           &:after {
-               position: absolute;
-               color: $color-medium;
-               font-size: rem(80);
-               
-           }
-
-           &:before {
-               content: open-quote;
-               font-size: rem(80);
-               top: 0;
-               left: -40px;
-               line-height: 1;
-               
-           }
-       } // blockquote
-    }
-    
-    .side-column {
-        .section-title {
-            margin: ms(3) 0 ms(-4);
-            font-size: ms(0);
-        }
-        
-        .list {
-            margin-top: 0;
-            list-style-type: square;
-            padding-left: ms(1);
-        }
-    }
-    
-    .standalone {
-        display: none;
-    }
-} //.resume-container
-
-.resume-container {
-    margin-top: ms(3);
-}
-
-.resume-standalone {
-    .title-section {
-        @include j-column(.78);
-    }
-    
-    .contact-info {
-        @include j-column(.22);
-    }
-    
-    .main-column {
-        @include j-column(.7, $gutter: 6);
-    }
-    
-    .side-column {
-        @include j-column(.27);
-    }
-}
-
-.resume-standalone,
-.references-standalone {
-    
-    .standalone {
-        display: block;
-    }
-    
-    a {
-        box-shadow: none;
-    }
-    
-    body {
-        background: #FFF;
-        padding-top: 0;
-    }
-    
-    .resume-container,
-    .reference-container {
-        width: 100%;
-        margin: 0 auto;
-        background: #FFF;
-    }
-    
-    .resume-header {
-        margin-bottom: 0;
-    }
-    
-    .contact-info {       
-         @media #{$device-medium} {
-            .list {
-                line-height: ms2(4);
-            }
-        }
-     }
-    
-    .title,
-    .reference-title.sub-title {
-        font-size: ms2(5);
-        line-height: ms2(6);
-    }
-    
-    .sub-title {
-        font-size: ms2(3);
-        line-height: ms2(4);
-    }
-    
-    .role-title {
-        font-size: ms(0);
-        line-height: ms2(1);
-    }
-    
-    .side-column .section-title {
-        margin: ms(-1) 0 ms(-4);
-        font-size: ms2(1);
-        line-height: ms2(2);
-    }
-    
-    p,
-     ul,
-     q {
-         font-size: ms2(-1);
-         line-height: ms2(3);
-         margin: 0 0 ms2(2);
-     }
-     
-     .job-item,
-     .reference-item {
-         margin-bottom: ms2(-1);
-         
-         .job-title,
-         .reference-name {
-             font-size: ms2(2);
-             line-height: ms2(3);
-         }
-         
-         .role-title {
-            font-size: ms2(0);
-        }
-        
-        
-        .length {
-            font-size: ms2(-1);
-        }
-        
-        .location {
-            font-size: ms2(-1);
-        }
-     }
-     
-     .portfolio-link {
-         margin-top: ms2(2);
-     }
-}
-
-.reference-container,
-.resume-footer {
-    margin-top: ms(4) !important;
-}
-
-.resume-footer {
-    text-align: center;
-    
-    p {
-        margin-top: 0;
-        font-size: ms(3);
-        line-height: ms(4);
-    }
-}
-
-.resume-button {
-    border-color: $color-dark;
-    color: $color-dark;
-    margin: 0 auto;
-    margin: ms(1) auto 0;
-    display: inline-block;
-    
-    &:hover {
-        border: 2px solid $color-medium;
-    }
-}
-
-.resume .show-for-standalone {
-    display: none;
-}
-
-	
 /**
  * Articles
  */
@@ -1428,7 +251,7 @@ button,
 		color: $color-dark;
 		font-weight: 400;
     }
-}
+} //.article-block
 		
 /**
  * Article
@@ -1487,7 +310,7 @@ button,
         text-align: left;
         padding: 0;
     }
-}
+} //.work-item-title
 
 .work-item {
 	position: relative;
@@ -1507,7 +330,7 @@ button,
             border-color: $color-lighter;
             background-color: $color-lighter;
         }
-    }
+    } //.button
     
     &.grid {
         @include j-column(.5, $cycle: 2, $gutter: 0);
@@ -1526,7 +349,7 @@ button,
             background-position: 50%;
             text-align: center;
         }
-    }
+    } //&.grid
     
     &.sections {
         position: relative;
@@ -1597,103 +420,10 @@ button,
                 a:hover {
                     color: $color-lightest;
                 }
-            } // .work-item-title
-        }
-    }
-}
-
-/**
- * Browser
- */
-.work-item-cover {
-    .cover-source {
-        width: 100%;
-        height: 400px;
-        display: block;
-        background-size: cover;
-        background-position: center top;
-        position: relative;
-        
-        &:before {
-            content: "";
-            transition: all .5s ease-in-out;
-        }
-        
-        &:after {
-            content: "";
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        
-        &:hover {
-            
-            &:before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-color: rgba($color-darkest, .7);
-            }
-            
-            &:after {
-                content: "+";
-                font-family: $font-primary;
-                font-size: rem(200);
-                font-weight: 100;
-                color: $color-light;
-                display: inline-block;
-                position: absolute;
-                text-align: center;
-                vertical-align: middle;
-                height: 100%;
-                width: 100%;
-                line-height: 1.75;
-                top: 0;
-                left: 0;
-                opacity: 1;
-            }
-        }
-    }
-    .browser-bar {
-        width: 100%;
-        height: ms(1);
-        background-color: $color-light;
-        border-radius: 4px 4px 0 0;
-    }
-}
-
-%browser-dot {
-    &:before {
-        content: "";
-        display: block;
-        width: ms(-3);
-        height: ms(-3);
-        background-color: $color-medium;
-        border-radius: 100%;
-        float: left;
-        margin: ms(-4) 0 0 ms(-5);
-        
-    }
-}
-
-.browser-dot-1,
-.browser-dot-2,
-.browser-dot-3 {
-    margin-left: 3px;
-    @extend %browser-dot;
-}
-
-.browser-dot-1:hover:before {
-    background-color: $color-danger;
-}
-
-.browser-dot-2:hover:before {
-    background-color: $color-warning;
-}
-
-.browser-dot-3:hover:before {
-    background-color: $color-success;
-}
+            } //.work-item-title
+        } //&:nth-child(even) 
+    } //&.sections
+} //.work-item
 
 .tag-list {
     margin: 0;
@@ -1727,26 +457,5 @@ button,
                 margin-bottom: 0;
             }
         }
-    }
-}
-
-.align-center {
-    text-align: center;
-}
-
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
-@import "_vendor/slicknav";
-@import "_modules/progress";
-
-/**
- * Art Directed Partials
- */
-
-@import "_case-studies/longerdays";
+    } // li
+} //.tag-list

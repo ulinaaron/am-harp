@@ -1,0 +1,32 @@
+/**
+ * Footer
+ */
+
+.footer {
+	background-color: $color-primary;
+	color: $color-lightest;
+    overflow: hidden;
+    font-size: ms(0);
+}
+	
+.colophon {
+	color: $color-dark;
+    margin-top: ms(3);
+}
+	
+.social-section,
+.contact-section {
+	.group-title {
+		color: $color-light;
+    }
+		
+	a {
+		color: $color-medium;
+        transition: all .5s ease-in-out;
+		
+		&:hover {
+			color: $color-success;
+            box-shadow: inset 0 -6px 0 rgba($color-success,0.2)
+        }
+    }
+}

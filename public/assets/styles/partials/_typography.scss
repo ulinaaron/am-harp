@@ -1,0 +1,179 @@
+/**
+ * Typography
+ */
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-primary;
+	color: $color-darker;
+}
+
+h1 {
+    font-size: ms(5);
+    line-height: ms(6);
+    margin: ms(2) 0 0;
+}
+
+h2 {
+    font-size: ms(4);
+    line-height: ms(5);
+    margin: ms(1) 0;
+}
+
+h3 {
+    font-size: ms(3);
+    line-height: ms(4);
+    margin: ms(2) 0 0;
+}
+
+h4 {
+    font-size: ms(2);
+    line-height: ms(3);
+    margin: ms(2) 0 0;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: ms(1);
+    line-height: ms(2);
+    margin: ms(1) 0 0;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h6 {
+    font-size: ms(1);
+    line-height: ms(2);
+    margin: ms(1) 0 0;
+    font-weight: 100;
+}
+
+p, 
+ul, 
+ol, 
+table, 
+blockquote {
+	margin-top: ms(0);
+    margin-bottom: ms(2);
+}
+
+pre {
+    line-height: 0;
+    overflow: hidden;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr {
+  border: 3px solid;
+  height: 0;
+  margin: ms(1) auto ms(2);
+}
+
+code {
+    font-size: ms(0);
+    background-color: $color-lighter;
+    border-radius: 4px;
+    padding: ms(-10);
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+.group-title {
+	font-weight: 300;
+    margin: 0 0 ms(1);
+}
+
+.lead {
+	font-size: modular-scale(1, rem(12) rem(18));
+	font-weight: 600;
+}
+
+/**
+ * Links
+ */
+
+// Set a baseline for all link types	
+a {
+	color: $color-dark;
+    text-decoration: none;
+	
+	&:hover {
+		border: 0;
+    }
+}
+
+// Lets give content links some special attention   
+p, 
+ul, 
+ol, 
+pre, 
+table, 
+blockquote {
+    > a {
+
+    box-shadow: inset 0 -6px 0 rgba($color-darker,0.2);
+    transition: all .5s ease-in-out;
+    
+        &:hover {
+            color: $color-danger;
+            box-shadow: inset 0 -6px 0 rgba($color-danger,0.2)
+        }
+    } // a
+}
+
+/**
+ * Plain List
+ */
+
+.plain-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.align-image-center {
+	margin: 0 auto;
+	display: block;
+}	
+	
+.skill-list,
+.accolade-list,
+.social-list {
+	@include ul('circle');
+	margin: 0;
+	padding: 0 ms(1);
+    color: $color-medium;
+    margin-bottom: ms(4);
+    list-style-position: inside;
+    
+    &.plain {
+       @include ul('none'); 
+       padding: 0;
+    }
+ 
+	
+	@media #{$device-medium} {
+		padding: 0;
+    }
+}

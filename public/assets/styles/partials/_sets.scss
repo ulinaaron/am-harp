@@ -1,0 +1,116 @@
+/**
+ * Sets
+ */
+ 
+ .set-item {
+     
+    &.fancy {
+        border: 4px solid $color-dark;
+        margin-bottom: ms(2);
+        color: $color-light;
+        @extend %pattern-1;
+        background-size: ms(4) ms(4);
+    
+        &:hover {
+            animation: progress 2s linear infinite;
+        }
+    
+    
+        .inner {
+            background-color: $color-darker;
+            margin: ms(0);
+            padding: ms(2);
+        }
+        
+        @media #{$device-medium} {
+            margin-bottom: 0;
+        }
+    }
+    
+    &.swatch {
+        border: 2px solid $color-dark;
+        height: ms(4);
+        
+        @media #{$device-medium} {
+             height: ms(6);
+        }
+    }
+    
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    &.primary {
+        background-color: darken($color-primary, 0);
+    }
+    
+    &.secondary {
+        background-color: darken($color-secondary, 0);
+    }
+     
+    &.danger {
+        background-color: darken($color-danger, 0);
+    }
+    
+    &.info {
+        background-color: darken($color-info, 0);
+    }
+    
+    &.success {
+        background-color: darken($color-success, 0);
+    }
+    
+    .set-title {
+        font-size: ms(1);
+        line-height: ms(2);
+        text-align: center;
+        color: $color-light;
+    }
+    
+    .set-icon {
+        display: inline-block;
+        font-size: ms(6);
+        background-color: $color-light;
+        color: $color-darker;
+        border-radius: 100%;
+        padding: ms(0);
+        margin-top: ms(0);
+    }
+ }
+ 
+.set-of-two {
+    @extend .clearfix;
+    
+    .set-item {
+        @extend %span-column;
+
+        @media #{$device-medium} {
+            @include j-column(.5, $cycle: 0, $gutter: 2);
+        }
+    }
+}
+
+.set-of-three {
+    @extend .clearfix;
+    
+    .set-item {
+        @extend %span-column;
+		
+        @media #{$device-medium} {
+            @include j-column(.33333, $cycle: 0, $gutter: 1);
+        }
+    }
+}
+
+.set-of-six {
+    @extend .clearfix;
+    margin-bottom: ms(1);
+            
+    .set-item {
+        @extend %half-span-column;
+		
+        @media #{$device-medium} {
+            @include j-column(1/6, $cycle: 6, $gutter: 1);
+        }
+    }
+}

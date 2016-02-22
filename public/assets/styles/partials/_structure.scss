@@ -1,0 +1,87 @@
+/**
+ * Structure
+ */
+ 
+.container {
+	@include j-center(1100px);
+	@extend .clearfix;
+}
+
+.narrow {
+    padding: 0 20px;
+	@include j-center(650px);
+	
+	@media #{$device-medium} {
+		padding: 0;
+    }
+    
+    &.extra {
+        @include j-center(400px);
+    }
+}
+
+%span-column {
+    @include j-column(1, $gutter: 0);
+}
+
+%half-span-column {
+    @include j-column(.5, $cycle: 2, $gutter: 6);
+}
+
+.header-title {
+	@include j-column(1);
+	
+	@media #{$device-medium} {
+		@include j-column(2/5);
+    }
+}
+
+.header-menu {
+	@include j-column(1);
+	
+	@media #{$device-medium} {
+		@include j-column(3/5);
+    }
+}
+		
+.talents,
+.footer {
+	
+	.narrow {
+		
+		@media #{$device-medium} {
+			@include j-center(300px);
+        }
+			
+		@media #{$device-large} {
+			@include j-center(400px);
+        }
+    }
+}
+
+.group {
+	@include j-column(1);
+	padding: 40px 20px;
+	padding: ms(4) ms(2);
+	
+	@media #{$device-medium} {
+		@include j-column(1/2, $gutter: 0);
+		padding: 80px 0;
+    }
+    
+   &.full-span {
+       @include j-column(1);
+   }
+}
+		
+.skills,
+.accolades {
+	
+	&.group {
+		padding: 60px 20px 40px;
+		
+		@media #{$device-medium} {
+			padding: 80px 0 80px;
+        }
+    }
+}

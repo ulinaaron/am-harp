@@ -1,0 +1,376 @@
+/**
+ * Resume
+ */
+ 
+.resume-container,
+.reference-container,
+.resume-footer {
+    padding: ms(1);
+    background-color: $color-lightest;
+    border: 6px solid $color-dark;
+    @extend .clearfix;
+    
+    a {
+        color: $color-dark;
+    }
+    
+    .sub-title {
+        text-align: left;
+        
+        &.work-title {
+            margin-bottom: ms(1);
+        }
+        
+        &.summary-title {
+            margin-bottom: ms(-2);
+            
+            & + p:first-of-type {
+                margin-top: 0;
+            }
+        }
+        
+        &.reference-title {
+            margin: 0 0 ms(2);
+        }
+    }
+    
+    /** 
+     * Structure
+     */
+     
+     .resume-header {
+         @extend clearfix;
+         margin-bottom: ms(1);
+         overflow: hidden;
+     }
+     
+    .title-section {
+         @extend %span-column;
+         @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-column(.8);
+        }
+     }
+    
+    .contact-info {
+        @extend %span-column;
+        @extend .clearfix;
+		
+        @media #{$device-medium} {
+            @include j-column(.20);
+        }
+    }
+    
+    .main-column {
+        @extend %span-column;
+        @extend .clearfix;
+        
+        @media #{$device-medium} {
+            @include j-column(.7, $gutter: 6);
+        }
+    }
+    
+    .side-column {
+        @extend %span-column;
+        @extend .clearfix;
+        
+        @media #{$device-medium} {
+            @include j-column(.27);
+        }
+    }
+    
+    /**
+     * Styles
+     */
+     
+     .contact-info {
+         padding-top: ms(1);
+         
+         @media #{$device-medium} {
+             padding-top: 0;
+             
+            .list {
+                text-align: left;
+                padding: 0;
+                line-height: ms(3);
+            }
+        }
+     }
+     
+     p,
+     ul,
+     q {
+         font-size: ms(0);
+         
+         &:last-of-type {
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
+     }
+    
+    .title {
+        margin: 0;
+        font-size: ms(2);
+        border-bottom: 4px solid $color-medium;
+        padding-bottom: ms(-5);
+        margin-bottom: ms(-1);
+    }
+    
+    .title-section {
+        
+        @media #{$device-medium} {
+            border-right: 4px solid $color-medium;
+        }
+    }
+    
+    .role-title, {
+        margin: 0;
+        font-weight: 100;
+    }
+
+    .job-item {
+        position: relative;
+        margin-bottom: ms(4);
+        
+        .job-title {
+            font-weight: 700;
+            line-height: ms(3);
+        }
+        
+        .role-title {
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            font-size: ms(0);
+            line-height: ms(2);
+        }
+        
+        .length {
+            margin: 0;
+            font-weight: 100;
+            font-size: modular-scale(0, rem(14));
+            line-height: ms(0);
+        }
+        
+        .location {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            font-weight: 100;
+            font-size: modular-scale(0, rem(14));
+        }
+        
+        .explainations {
+            padding-left: ms(1);
+            margin-top: ms(-3);
+        }
+        
+        p:first-of-type {
+            margin-top: ms(-2);
+        }
+    } //.job-item
+    
+    .reference-item {
+        margin-bottom: ms(4);
+        
+        .reference-name {
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .role-title {
+            font-weight: 400;
+            margin: 0;
+            font-size: ms(0);
+        }
+        
+       blockquote {
+           position: relative;
+           quotes: "\201C""\201D";
+           margin-top: ms(-2);
+           
+           &:before,
+           &:after {
+               position: absolute;
+               color: $color-medium;
+               font-size: rem(80);
+               
+           }
+
+           &:before {
+               content: open-quote;
+               font-size: rem(80);
+               top: 0;
+               left: -40px;
+               line-height: 1;
+               
+           }
+       } // blockquote
+    }
+    
+    .side-column {
+        .section-title {
+            margin: ms(3) 0 ms(-4);
+            font-size: ms(0);
+        }
+        
+        .list {
+            margin-top: 0;
+            list-style-type: square;
+            padding-left: ms(1);
+        }
+    }
+    
+    .standalone {
+        display: none;
+    }
+} //.resume-container
+
+.resume-container {
+    margin-top: ms(3);
+}
+
+.resume-standalone {
+    .title-section {
+        @include j-column(.78);
+    }
+    
+    .contact-info {
+        @include j-column(.22);
+    }
+    
+    .main-column {
+        @include j-column(.7, $gutter: 6);
+    }
+    
+    .side-column {
+        @include j-column(.27);
+    }
+}
+
+.resume-standalone,
+.references-standalone {
+    
+    .standalone {
+        display: block;
+    }
+    
+    a {
+        box-shadow: none;
+    }
+    
+    body {
+        background: #FFF;
+        padding-top: 0;
+    }
+    
+    .resume-container,
+    .reference-container {
+        width: 100%;
+        margin: 0 auto;
+        background: #FFF;
+    }
+    
+    .resume-header {
+        margin-bottom: 0;
+    }
+    
+    .contact-info {       
+         @media #{$device-medium} {
+            .list {
+                line-height: ms2(4);
+            }
+        }
+     }
+    
+    .title,
+    .reference-title.sub-title {
+        font-size: ms2(5);
+        line-height: ms2(6);
+    }
+    
+    .sub-title {
+        font-size: ms2(3);
+        line-height: ms2(4);
+    }
+    
+    .role-title {
+        font-size: ms(0);
+        line-height: ms2(1);
+    }
+    
+    .side-column .section-title {
+        margin: ms(-1) 0 ms(-4);
+        font-size: ms2(1);
+        line-height: ms2(2);
+    }
+    
+    p,
+     ul,
+     q {
+         font-size: ms2(-1);
+         line-height: ms2(3);
+         margin: 0 0 ms2(2);
+     }
+     
+     .job-item,
+     .reference-item {
+         margin-bottom: ms2(-1);
+         
+         .job-title,
+         .reference-name {
+             font-size: ms2(2);
+             line-height: ms2(3);
+         }
+         
+         .role-title {
+            font-size: ms2(0);
+        }
+        
+        
+        .length {
+            font-size: ms2(-1);
+        }
+        
+        .location {
+            font-size: ms2(-1);
+        }
+     }
+     
+     .portfolio-link {
+         margin-top: ms2(2);
+     }
+}
+
+.reference-container,
+.resume-footer {
+    margin-top: ms(4) !important;
+}
+
+.resume-footer {
+    text-align: center;
+    
+    p {
+        margin-top: 0;
+        font-size: ms(3);
+        line-height: ms(4);
+    }
+}
+
+.resume-button {
+    border-color: $color-dark;
+    color: $color-dark;
+    margin: 0 auto;
+    margin: ms(1) auto 0;
+    display: inline-block;
+    
+    &:hover {
+        border: 2px solid $color-medium;
+    }
+}
+
+.resume .show-for-standalone {
+    display: none;
+}

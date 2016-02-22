@@ -1,0 +1,33 @@
+/**
+ * Base
+ */
+ 
+ html {
+ 	font-size: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+::selection {
+  background: $color-success; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $color-success; /* Gecko Browsers */
+}
+
+body {
+	font-size: ms(1);
+    line-height: ms(3);
+	font-family: $font-secondary;
+    background-color: $color-darkest;
+    color: $color-dark;
+    @extend %pattern-2;
+    background-size: ms(4) ms(4);
+    letter-spacing: rem(.4);
+    
+    @media #{$device-medium} {
+		padding: rem(30);
+    }
+}

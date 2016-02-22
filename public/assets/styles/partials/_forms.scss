@@ -1,0 +1,55 @@
+/**
+ * Forms
+ */
+
+.contact-form {
+	@extend .clearfix;
+	
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		background-color: $color-darker;
+        color: $color-light;
+		border: 0;
+		border-radius: 0;
+		padding: ms(-1);
+		@include set-placeholder-style(color, $color-medium);
+		transition: background-color .5s ease-in-quart;
+		
+		@media #{$device-medium} {
+			@include set-placeholder-style('text-align', right);
+            
+            .contact & {
+                @include set-placeholder-style('text-align', left);
+            }
+        }
+		
+		&:focus {
+			outline: none;
+			background-color: $color-darkest;
+        }
+    }
+
+	textarea {
+		height: 200px;
+		resize: none;
+    }
+		
+	input,
+	textarea,
+	button {
+		@include j-stack();
+		margin-bottom: ms(1);
+    }
+		
+	button {
+		width: 100%;
+		float: right;
+		text-align: right;
+		
+		@media #{$device-medium} {
+			width: 50%;
+        }
+    }
+}
+		

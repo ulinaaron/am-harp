@@ -1,0 +1,16 @@
+/**
+ * Segments
+ */
+
+.segment {
+    background-color: $color-darkest;
+    border: 6px solid $color-medium;
+    padding: ms(0);
+    margin: ms(2) 0 0;
+    color: $color-light;
+    
+    > p,
+    > pre {
+        margin-top: 0;
+    }
+}

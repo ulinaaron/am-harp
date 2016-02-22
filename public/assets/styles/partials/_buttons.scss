@@ -1,0 +1,48 @@
+/**
+ * Buttons
+ */
+ 
+button,
+.button {
+    display: inline-block;
+    color: $color-medium;
+    padding: ms(-2) ms(1);
+    margin: ms(1) 0;
+    font-size: ms(0);
+    line-height: ms(1);
+    font-family: $font-primary;
+	font-weight: 300;
+	background-color: transparent;
+	border: 2px solid $color-medium;
+	border-radius: 0;
+	position: relative;
+	transition: background-color .5s ease-in;
+	outline: none;
+	box-shadow: none;
+	
+	&:hover {
+		background-color: $color-medium;
+        border: 2px solid $color-medium;
+		color: $color-light;
+		text-decoration: none;
+    }
+}
+		
+.read-more {
+    color: $color-medium;
+    padding: 0 12px;
+	background-color: transparent;
+	border-radius: 0;
+	border: 2px solid $color-medium;
+	font-weight: 300;
+	
+	&:hover {
+		border: 2px solid $color-dark;
+		background-color: $color-dark;
+		color: $color-light;
+    }
+	
+	@media #{$device-medium} {
+		float: right;
+    }
+}

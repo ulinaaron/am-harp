@@ -1,3 +1,8 @@
+/**
+ * AaronMazade.com
+ * Description: Accompanies Harp for Browser Sync and NPM component fetchings.
+ */
+
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;

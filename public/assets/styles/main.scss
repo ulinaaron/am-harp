@@ -22,7 +22,7 @@
 @import "partials/browser"; // Browser window used for the Works page
 @import "partials/animations"; // Custom Animations
 @import "partials/patterns"; // CSS Patterns
-@import "partials/devicons"; // Devicons Font Icon
+@import "partials/icons"; // Font Icon
 @import "_vendor/slicknav"; // Used for mobile navigation
 @import "animate"; // Animate.css Library
 
@@ -443,6 +443,7 @@
         font-family: $font-primary;
         font-weight: 100;
         font-size: ms(0);
+        margin-bottom: ms(-3);
         
         &:last-child {
             margin-right: 0;

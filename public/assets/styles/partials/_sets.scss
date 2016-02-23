@@ -30,9 +30,11 @@
     &.swatch {
         border: 2px solid $color-dark;
         height: ms(4);
+        margin-bottom: ms(0);
         
         @media #{$device-medium} {
              height: ms(6);
+             margin-bottom: 0;
         }
     }
     
@@ -104,12 +106,13 @@
 
 .set-of-six {
     @extend .clearfix;
-    margin-bottom: ms(1);
+    margin-bottom: 0;
             
     .set-item {
         @extend %half-span-column;
 		
         @media #{$device-medium} {
+            margin-bottom: ms(0);
             @include j-column(1/6, $cycle: 6, $gutter: 1);
         }
     }

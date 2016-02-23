@@ -1,0 +1,22 @@
+<% if (environment == "development") { 
+  var env_set = ""
+} else {
+  var env_set = root
+} %>
+
+<%- partial('../_templates/head', {env_root: env_set}) %>
+<body>
+  <%- partial('../_templates/header', {env_root: env_set}) %>
+  <div id="container" class="article-container">
+    <section id="main" class="article-entry main">
+    	<h1 class="entry-title"><%= title %></h1>
+    	<div class="meta">
+    		Published on <%= date %>
+    	</div>
+    	<%- yield %>
+    </section>
+  </div>
+  <%- partial('../_templates/footer', {env_root: env_set}) %>
+  <%- partial('../_templates/foot', {env_root: env_set}) %>
+</body>
+</html>

@@ -7,7 +7,6 @@
 // Begin CSS Output and cascade order
 @import "_vendor/normalize"; // Top of the stylsheet
 @import "partials/base"; // General styles and global element resets
-@import "partials/utilities"; // Utility classes such as alignments and clearfixes
 @import "partials/typography"; // Typography
 @import "partials/figures"; // Figure and image types
 @import "partials/structure"; // Layout and grid
@@ -24,6 +23,7 @@
 @import "partials/patterns"; // CSS Patterns
 @import "partials/icons"; // Font Icon
 @import "_vendor/slicknav"; // Used for mobile navigation
+@import "partials/utilities"; // Utility classes such as alignments and clearfixes
 @import "animate"; // Animate.css Library
 
 // Art Directed Partials

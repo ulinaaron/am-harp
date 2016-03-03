@@ -6,7 +6,7 @@
     "twitter": "ulinaaron",
     "site_url": "http://aaronmazade.com",
     "root": "",
-    "google_analytics": "",
+    "google_analytics": "UA-43246428-1",
     "disqus": {
       "enabled": false,
       "shortname": ""

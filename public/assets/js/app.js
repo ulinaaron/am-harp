@@ -12,16 +12,18 @@ $('#navigation').slicknav({
 
 // Contact Form AJAX and Success Message
 
-$('#contact-form').on('submit', function(e) {
+var $contactForm = $('#contact-form');
+
+$contactForm.submit( function(e) {
     e.preventDefault();
     
     // Process the form
     $.ajax({
         type: 'POST',
-        url: $(this).attr('action'),
-        data: $(this).serialize()
+        url: $contactForm.attr('action'),
+        data: $contactForm.serialize()
     }).done( function() {
-        $(this).parent().append('<div class="message success">Thank you for your message! I will be in touch with you shortly.</div>');
-        $(this).remove();
+        $contactForm.parent().append('<div class="message success">Thank you for your message! I will be in touch with you shortly.</div>');
+        $contactForm.remove();
     });
 });

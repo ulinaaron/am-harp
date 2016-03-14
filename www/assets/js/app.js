@@ -16,10 +16,10 @@ $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     var action = $(this).attr('action');
     var data = $(this).serialize();
+    var name = $(this).find('input[name="name"]');
     var callback = function(data) {
-        $(this).remove();
-        
-        $(this).text('Thank you!');
+        $(this).parent().find('.group-title').text('Thanks, ' + name + '!');
+        $(this).append().html('<div class="message success">I will be in touch with you shortly.</div>');
     };
     
     // Process the form

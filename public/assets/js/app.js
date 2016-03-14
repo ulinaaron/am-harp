@@ -18,7 +18,7 @@ $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     var action = $(this).attr('action');
     var data = $(this).serialize();
-    var callback = function(data) {
+    var callback = function() {
         $(this).parent().append().html('<div class="message success">I will be in touch with you shortly.</div>');
     };
     
@@ -27,6 +27,6 @@ $('#contact-form').on('submit', function(e) {
         type: 'POST',
         url: action,
         data: data,
-        sucess: callback
+        success: callback
     });
 });

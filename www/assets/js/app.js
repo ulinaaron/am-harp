@@ -21,8 +21,11 @@ $contactForm.submit( function(e) {
     $.ajax({
         type: 'POST',
         url: $contactForm.attr('action'),
+        accept: {
+            javascript: 'application/javascript'
+        },
         data: $contactForm.serialize()
-    }).done( function() {
+    }).done( function(data) {
         $contactForm.parent().append('<div class="message success">Thank you for your message! I will be in touch with you shortly.</div>');
         $contactForm.remove();
     });

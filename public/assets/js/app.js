@@ -26,7 +26,8 @@ $contactForm.submit( function(e) {
         },
         data: $contactForm.serialize()
     }).done( function(data) {
-        $contactForm.parent().append('<div class="message success">Thank you for your message! I will be in touch with you shortly.</div>');
+        $contactForm.parent().find('.group-title').text('Thank You!').fadeIn('slow');
+        $contactForm.parent().append('<div class="message success">I will be in touch with you shortly.</div>').fadeIn('slow');
         $contactForm.remove();
     });
 });

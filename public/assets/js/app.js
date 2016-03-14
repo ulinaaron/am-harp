@@ -12,8 +12,6 @@ $('#navigation').slicknav({
 
 // Contact Form AJAX and Success Message
 
-var formData = $('#contact-form input[name=name]').val();
-
 $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     
@@ -21,9 +19,9 @@ $('#contact-form').on('submit', function(e) {
     $.ajax({
         type: 'POST',
         url: $(this).attr('action'),
-        data: $(this).serialize(),
-        success: function(data) {
-            $('#contact-form').parent().append().html('<div class="message success">I will be in touch with you shortly.</div>');
-        }
+        data: $(this).serialize()
+    }).done( function() {
+        $(this).parent().append('<div class="message success">Thank you for your message! I will be in touch with you shortly.</div>');
+        $(this).remove();
     });
 });

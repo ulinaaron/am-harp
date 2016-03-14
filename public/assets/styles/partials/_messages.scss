@@ -1,0 +1,11 @@
+.message {
+    
+    &.success {
+        background-color: $color-success;
+        color: $color-darker;
+        font-weight: bold;
+        text-align: center;
+        padding: ms(-2) ms(2);
+        margin-top: ms(1);
+    }
+}

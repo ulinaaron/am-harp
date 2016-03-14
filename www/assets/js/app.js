@@ -23,7 +23,7 @@ $('#contact-form').on('submit', function(e) {
         url: $(this).attr('action'),
         data: $(this).serialize(),
         success: function(data) {
-            $(this).parent().append().html('<div class="message success">I will be in touch with you shortly.</div>');
+            $('#contact-form').parent().append().html('<div class="message success">I will be in touch with you shortly.</div>');
         }
     });
 });

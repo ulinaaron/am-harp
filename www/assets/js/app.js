@@ -3,7 +3,9 @@
  */
 
 // Add matchHeight to classes
-$('.group, .set-item .inner, .header-group').matchHeight();
+$(document).ready( function () {
+  $('.group, .set-item .inner, .header-group').matchHeight();
+});
 
 // Start SlickNav
 $('#navigation').slicknav({

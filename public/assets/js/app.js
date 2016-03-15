@@ -7,7 +7,7 @@ $('.group, .set-item .inner, .header-group').matchHeight();
 
 // Start SlickNav
 $('#navigation').slicknav({
-  label: '';
+  label: ''
 });
 
 // Contact Form AJAX and Success Message

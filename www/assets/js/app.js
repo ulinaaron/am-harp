@@ -16,7 +16,7 @@ var $contactForm = $('#contact-form');
 
 $contactForm.submit(function(e) {
   e.preventDefault();
-   
+
   // Process the form
   $.ajax({
     type: 'POST',

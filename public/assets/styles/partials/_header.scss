@@ -7,10 +7,6 @@
 	padding: ms(1);
 	background-color: $color-light;
     
-    .index & {
-        display: none;
-    }
-    
     @media #{$device-medium} {
 		.index & {
             display: block;
@@ -41,7 +37,7 @@
     
 
 	a {
-        padding: ms(-3) ms(-1);
+        padding: ms(-3) 0 ms(-1);
         transition: border 1.0s ease-in;
  		transition: color .5s ease-in;
         color: $color-medium;

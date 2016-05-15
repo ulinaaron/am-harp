@@ -18,9 +18,9 @@
 }
 
 body {
-	font-size: ms(1);
+    font-size: ms(1);
     line-height: ms(3);
-	font-family: $font-secondary;
+    font-family: $font-secondary;
     background-color: $color-darkest;
     color: $color-dark;
     @extend %pattern-2;
@@ -30,4 +30,8 @@ body {
     @media #{$device-medium} {
 		padding: rem(30);
     }
+}
+
+img {
+  max-width: 100%;
 }

@@ -30,138 +30,147 @@
 // Art Directed Partials
 
 @import "partials/case-studies/longerdays";
-	
+
 /**
  * Home
  */
 
 .introduction {
-	background-color: $color-light;
-	color: $color-dark;
-	position: relative;
-	
-	.container {
-		padding: ms(4);
-	
-		@media #{$device-medium} {
-			padding: ms(7) 0 ms(8);
+    background-color: $color-light;
+    color: $color-dark;
+    position: relative;
+
+    .container {
+        padding: ms(4);
+
+        @media #{$device-medium} {
+            padding: ms(7) ms(4) ms(8);
         }
+
+        @media #{$device-large} {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .media {
+        max-width: 100%;
     }
 }
 
 .introduction-title {
-	font-size: ms(5);
+    font-size: ms(5);
     line-height: ms(6);
-	font-weight: 500;
-	color: $color-darker;
-	margin: ms(0) auto ms(0);
+    font-weight: 500;
+    color: $color-darker;
+    margin: 0 auto ms(0);
 }
 
 .introduction-subtitle {
-	font-size: ms(3);
+    font-size: ms(3);
     line-height: ms(4);
-	font-weight: 300;
+    font-weight: 300;
     font-style: normal;
-	color: $color-dark;
-	margin: 0;
+    color: $color-dark;
+    margin: 0;
 }
 
 .talents {
-	color: $color-medium;
-	@extend .clearfix;
+    color: $color-medium;
+    @extend .clearfix;
     font-size: ms(0);
-	
-	.group-title {
+
+    .group-title {
         font-size: ms(2);
-		color: $color-lighter;
-		display: inline-block;
-		padding: ms(-5) ms(1);
+        color: $color-lighter;
+        display: inline-block;
+        padding: ms(-5) ms(1);
         margin: 0 0 ms(1);
     }
 } //.talents
-		
+
 .accolades {
-	background-color: darken($color-darker, 1);
-	
-	.group-title {
+    background-color: darken($color-darker, 1);
+
+    .group-title {
         margin-top: 0;
-		background-color: $color-darkest;
+        background-color: $color-darkest;
     }
 }
 
 .skills {
-	background-color: lighten($color-darker, 1);
-	
-	.group-title {
+    background-color: lighten($color-darker, 1);
+
+    .group-title {
         margin-top: 0;
-		background-color: $color-darkest;
+        background-color: $color-darkest;
     }
-    
-	.narrow {
-		
-		@media #{$device-medium} {
-			text-align: right;
+
+    .narrow {
+
+        @media #{$device-medium} {
+            text-align: right;
         }
     }
 } //.skills
-			
+
 .skill-list {
-	list-style-type: none;
-	direction: ltr;
-	
-	.skill-row {
-		position: relative;
-		@extend .clearfix;
+    list-style-type: none;
+    direction: ltr;
+
+    .skill-row {
+        position: relative;
+        @extend .clearfix;
     }
 } //.skill-list
-		
+
 .skill-title {
     font-size: ms(0);
-	font-family: $font-secondary;
-	color: $color-medium;
-	font-weight: 300;
-	text-transform: none;
-	margin: 0 0 ms(-5);
-	position: relative;
-	
-	@media #{$device-medium} {
-		text-align: right;
+    font-family: $font-secondary;
+    color: $color-medium;
+    font-weight: 300;
+    text-transform: none;
+    margin: 0 0 ms(-5);
+    position: relative;
+
+    @media #{$device-medium} {
+        text-align: right;
         margin-bottom: 0;
-		@include j-column(3/5);
+        @include j-column(3/5);
     }
 } //.skill-title
 
 .skill-list .progress {
-	position: relative;
-	
-	@media #{$device-medium} {
-		@include j-column(2/5);
+    position: relative;
+
+    @media #{$device-medium} {
+        @include j-column(2/5);
     }
 }
-	
+
 .work {
-	padding: ms(4) 0;
-	
-	@media #{$device-medium} {
-		padding: ms(7) 0;
+    padding: ms(4) 0;
+
+    @media #{$device-medium} {
+        padding: ms(7) 0;
     }
-		
-	.group-title {
-		background-color: $color-dark;
-		color: $color-lightest;
-		padding: ms(-4) ms(1);
-		display: inline-block;
-		margin: 0 auto;
+
+    .group-title {
+        background-color: $color-dark;
+        color: $color-lightest;
+        padding: ms(-4) ms(1);
+        display: inline-block;
+        margin: 0 auto;
     }
 } //.work
 
 /**
  * Sections
  */
- 
+
 .contact-section {
     background-color: lighten($color-darkest, 2);
-    
+
     @media #{$device-medium} {
         text-align: right;
     }
@@ -170,32 +179,32 @@
 .social-section {
     background-color: $color-darkest;
 }
-		
+
 /**
  * Main
  */
- 
+
 .main {
-	padding: 0 ms(1);
+    padding: 0 ms(1);
     background-color: $color-light;
     overflow: hidden;
-    
+
     .my-work & {
         padding: 0;
     }
-    
+
     @media #{$device-small} {
-		padding: ms(1) ms(1) ms(6);
+        padding: ms(1) ms(1) ms(6);
     }
-	
-	@media #{$device-xl} {
-		padding: ms(1) 0 ms(6);
+
+    @media #{$device-xl} {
+        padding: ms(1) 0 ms(6);
     }
 } //.main
 
 .main-case-study {
     padding: ms(3) ms(1);
-    
+
     @media #{$device-medium} {
         padding: ms(3) 0;
     }
@@ -204,20 +213,20 @@
 /**
  * Pages
  */
- 
+
  .page-header {
      margin-top: ms(1);
      padding: 0 ms(1) ms(6);
-     
+
      @media #{$device-medium} {
-		padding: 0 0 ms(6);
+        padding: 0 0 ms(6);
     }
-     
+
      p:first-of-type {
         margin: 0;
      }
  } //.page-header
- 
+
 .page-title {
     text-align: center;
 }
@@ -226,7 +235,7 @@
     position: relative;
     width: ms(11);
     margin: ms(2) auto 0;
-    
+
     @media #{$device-medium} {
         float: left;
         margin: 0 ms(2) ms(2) 0;
@@ -236,71 +245,71 @@
 /**
  * Articles
  */
- 
+
 .article-block {
-	border-bottom: 2px solid $color-medium;
-	background-color: $color-lightest;
-	padding: 20px;
-	margin-bottom: 20px;
-	@extend .clearfix;
-	
-	.entry-title {
-		margin: 0;
+    border-bottom: 2px solid $color-medium;
+    background-color: $color-lightest;
+    padding: 20px;
+    margin-bottom: 20px;
+    @extend .clearfix;
+
+    .entry-title {
+        margin: 0;
     }
-	
-	.entry-title a {
-		color: $color-dark;
-		font-weight: 400;
+
+    .entry-title a {
+        color: $color-dark;
+        font-weight: 400;
     }
 } //.article-block
-		
+
 /**
  * Article
  */
- 
+
 .article-container {
-	@include j-center(800px);
+    @include j-center(800px);
 }
-	
+
 .article-entry {
 
-	.entry-title {
-		color: $color-dark;
-		font-weight: 400;
-		margin-bottom: 0;
+    .entry-title {
+        color: $color-dark;
+        font-weight: 400;
+        margin-bottom: 0;
     }
-    
+
     .meta {
         font-size: rem(13);
         color: $color-medium;
     }
 }
- 
+
 .article-entry p {
-	font-size: rem(18);
-	font-weight: 300;
+    font-size: rem(18);
+    font-weight: 300;
 }
-	
+
 /**
  * Work Group
  */
- 
+
 .work-group {
-	@extend .clearfix;
+    @extend .clearfix;
 }
 
 .work-item-title {
     padding: ms(1);
-	width: 100%;
-	margin: 0;
-	font-weight: 300;
-	text-align: center;
+    width: 100%;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
 
     &,
     a {
-        color: $color-dark;  
+        color: $color-dark;
     }
-    
+
     a:hover {
         color: $color-light;
     }
@@ -314,32 +323,32 @@
 } //.work-item-title
 
 .work-item {
-	position: relative;
-    
+    position: relative;
+
     .meta-year {
         margin-bottom: 0;
     }
-    
+
     .button {
         color: $color-dark;
         border-color: $color-dark;
         padding: ms(0) ms(6);
         width: 100%;
         text-align: center;
-        
+
         &:hover {
             border-color: $color-lighter;
             background-color: $color-lighter;
         }
     } //.button
-    
+
     &.grid {
         @include j-column(.5, $cycle: 2, $gutter: 0);
-		
+
         @media #{$device-medium} {
             @include j-column(.25, $cycle: 4, $gutter: 0);
         }
-        
+
         a {
             display: block;
             width: 100%;
@@ -351,7 +360,7 @@
             text-align: center;
         }
     } //&.grid
-    
+
     &.sections {
         position: relative;
         display: block;
@@ -359,70 +368,70 @@
         padding: ms(7) 0;
         width: 100%;
         background-color: $color-medium;
-        
+
         .container {
             padding: 0 ms(1);
         }
-        
+
         .work-item-title {
             padding: ms(1) 0;
-            
+
             @media #{$device-medium} {
                 padding: 0 0 ms(1) 0;
             }
         }
-        
+
         .work-item-cover {
             @extend %span-column;
-            
+
             @media #{$device-medium} {
                 @include j-column(.6, $gutter: 0);
                 padding-right: ms(6);
                 margin-bottom: - ms(8);
             }
         }
-        
+
         .work-item-description {
             position: relative;
             @extend %span-column;
-            
+
             @media #{$device-medium} {
                 @include j-column(.4, $gutter: 0);
             }
         }
-        
+
         .tag-list {
             margin-bottom: ms(1);
         }
-        
+
         &:nth-child(even) {
             background-color: $color-darker;
             color: $color-light;
-            
+
              @media #{$device-medium} {
                  .work-item-cover {
                     @include j-shift(0.38);
                     padding-left: ms(6);
                     padding-right: 0;
                 }
-            
+
                 .work-item-description {
                     @include j-shift(-0.58);
                 }
             }
-            
+
             .work-item-title {
-                
+
                 &,
                 a {
                     color: $color-light;
                 }
-                
+
                 a:hover {
                     color: $color-lightest;
                 }
             } //.work-item-title
-        } //&:nth-child(even) 
+        } //&:nth-child(even)
     } //&.sections
 } //.work-item
 
@@ -431,11 +440,11 @@
     padding: 0;
     list-style-type: none;
     text-align: center;
-    
+
     .work-item & {
         text-align: left;
     }
-    
+
     li {
         display: inline-block;
         background-color: $color-dark;
@@ -445,16 +454,16 @@
         font-weight: 100;
         font-size: ms(0);
         margin-bottom: ms(-3);
-        
+
         &:last-child {
             margin-right: 0;
         }
-        
+
         .work-item & {
             font-size: modular-scale(0, rem(12));
             padding: ms(-8) ms(-2);
             margin-bottom: ms(-4);
-            
+
             @media #{$device-xl} {
                 margin-bottom: 0;
             }

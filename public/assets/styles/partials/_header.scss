@@ -13,10 +13,13 @@
         }
     }
 	
-	.index &,
     .contact &,
 	.about & {
 		background-color: $color-light;
+    }
+    
+    .index & {
+        background-color: $color-dark;
     }
 	
 	@media #{$device-medium} {
@@ -118,6 +121,10 @@
             -moz-transform: scale(1.5);
             -ms-transform: scale(1.5);
             transform: scale(1.5);
+            
+            .index & {
+                background: $color-darker;
+            }
             
             &:after {
             -webkit-animation: sonarEffect 1s ease-out 75ms;

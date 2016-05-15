@@ -36,8 +36,8 @@
  */
 
 .introduction {
-    background-color: $color-light;
-    color: $color-dark;
+    background-color: $color-dark;
+    color: $color-light;
     position: relative;
 
     .container {
@@ -62,8 +62,8 @@
     font-size: ms(5);
     line-height: ms(6);
     font-weight: 500;
-    color: $color-darker;
-    margin: 0 auto ms(0);
+    color: $color-lightest;
+    margin: ms(0) auto ms(0);
 }
 
 .introduction-subtitle {
@@ -71,7 +71,7 @@
     line-height: ms(4);
     font-weight: 300;
     font-style: normal;
-    color: $color-dark;
+    color: $color-light;
     margin: 0;
 }
 

@@ -227,6 +227,7 @@
 <script type="text/javascript" src="/assets/js/jquery.matchHeight.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.slicknav.js"></script>
 <script type="text/javascript" src="/assets/js/wow.js"></script>
+<script type="text/javascript" src="/assets/js/vivus.min.js"></script>
 <script type="text/javascript" src="/assets/js/app.js"></script>
 <script src="https://use.typekit.net/cfe1bna.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -241,6 +242,15 @@
   * Initiate Syntaxt Highlighting
   */
  hljs.initHighlightingOnLoad();
+</script>
+
+<script>
+	var myMac = new Vivus('my-mac-svg', {
+		type: 'oneByOne',
+		duration: 500,
+		pathTimingFunction: Vivus.EASE_OUT,
+		animTimingFunction: Vivus.EASE_IN
+	});
 </script>
 </body>
 </html>

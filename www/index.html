@@ -42,13 +42,20 @@
 
 	<div id="introduction" class="introduction">
 		<div class="container">
-			<h5 class="introduction-subtitle align-center wow fadeIn tk-sorts-mill-goudy" data-wow-delay=".5s">Hello, I am</h5>
-			<h4 class="introduction-title align-center wow fadeIn tk-sorts-mill-goudy" data-wow-delay="1.5s">Aaron Mazade!</h4>
-			<div class="introduction-title-border align-center wow fadeIn" data-wow-delay="2.5s"></div>
-			<p class="lead narrow align-center wow fadeIn" data-wow-delay="3s">
-				I'm a man of many titles and even more so of talents. You can call me a Front-End Developer, a web designer, a user experience aficionado, or just a guy who talks a lot about Sci-Fi, bowling, and disc golf. I hail from Grandville, MI, where I concoct my eccentric plans of world domination.
-			</p>
-		</div>
+			<div class="content">
+				<h5 class="introduction-subtitle wow fadeIn tk-sorts-mill-goudy" data-wow-delay=".5s">Hello, I am</h5>
+				<h4 class="introduction-title wow fadeIn tk-sorts-mill-goudy" data-wow-delay="1.5s">Aaron Mazade!</h4>
+				<div class="introduction-title-border wow fadeIn" data-wow-delay="2.5s"></div>
+				<p class="wow fadeIn" data-wow-delay="3s">
+					I'm a man of many titles and even more so of talents. 
+					You can call me a Front-End Developer, a web designer, a user experience aficionado, or just a guy who talks a lot about Sci-Fi, bowling, and disc golf. 
+					I hail from Grandville, MI, where I concoct my eccentric plans of world domination.
+				</p>
+			</div> <!-- /.content -->
+			<div class="media wow fadeIn" onclick="myMac.reset().play();">
+				<object id="my-mac-svg" type="image/svg+xml" data="assets/images/mymac.svg"></object>
+			</div>
+		</div> <!-- /.container -->
 	</div> <!-- /.introduction -->
 
 	<div class="talents">
@@ -78,7 +85,7 @@
 						  </div>
 						</div>
 					</div>
-                    <div class="skill-row">
+					<div class="skill-row">
 						<h6 class="skill-title">WordPress</h6>
 						<div class="progress progress-striped active">
 						  <div class="progress-bar progress-wordpress" role="progressbar" data-wow-delay="4s" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
@@ -194,6 +201,7 @@
 <script type="text/javascript" src="/assets/js/jquery.matchHeight.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.slicknav.js"></script>
 <script type="text/javascript" src="/assets/js/wow.js"></script>
+<script type="text/javascript" src="/assets/js/vivus.min.js"></script>
 <script type="text/javascript" src="/assets/js/app.js"></script>
 <script src="https://use.typekit.net/cfe1bna.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -208,6 +216,15 @@
   * Initiate Syntaxt Highlighting
   */
  hljs.initHighlightingOnLoad();
+</script>
+
+<script>
+	var myMac = new Vivus('my-mac-svg', {
+		type: 'oneByOne',
+		duration: 500,
+		pathTimingFunction: Vivus.EASE_OUT,
+		animTimingFunction: Vivus.EASE_IN
+	});
 </script>
 </body>
 </html>

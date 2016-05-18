@@ -10,6 +10,7 @@ var merge       = require('merge-stream');
 var rename      = require('gulp-rename');
 var harp        = require('harp');
 var deploy      = require('gulp-gh-pages');
+var surge = require('gulp-surge');
 
 /**
  * Serve the Harp Site from the src directory
@@ -56,10 +57,13 @@ gulp.task('npm-packages', function () {
     .pipe(gulp.dest('public/assets/styles/_vendor/')); // Copies to src/scss
 });
 
-gulp.task('deploy', function() {
-  gulp.src('./www/**/*')
-  .pipe(deploy());
-});
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: './www',         // Path to your static build directory
+    domain: 'aaronmazade.com'  // Your domain or Surge subdomain
+  })
+})
 
 /**
  * Default task, running `gulp` will fire up the Harp site,

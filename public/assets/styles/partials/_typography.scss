@@ -170,6 +170,7 @@ blockquote {
     &.plain {
        @include ul('none'); 
        padding: 0;
+       margin-bottom: ms(4);
     }
  
 	

@@ -75,7 +75,8 @@
     margin: 0;
 }
 
-.talents {
+.talents,
+.footer {
     color: $color-medium;
     @extend .clearfix;
     font-size: ms(0);
@@ -83,28 +84,26 @@
     .group-title {
         font-size: ms(2);
         color: $color-lighter;
+        line-height: ms(4);
         display: inline-block;
-        padding: ms(-5) ms(1);
+        padding: ms(-5) 0;
         margin: 0 0 ms(1);
     }
 } //.talents
 
-.accolades {
-    background-color: darken($color-darker, 1);
-
+.accolades,
+.skills {
     .group-title {
         margin-top: 0;
-        background-color: $color-darkest;
     }
+}
+
+.accolades {
+    background-color: darken($color-darker, 1);
 }
 
 .skills {
     background-color: lighten($color-darker, 1);
-
-    .group-title {
-        margin-top: 0;
-        background-color: $color-darkest;
-    }
 
     .narrow {
 
@@ -156,7 +155,6 @@
     }
 
     .group-title {
-        background-color: $color-dark;
         color: $color-lightest;
         padding: ms(-4) ms(1);
         display: inline-block;

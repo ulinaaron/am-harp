@@ -37,17 +37,17 @@
 	margin: 0;
 	padding: 0;
 	font-weight: 300;
-    
 
 	a {
-        padding: ms(-3) 0 ms(-1);
+        padding: ms(-3) ms(0) ms(-3);
         transition: border 1.0s ease-in;
- 		transition: color .5s ease-in;
+        transition: color .5s ease-in;
         color: $color-medium;
         line-height: 1;
         
         &:hover {
             color: $color-dark;
+            border-color: $color-dark;
         }
     }
 		

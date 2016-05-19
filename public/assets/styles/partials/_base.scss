@@ -28,7 +28,7 @@ body {
     letter-spacing: rem(.4);
     
     @media #{$device-medium} {
-		padding: rem(30);
+		padding: ms(3);
     }
 }
 

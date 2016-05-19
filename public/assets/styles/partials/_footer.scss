@@ -7,6 +7,11 @@
 	color: $color-lightest;
     overflow: hidden;
     font-size: ms(0);
+    margin-top: ms(3);
+    
+    .my-work & {
+        margin-top: 0;
+    }
 }
 	
 .colophon {

@@ -4,87 +4,92 @@
 
 .header {
     position: relative;
-	padding: ms(1);
-	background-color: $color-light;
+    padding: ms(1);
+    background-color: $color-light;
     
     @media #{$device-medium} {
-		.index & {
+        .index & {
             display: block;
         }
     }
-	
+    
     .contact &,
-	.about & {
-		background-color: $color-light;
+    .about & {
+        background-color: $color-light;
     }
     
     .index & {
         background-color: $color-dark;
     }
-	
-	@media #{$device-medium} {
-		padding: ms(3) 0;
+    
+    @media #{$device-medium} {
+        padding: ms(3) 0;
     }
     
     @media #{$device-small} {
-		padding: ms(3);
+        padding: ms(3);
     }
 }
-	
+    
 .site-title {
-	position: relative;
-	font-size: ms(3);
-	margin: 0;
-	padding: 0;
-	font-weight: 300;
-
-	a {
-        padding: ms(-3) ms(0) ms(-3);
-        transition: border 1.0s ease-in;
-        transition: color .5s ease-in;
+    position: relative;
+    font-size: ms(3);
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    
+    a {
+        display: inline-block;
+        padding: ms(0) ms(0);
         color: $color-medium;
+        border: 2px solid $color-medium;
         line-height: 1;
+        font-weight: bold;
         
+
         &:hover {
-            color: $color-dark;
-            border-color: $color-dark;
-        }
+            color: $color-darker;
+            border-color: $color-darker;
+            animation: progress 2s linear infinite;
+            @extend %pattern-2;
+            background-size: ms(4) ms(4);
+        } // hover
     }
-		
-	@media #{$device-medium} {
-		margin: 0;
+    
+    @media #{$device-medium} {
+        margin: 0;
     }
 }
-		
+
 .site-title.align-center {
-	
-	@media #{$device-medium} {
-		text-align: left;
+    
+    @media #{$device-medium} {
+        text-align: left;
     }
 }
-		
+        
 /**
  * Header Navigation
  */
  
 .header-menu {
-	position: relative;
+    position: relative;
 }
- 	
+     
 .navigation-list {
-	@include inline-list(10px);
-	font-family: $font-primary;
-	
-	@media #{$device-medium} {
-		@include j-align(vertical);
-		right: 0;
-		left: auto;
+    @include inline-list(10px);
+    font-family: $font-primary;
+    
+    @media #{$device-medium} {
+        @include j-align(vertical);
+        right: - ms(-1);
+        left: auto;
     }
-		
-	a {
+        
+    a {
         position: relative;
- 		font-weight: 100;
- 		padding: ms(-3) ms(-1);
+        font-weight: 100;
+        padding: ms(-3) ms(-1);
         color: $color-medium;
         background: transparent;
         -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
@@ -114,7 +119,7 @@
             transform: scale(0.70);
         }
 
- 		&:hover {
+         &:hover {
             color: $color-light;
             background: $color-dark;
             -webkit-transform: scale(1.5);
@@ -133,14 +138,14 @@
             }
         }
     }
- 		
- 	.active a {
- 		border-color: $color-darkest;
- 		color: $color-darkest;
- 		
- 		&:hover {
- 			background-color: $color-darkest;
- 			color: $color-light;
+         
+     .active a {
+         border-color: $color-darkest;
+         color: $color-darkest;
+         
+         &:hover {
+             background-color: $color-darkest;
+             color: $color-light;
          }
      }
 }
@@ -150,17 +155,17 @@
  */
  
 #navigation {
-	display: none;
-	
-	@media #{$device-medium} {
-		display: block;
+    display: none;
+    
+    @media #{$device-medium} {
+        display: block;
     }
 }
-		
+        
 .slicknav_menu {
-	display: block;
-	
-	@media #{$device-medium} {
-		display: none;
+    display: block;
+    
+    @media #{$device-medium} {
+        display: none;
     }
 }

@@ -11,9 +11,11 @@ $color-longerdays: #409ece;
     
     .site-title a {
         color: $color-lightest;
+        border-color: $color-lightest;
         
         &:hover {
             color: $color-dark;
+            border-color: $color-dark;
         }
     }
     

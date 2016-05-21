@@ -298,10 +298,11 @@
 
  .page-header {
      margin-top: ms(1);
-     padding: 0 ms(1) ms(6);
+     padding: 0 ms(1) ms(0);
+     text-align: center;
 
      @media #{$device-medium} {
-        padding: 0 0 ms(6);
+        padding: 0 0 ms(0);
     }
 
      p:first-of-type {
@@ -311,7 +312,32 @@
 
 .page-title {
     text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-medium;
+    transition: border 1s ease-in;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-bottom: ms(2);
+    font-size: ms(5);
+    line-height: ms(6);
 }
+
+ .lead-header {
+     margin-top: ms(1);
+     padding: 0 ms(1) ms(6);
+     text-align: center;
+
+     @media #{$device-medium} {
+        padding: 0 0 ms(6);
+    }
+
+     p:first-of-type {
+        margin: 0;
+     }
+ } //.lead-header
+ 
 
 .about-headshot {
     position: relative;

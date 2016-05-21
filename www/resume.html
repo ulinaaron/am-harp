@@ -25,11 +25,11 @@
   <header id="header" class="header">
 	<div class="container">
     <div id="header-title" class="header-title header-group">
-        <h1 class="site-title align-center">
+        <h4 class="site-title align-center">
             <a href="/" id="logo">
                 <span class="first">A</span><span class="last">M</span>
             </a>
-        </h1>
+        </h4>
     </div>
     <div id="header-menu" class="header-menu header-group">
         <ul id="navigation" class="navigation-list">
@@ -384,7 +384,16 @@
  /**
  * Initiate WOW.js
  */
- new WOW().init();
+wow = new WOW(
+	{
+		boxClass:     'wow',      // default
+		animateClass: 'animated', // default
+		offset:       0,          // default
+		mobile:       false,       // default
+		live:         true        // default
+	}
+)
+wow.init();
  
  /**
   * Initiate Syntaxt Highlighting

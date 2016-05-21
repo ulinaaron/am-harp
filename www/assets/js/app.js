@@ -9,4 +9,3 @@ $('.group, .set-item .inner, .header-group').matchHeight();
 $('#navigation').slicknav({
   label: 'Menu'
 });
-

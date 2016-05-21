@@ -59,21 +59,92 @@
 }
 
 .introduction-title {
-    font-size: ms(5);
-    line-height: ms(6);
-    font-weight: 500;
+    display: inline-block;
+    font-size: ms(3);
+    line-height: ms(4);
+    font-weight: 900;
     color: $color-lightest;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-info;
+    transition: border 1s ease-in;
+    transition-delay: 3s;
     margin: ms(0) auto ms(0);
+    
+    @media #{$device-small} {
+        font-size: ms(5);
+        line-height: ms(6);
+        text-align: left;
+    }
 }
 
 .introduction-subtitle {
-    font-size: ms(3);
-    line-height: ms(4);
-    font-weight: 300;
+    font-size: ms(1);
+    line-height: ms(2);
+    font-weight: 900;
     font-style: normal;
+    text-transform: uppercase;
+    font-family: $font-secondary;
     color: $color-light;
     margin: 0;
 }
+
+.introduction .media .narrow {
+    position: relative;
+}
+
+.introduction .media .my-mac {
+    z-index: 22;
+    position: relative;
+    display: none;
+    
+    @media #{$device-medium} {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.introduction .media .my-screen {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    z-index: 20;
+    display: none;
+    
+    @media #{$device-medium} {
+        display: block;
+        width: 270px;
+        top: 14px;
+        left: 16px;
+    }
+    
+    @media #{$device-large} {
+        width: 362px;
+        top: 17px;
+        left: 20px;
+    }
+}
+
+.introduction .media .my-editor {
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    z-index: 23;
+    
+    @media #{$device-medium} {
+        position: absolute;
+        width: 140px;
+        top: 28px;
+        left: 80px;
+    }
+    
+    @media #{$device-large} {
+        width: 180px;
+        top: 38px;
+        left: 110px;
+    }
+}
+
 
 .talents {
     margin: ms(3) 0 0;

@@ -1,6 +1,13 @@
 /**
  * Utilities
  */
+ 
+ /**
+  * Prevent FOUT (Flash of Unstyled Text)
+  */
+.wf-loading {
+    visibility: hidden;
+}
 
 .align-center {
     text-align: center;

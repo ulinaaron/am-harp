@@ -21,6 +21,11 @@
     text-align: right;
 }
 
+.align-image-center {
+	margin: 0 auto;
+	display: block;
+}
+
 .clearfix {
     @include clearfix;
 }

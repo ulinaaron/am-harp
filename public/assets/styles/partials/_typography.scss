@@ -1,6 +1,6 @@
-/**
- * Typography
- */
+/* ==========================================================================
+   Typography
+   ========================================================================== */
  
 h1,
 h2,
@@ -8,8 +8,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-primary;
-	color: $color-darker;
+    font-family: $font-primary;
+    color: $color-darker;
 }
 
 h1 {
@@ -57,7 +57,7 @@ ul,
 ol, 
 table, 
 blockquote {
-	margin-top: ms(0);
+    margin-top: ms(0);
     margin-bottom: ms(2);
 }
 
@@ -74,7 +74,7 @@ ul ul, ol ol, ul ol, ol ul {
 hr {
   border: 3px solid;
   height: 0;
-  margin: ms(1) auto ms(2);
+  margin: ms(2) auto ms(2);
 }
 
 code {
@@ -99,27 +99,77 @@ sub {
   bottom: -0.25em;
 }
 
+/* Group Titles
+   ========================================================================== */
+
 .group-title {
-	font-weight: 300;
+    font-weight: 300;
     margin: 0 0 ms(1);
 }
 
+/* Leads
+   ========================================================================== */
+
 .lead {
-	font-size: modular-scale(1, rem(12) rem(18));
-	font-weight: 600;
+    font-size: modular-scale(1, rem(12) rem(18));
+    font-weight: 600;
 }
 
-/**
- * Links
- */
+.lead-header {
+    margin-top: ms(1);
+    padding: 0 ms(1) ms(6);
+    text-align: center;
 
-// Set a baseline for all link types	
+    @media #{$device-medium} {
+        padding: 0 0 ms(6);
+    }
+
+    p:first-of-type {
+        margin: 0;
+    }
+} //.lead-header
+
+/* Page Header & Titles
+   ========================================================================== */
+
+.page-header {
+    margin-top: ms(1);
+    padding: 0 ms(1) ms(0);
+    text-align: center;
+
+    @media #{$device-medium} {
+        padding: 0 0 ms(0);
+    }
+
+    p:first-of-type {
+        margin: 0;
+    }
+} //.page-header
+
+.page-title {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 4px solid $color-medium;
+    transition: border 1s ease-in;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-bottom: ms(2);
+    font-size: ms(5);
+    line-height: ms(6);
+}
+
+/* Links
+   ========================================================================== */
+
+// Set a baseline for all link types
 a {
-	color: $color-dark;
+    color: $color-dark;
     text-decoration: none;
-	
-	&:hover {
-		border: 0;
+    
+    &:hover {
+        border: 0;
     }
 }
 
@@ -142,9 +192,9 @@ blockquote {
     } // a
 }
 
-/**
- * Plain List
- */
+/* ==========================================================================
+   Lists
+   ========================================================================== */
 
 .plain-list {
     list-style-type: none;
@@ -152,17 +202,15 @@ blockquote {
     margin: 0;
 }
 
-.align-image-center {
-	margin: 0 auto;
-	display: block;
-}	
-	
+/* Special Type Lists
+   ========================================================================== */
+ 
 .skill-list,
 .accolade-list,
 .social-list {
-	@include ul('circle');
-	margin: 0;
-	padding: 0 ms(1);
+    @include ul('circle');
+    margin: 0;
+    padding: 0 ms(1);
     color: $color-medium;
     margin-bottom: ms(4);
     list-style-position: inside;
@@ -173,8 +221,89 @@ blockquote {
        margin-bottom: ms(4);
     }
  
-	
-	@media #{$device-medium} {
-		padding: 0;
+    
+    @media #{$device-medium} {
+        padding: 0;
     }
 }
+
+.about {
+    .accolade-list {
+        color: $color-dark;
+    }
+    
+    .skill-list {
+        margin-bottom: 0;
+    }
+}
+
+.skill-list {
+    list-style-type: none;
+    direction: ltr;
+
+    .skill-row {
+        position: relative;
+        @extend .clearfix;
+    }
+} //.skill-list
+
+/* Skill Lists */
+.skill-title {
+    font-size: ms(0);
+    font-family: $font-secondary;
+    font-weight: 300;
+    text-transform: none;
+    margin: 0 0 ms(-5);
+    position: relative;
+
+    @media #{$device-medium} {
+        text-align: right;
+        margin-bottom: 0;
+        @include j-column(3/5);
+    }
+} //.skill-title
+
+.skill-list .progress {
+    position: relative;
+
+    @media #{$device-medium} {
+        @include j-column(2/5);
+    }
+}
+
+/* Tag Lists */
+.tag-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+    .work-item & {
+        text-align: left;
+    }
+
+    li {
+        display: inline-block;
+        background-color: $color-dark;
+        color: $color-light;
+        padding: ms(-4) ms(-1);
+        font-family: $font-primary;
+        font-weight: 100;
+        font-size: ms(0);
+        margin-bottom: ms(-3);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .work-item & {
+            font-size: modular-scale(0, rem(12));
+            padding: ms(-8) ms(-2);
+            margin-bottom: ms(-4);
+
+            @media #{$device-xl} {
+                margin-bottom: 0;
+            }
+        }
+    } // li
+} //.tag-list

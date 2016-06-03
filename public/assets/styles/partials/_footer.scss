@@ -3,8 +3,8 @@
  */
 
 .footer {
-	background-color: $color-primary;
-	color: $color-lightest;
+    background-color: $color-primary;
+    color: $color-lightest;
     overflow: hidden;
     font-size: ms(0);
     margin-top: ms(3);
@@ -13,21 +13,37 @@
         margin-top: 0;
     }
 }
-	
+    
 .colophon {
-	color: $color-dark;
+    color: $color-dark;
     margin-top: ms(3);
 }
-	
+    
 .social-section,
-.contact-section {		
-	a {
-		color: $color-medium;
+.contact-section {        
+    a {
+        color: $color-medium;
         transition: all .5s ease-in-out;
-		
-		&:hover {
-			color: $color-success;
+        
+        &:hover {
+            color: $color-success;
             box-shadow: inset 0 -6px 0 rgba($color-success,0.2)
         }
     }
+}
+
+/**
+ * Sections
+ */
+
+.contact-section {
+    background-color: lighten($color-darkest, 2);
+
+    @media #{$device-medium} {
+        text-align: right;
+    }
+}
+
+.social-section {
+    background-color: $color-darkest;
 }

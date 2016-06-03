@@ -1,0 +1,47 @@
+
+.talents,
+.footer {
+    @extend .clearfix;
+    font-size: ms(0);
+
+    .group-title {
+        font-size: ms(2);
+        color: $color-lighter;
+        line-height: ms(4);
+        display: inline-block;
+        padding: ms(-5) 0;
+        margin: 0 0 ms(1);
+    }
+} //.talents
+
+.about .talents .group-title {
+    color: $color-darker;
+}
+
+.accolades,
+.skills {
+    .group-title {
+        margin-top: 0;
+    }
+}
+
+.skills {
+
+    .narrow {
+
+        @media #{$device-medium} {
+            text-align: right;
+        }
+    }
+} //.skills
+
+.about-headshot {
+    position: relative;
+    width: ms(11);
+    margin: ms(2) auto 0;
+
+    @media #{$device-medium} {
+        float: left;
+        margin: 0 ms(2) ms(2) 0;
+    }
+} //.about-headshot

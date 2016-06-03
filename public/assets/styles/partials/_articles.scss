@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Articles
+   ========================================================================== */
+   
+.article-block {
+    border-bottom: 2px solid $color-medium;
+    background-color: $color-lightest;
+    padding: 20px;
+    margin-bottom: 20px;
+    @extend .clearfix;
+
+    .entry-title {
+        margin: 0;
+    }
+
+    .entry-title a {
+        color: $color-dark;
+        font-weight: 400;
+    }
+} //.article-block
+
+/**
+ * Article
+ */
+
+.article-container {
+    @include j-center(800px);
+}
+
+.article-entry {
+
+    .entry-title {
+        color: $color-dark;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .meta {
+        font-size: rem(13);
+        color: $color-medium;
+    }
+}
+
+.article-entry p {
+    font-size: rem(18);
+    font-weight: 300;
+}

@@ -94,10 +94,10 @@
 .accolades {
 	
 	&.group {
-		padding: 60px 20px 40px;
+		padding: 40px 20px 20px;
 		
 		@media #{$device-medium} {
-			padding: 80px 0 80px;
+			padding: 40px 0 40px;
         }
     }
 }

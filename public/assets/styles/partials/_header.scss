@@ -6,6 +6,7 @@
     position: relative;
     padding: ms(1);
     background-color: $color-light;
+    z-index: 1;
     
     @media #{$device-medium} {
         .index & {
@@ -19,7 +20,13 @@
     }
     
     .index & {
-        background-color: $color-dark;
+        background-color: transparent;
+        margin-bottom: - ms(9);
+        
+        @media #{$device-medium} {
+            background-color: transparent;
+            margin-bottom: - ms(9);
+        }
     }
     
     @media #{$device-medium} {

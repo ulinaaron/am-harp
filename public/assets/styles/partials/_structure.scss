@@ -8,11 +8,11 @@
 }
 
 .narrow {
-    padding: 0 20px;
-	@include j-center(650px);
+    padding: 0 ms(0);
 	
 	@media #{$device-medium} {
 		padding: 0;
+		@include j-center(650px);
     }
     
     &.extra {
@@ -77,12 +77,11 @@
 
 .group {
 	@include j-column(1);
-	padding: 40px 20px;
-	padding: ms(4) ms(2);
+	padding: ms(4) ms(0);
 	
 	@media #{$device-medium} {
 		@include j-column(1/2, $gutter: 0);
-		padding: 80px 0;
+		padding: ms(6) 0;
     }
     
    &.full-span {
@@ -94,10 +93,10 @@
 .accolades {
 	
 	&.group {
-		padding: 40px 20px 20px;
+		padding: ms(4) ms(0) ms(0);
 		
 		@media #{$device-medium} {
-			padding: 40px 0 40px;
+			padding: ms(4) 0 ms(4);
         }
     }
 }

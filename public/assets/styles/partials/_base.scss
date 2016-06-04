@@ -35,3 +35,26 @@ body {
 img {
   max-width: 100%;
 }
+
+
+/**
+ * Main
+ */
+
+.main {
+    padding: 0 ms(1);
+    background-color: $color-light;
+    overflow: hidden;
+
+    .my-work & {
+        padding: 0;
+    }
+
+    @media #{$device-small} {
+        padding: ms(1) ms(1) ms(6);
+    }
+
+    @media #{$device-xl} {
+        padding: ms(1) 0 ms(6);
+    }
+} //.main

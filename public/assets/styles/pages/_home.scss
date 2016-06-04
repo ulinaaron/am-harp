@@ -10,6 +10,20 @@
     background-color: $color-dark;
     color: $color-light;
     position: relative;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2d2d2d+0,515151+100 */
+    background: #2d2d2d; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #2d2d2d 0%, #515151 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #2d2d2d 0%,#515151 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #2d2d2d 0%,#515151 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#515151',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    padding-top: ms(9);
+    
+    @media #{$device-medium} {
+        padding-top: ms(10);
+    }
+
 
     .container {
         padding: ms(4);
@@ -36,7 +50,7 @@
     font-weight: 900;
     color: $color-lightest;
     text-transform: uppercase;
-    border-bottom: 2px solid $color-info;
+    border-bottom: 4px solid $color-info;
     transition: border 1s ease-in;
     transition-delay: 3s;
     margin: ms(0) auto ms(0);
@@ -122,5 +136,32 @@
         &:hover {
             transform: translateY(8px);
         }
+    }
+}
+
+.capabilities {
+    margin-top: ms(3);
+    padding-top: ms(6);
+    padding-bottom: ms(6);
+    
+    .set-of-three {
+        @media #{$device-medium} {
+            margin-top: ms(3);
+        }
+    }
+}
+
+.capabilities .set-of-three .set-item {
+    margin: 0 auto;
+    
+    @media #{$device-tiny-to-small} {
+        float: none;
+        width: 80%;    
+    }
+    
+    @media #{$device-small-to-medium} {
+        float: none;
+        width: 60%;
+
     }
 }

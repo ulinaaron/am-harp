@@ -3,7 +3,7 @@
  */
  
  .set-item {
-     
+          
     &.fancy {
         border: 4px solid $color-dark;
         margin-bottom: ms(2);
@@ -20,6 +20,7 @@
             background-color: $color-darker;
             margin: ms(0);
             padding: ms(2);
+            border-radius: $border-radius;
         }
         
         @media #{$device-medium} {
@@ -67,18 +68,31 @@
         line-height: ms(2);
         text-align: center;
         color: $color-light;
+        
+        .capabilities & {
+            color: $color-dark;
+        } //.capabilities
     }
     
     .set-icon {
         display: inline-block;
-        font-size: ms(6);
+        font-size: ms(8);
         background-color: $color-light;
         color: $color-darker;
-        border-radius: 100%;
+        border-radius: $border-radius;
         padding: ms(0);
         margin-top: ms(0);
+        
+        .capabilities & {
+            background-color: $color-darker;
+            color: $color-light;
+        } //.capabilities
+    } //.set-icon
+    
+   .set-icon.devicons {
+        font-size: ms(6);
     }
- }
+ } //.set-item
  
 .set-of-two {
     @extend .clearfix;

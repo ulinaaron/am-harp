@@ -160,6 +160,23 @@ sub {
     line-height: ms(6);
 }
 
+/* Section Titles
+   ========================================================================== */
+   
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 4px solid $color-medium;
+    transition: border 1s ease-in;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-bottom: ms(2);
+    font-size: ms(5);
+    line-height: ms(6);
+}
+
 /* Links
    ========================================================================== */
 

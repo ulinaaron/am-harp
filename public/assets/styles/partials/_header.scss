@@ -57,7 +57,8 @@
         background: -webkit-linear-gradient(45deg,  rgba(242,240,236,1) 0%,rgba(112,176,224,0) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(45deg,  rgba(242,240,236,1) 0%,rgba(112,176,224,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f0ec', endColorstr='#0070b0e0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+        transition: border 1s ease-in, color 1s ease-in;
+        
         .index & {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#515151+0,70b0e0+100&1+0,0+100 */
             background: -moz-linear-gradient(45deg,  rgba(81,81,81,1) 0%, rgba(112,176,224,0) 100%); /* FF3.6-15 */
@@ -112,10 +113,7 @@
         padding: ms(-3) ms(-1);
         color: $color-medium;
         background: transparent;
-        -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
-        -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
-        transition: transform ease-out 0.1s, background 0.2s;
-        transition: background 1s ease-out;
+        transition: transform ease-out 0.1s, background 1s ease-out, color 1s ease-out;
         
         &:after {
             pointer-events: none;

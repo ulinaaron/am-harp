@@ -85,3 +85,87 @@
     background-position: -60px -60px;
   }
 }
+
+
+
+@-webkit-keyframes rainbow-color {
+	0% {color: $color-danger;}
+	15% {color: $color-alert;}
+	30% {color: $color-warning;}
+	45% {color: $color-success;}
+	60% {color: $color-info;}
+	75% {color: $color-primary;}
+	90% {color: $color-secondary;}
+	100% {color: $color-tertiary;}
+}
+@-ms-keyframes rainbow-color {
+	0% {color: $color-danger;}
+	15% {color: $color-alert;}
+	30% {color: $color-warning;}
+	45% {color: $color-success;}
+	60% {color: $color-info;}
+	75% {color: $color-primary;}
+	90% {color: $color-secondary;}
+	100% {color: $color-tertiary;}
+}
+@-o-keyframes rainbow-color {
+	0% {color: $color-danger;}
+	15% {color: $color-alert;}
+	30% {color: $color-warning;}
+	45% {color: $color-success;}
+	60% {color: $color-info;}
+	75% {color: $color-primary;}
+	90% {color: $color-secondary;}
+	100% {color: $color-tertiary;}
+}
+@keyframes rainbow-color {
+	0% {color: $color-danger;}
+	15% {color: $color-alert;}
+	30% {color: $color-warning;}
+	45% {color: $color-success;}
+	60% {color: $color-info;}
+	75% {color: $color-primary;}
+	90% {color: $color-secondary;}
+	100% {color: $color-tertiary;}
+}
+
+@-webkit-keyframes rainbow-border {
+	0% {border-color: $color-danger;}
+	15% {border-color: $color-alert;}
+	30% {border-color: $color-warning;}
+	45% {border-color: $color-success;}
+	60% {border-color: $color-info;}
+	75% {border-color: $color-primary;}
+	90% {border-color: $color-secondary;}
+	100% {border-color: $color-tertiary;}
+}
+@-ms-keyframes rainbow-border {
+	0% {border-color: $color-danger;}
+	15% {border-color: $color-alert;}
+	30% {border-color: $color-warning;}
+	45% {border-color: $color-success;}
+	60% {border-color: $color-info;}
+	75% {border-color: $color-primary;}
+	90% {border-color: $color-secondary;}
+	100% {border-color: $color-tertiary;}
+}
+@-o-keyframes rainbow-border {
+	0% {border-color: $color-danger;}
+	15% {border-color: $color-alert;}
+	30% {border-color: $color-warning;}
+	45% {border-color: $color-success;}
+	60% {border-color: $color-info;}
+	75% {border-color: $color-primary;}
+	90% {border-color: $color-secondary;}
+	100% {border-color: $color-tertiary;}
+}
+@keyframes rainbow-border {
+	0% {border-color: $color-danger;}
+	15% {border-color: $color-alert;}
+	30% {border-color: $color-warning;}
+	45% {border-color: $color-success;}
+	60% {border-color: $color-info;}
+	75% {border-color: $color-primary;}
+	90% {border-color: $color-secondary;}
+	100% {border-color: $color-tertiary;}
+}

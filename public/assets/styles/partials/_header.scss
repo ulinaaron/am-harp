@@ -74,6 +74,13 @@
             animation: progress 2s linear infinite;
             @extend %pattern-2;
             background-size: ms(4) ms(4);
+            
+            .index & {
+                -webkit-animation:rainbow-color 1s infinite, rainbow-border 1s infinite;
+                -ms-animation:rainbow-color 1s infinite, rainbow-border 1s infinite;
+                -o-animation:rainbow-color 1s infinite, rainbow-border 1s infinite;
+                animation:rainbow-color 1s infinite, rainbow-border 1s infinite;
+            }
         } // hover
     }
     

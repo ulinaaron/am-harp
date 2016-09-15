@@ -40,7 +40,7 @@
      
      .resume-header {
          @extend clearfix;
-         margin-bottom: ms(1);
+         margin-bottom: 0;
          overflow: hidden;
      }
      
@@ -214,6 +214,8 @@
         .section-title {
             margin: ms(3) 0 ms(-4);
             font-size: ms(0);
+            line-height: ms(3);
+            text-transform: none;
         }
         
         .list {
@@ -292,7 +294,7 @@
     }
     
     .sub-title {
-        font-size: ms2(3);
+        font-size: ms2(5);
         line-height: ms2(4);
     }
     
@@ -303,14 +305,26 @@
     
     .side-column .section-title {
         margin: ms(-1) 0 ms(-4);
-        font-size: ms2(1);
-        line-height: ms2(2);
+        font-size: ms2(3);
+        line-height: ms2(4);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    q {
+        font-family: $font-primary;
     }
     
     p,
-     ul,
-     q {
-         font-size: ms2(-1);
+    ul,
+    q {
+         font-size: ms(0);
          line-height: ms2(3);
          margin: 0 0 ms2(2);
      }
@@ -321,21 +335,22 @@
          
          .job-title,
          .reference-name {
-             font-size: ms2(2);
-             line-height: ms2(3);
+             font-size: ms2(3);
+             line-height: ms2(4);
          }
          
          .role-title {
-            font-size: ms2(0);
+            font-size: ms2(1);
+            font-weight: 900;
         }
         
         
         .length {
-            font-size: ms2(-1);
+            font-size: ms2(0);
         }
         
         .location {
-            font-size: ms2(-1);
+            font-size: ms2(0);
         }
      }
      
